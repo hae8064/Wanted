@@ -1,0 +1,96 @@
+/* .slick-slider {
+
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+} */
+
+/* .sliderImg img {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin: 0;
+}
+
+.slick-slide .slick-current .slick-active .slick-center {
+  padding: auto 0;
+} */
+
+/* .slick-prev2 {
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  opacity: 0.5;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
+  z-index: 10;
+  left: 150px;
+} */
+
+/*
+
+.slick-prev3 {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  color: #888;
+  position: relative;
+  top: 40px;
+  z-index: 2;
+}
+
+*/
+
+.slick-next2 {
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  width: 30px;
+  height: 60px;
+  opacity: 0.5;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
+  z-index: 10;
+}
