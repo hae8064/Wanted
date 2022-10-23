@@ -8,6 +8,7 @@ import Footer from './components/Common/Footer/Footer';
 import DevHeader from './components/DevelopPage/Header/DevHeader.jsx';
 import Bookmark from './components/DevelopPage/Bookmark/Bookmark';
 import GridContainer from './components/DevelopPage/GridContainer/GridContainer';
+import DetailRecruitContainer from './components/DetailRecruit/DetailRecruitContainer';
 
 function App() {
   return (
@@ -21,10 +22,13 @@ function App() {
       <Footer /> */}
 
       {/* Develop Page */}
-      <Header />
+      {/* <Header />
       <DevHeader />
       <Bookmark />
-      <GridContainer />
+      <GridContainer /> */}
+
+      {/* 채용공고 상세페이지 */}
+      <DetailRecruitContainer />
     </div>
   );
 }
