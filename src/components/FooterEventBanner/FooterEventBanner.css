@@ -1,0 +1,145 @@
+.footbanner {
+  max-width: 1536px;
+  font-size: 14px;
+  height: 278px;
+  color: #333333;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 0;
+  margin-top: 60px;
+  background-color: #f7f7f7;
+  height: 270px;
+}
+
+.leftbanner {
+  height: 158px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 100px;
+}
+
+.topbanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reason {
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.middlebanner {
+  font-size: 14px;
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.bannerwantedsvg {
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  font-weight: 700;
+  width: 160px !important;
+  height: 31px !important;
+  margin-top: 4px;
+  flex-shrink: 0;
+  font-size: inherit;
+}
+
+.bottombanner {
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  margin: 0;
+  min-width: 64px;
+  border-radius: 25px;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  background-color: #36f;
+  height: 50px;
+  font-size: 16px;
+  width: 260px;
+  margin-top: 25px;
+  display: flex;
+}
+
+.bannerbutton {
+  background-color: #36f;
+  border: none;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  line-height: normal;
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.rightbanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightbanner img {
+  width: 500px;
+  height: 158px;
+}
+
+.SvgIcon_SvgIcon__root__svg__DKYBi {
+  text-transform: none;
+  font-family: inherit;
+  line-height: normal;
+  cursor: pointer;
+  font-weight: inherit;
+  color: white;
+  box-sizing: border-box;
+  user-select: none;
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  fill: currentColor;
+  /* flex-shrink: 0; */
+  font-size: inherit;
+  overflow: hidden;
+  /* margin-left: 30px; */
+  margin-top: 20px;
+  position: sticky;
+  left: 250px;
+}

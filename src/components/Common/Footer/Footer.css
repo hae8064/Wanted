@@ -1,0 +1,137 @@
+.footer {
+  border-top: 1px solid rgb(204, 203, 203);
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 18px 65px 20px 65px;
+  align-items: center;
+}
+
+.footerTopLeft {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 110px;
+}
+
+.footerTopRight {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 2;
+  margin-left: 120px;
+  margin-right: 20px;
+}
+
+.footerInfo {
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: inherit;
+  cursor: pointer;
+  font-size: 15px;
+  color: #3a3a3a;
+  font-weight: 500;
+  line-height: 2.6;
+  margin-right: 45px;
+  white-space: nowrap;
+}
+
+.footerTag a {
+  text-decoration: none;
+  padding-right: 8px;
+}
+
+.footerBottom {
+  width: 1135px;
+  margin: 0px 192px;
+  border-top: 1px solid rgb(204, 203, 203);
+  display: flex;
+}
+
+.footerBottomText {
+  margin-top: 15px;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  float: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: #767676;
+  width: calc(100% - 290px);
+  margin-right: 40px;
+}
+
+.footerLogo {
+  margin-right: 30px;
+}
+
+.language {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  width: 250px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f2f4f7;
+}
+
+.language img {
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 24px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.languageChoice {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+  width: 100%;
+  height: 40px;
+  background: #f2f4f7;
+  border-radius: 5px;
+  border: none;
+  font-size: 13px;
+  color: #717171;
+  font-weight: 600;
+}
+
+.language i {
+  margin-right: 10px;
+}

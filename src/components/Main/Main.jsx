@@ -1,8 +1,8 @@
-import React from "react";
-import "./main.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import React from 'react';
+import './main.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
 function Main() {
   const setting = {
@@ -16,78 +16,89 @@ function Main() {
     // nextArrow: "<button type='button' class='slick-next'>Next</button>",
   };
 
+  const setting2 = {
+    // slide: "div", //슬라이드 되어야 할 태그
+    slidesToShow: 2, // 한 화면에 보여질 컨텐츠 개수
+    slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+    draggable: true,
+    // centerMode: true,
+    // ceterPadding: "100px",
+    // prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
+    // nextArrow: "<button type='button' class='slick-next'>Next</button>",
+  };
+
   const manyButtons = [
     {
-      className: "manybuttons career",
-      spanText: "커리어고민",
+      className: 'manybuttons career',
+      spanText: '커리어고민',
     },
     {
-      className: "manybuttons companylife",
-      spanText: "회사생활",
+      className: 'manybuttons companylife',
+      spanText: '회사생활',
     },
     {
-      className: "manybuttons curture",
-      spanText: "조직문화",
+      className: 'manybuttons curture',
+      spanText: '조직문화',
     },
     {
-      className: "manybuttons passmove",
-      spanText: "취업/이직",
+      className: 'manybuttons passmove',
+      spanText: '취업/이직',
     },
     {
-      className: "manybuttons leader",
-      spanText: "리더십",
+      className: 'manybuttons leader',
+      spanText: '리더십',
     },
     {
-      className: "manybuttons personrel",
-      spanText: "인간관계",
+      className: 'manybuttons personrel',
+      spanText: '인간관계',
     },
     {
-      className: "manybuttons lifestyle",
-      spanText: "라이프스타일",
+      className: 'manybuttons lifestyle',
+      spanText: '라이프스타일',
     },
     {
-      className: "manybuttons ittech",
-      spanText: "IT/기술",
+      className: 'manybuttons ittech',
+      spanText: 'IT/기술',
     },
     {
-      className: "manybuttons contents",
-      spanText: "콘텐츠제작",
+      className: 'manybuttons contents',
+      spanText: '콘텐츠제작',
     },
     {
-      className: "manybuttons develop",
-      spanText: "개발",
+      className: 'manybuttons develop',
+      spanText: '개발',
     },
     {
-      className: "manybuttons service",
-      spanText: "서비스기획",
+      className: 'manybuttons service',
+      spanText: '서비스기획',
     },
     {
-      className: "manybuttons marketing",
-      spanText: "마케팅",
+      className: 'manybuttons marketing',
+      spanText: '마케팅',
     },
     {
-      className: "manybuttons md",
-      spanText: "MD",
+      className: 'manybuttons md',
+      spanText: 'MD',
     },
     {
-      className: "manybuttons career",
-      spanText: "커리어고민",
+      className: 'manybuttons career',
+      spanText: '커리어고민',
     },
     {
-      className: "manybuttons companylife",
-      spanText: "회사생활",
+      className: 'manybuttons companylife',
+      spanText: '회사생활',
     },
     {
-      className: "manybuttons curture",
-      spanText: "조직문화",
+      className: 'manybuttons curture',
+      spanText: '조직문화',
     },
     {
-      className: "manybuttons passmove",
-      spanText: "취업/이직",
+      className: 'manybuttons passmove',
+      spanText: '취업/이직',
     },
     {
-      className: "manybuttons leader",
-      spanText: "리더십",
+      className: 'manybuttons leader',
+      spanText: '리더십',
     },
   ];
 
@@ -631,6 +642,7 @@ function Main() {
         </div>
 
         <div className="bottomContainer3">
+          {/* <Slider {...setting2}> */}
           <div className="articleBottom3">
             <a href="">
               <img
@@ -650,88 +662,106 @@ function Main() {
           <div className="articleBottom3">
             <a href="">
               <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2426%2F1fc340dd.jpg&w=1200&q=100"
+                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2404%2F54ecb586.jpg&w=1200&q=100"
                 alt=""
               />
-              <div className="buttonsTag">
-                <span className="bottom3online">
-                  <svg
-                    className="bottom3svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="11"
-                    height="12"
-                    viewBox="0 0 11 12"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M5.98.9A5.09 5.09 0 00.32 6.54l1.03-.1a4.07 4.07 0 014.52-4.53L5.98.89zm4.57 4.56l-1.03.1A4.07 4.07 0 015 10.1l-.11 1.03a5.1 5.1 0 005.66-5.66zM5.76 2.94c-.9-.1-1.84.18-2.53.86a3.06 3.06 0 00-.86 2.54l1.02-.11c-.07-.6.12-1.24.57-1.7a2.05 2.05 0 011.7-.57l.1-1.02zM8.5 5.68l-1.04.12a2 2 0 01-2.24 2.24L5.1 9.06a3.06 3.06 0 003.4-3.4zm-2.53-.22c-.3-.3-.8-.3-1.1 0-.3.3-.29.78.02 1.08.3.3.79.3 1.09 0 .3-.3.3-.78 0-1.08z"
-                    ></path>
-                  </svg>
-                  <span className="EventKinds_EventKind__text__sYu5B">
-                    온라인
-                  </span>
+              <span className="EventKind EventKinds_EventKind__eWUu8 is-article">
+                <span className="EventKinds_EventKind__text__sYu5A">
+                  아티클
                 </span>
-
-                <span className="EventKind EventKinds_EventKind__eWUu8 is-community">
-                  <span className="EventKinds_EventKind__text__sYu5C">
-                    네트워킹
-                  </span>
-                </span>
-              </div>
+              </span>
               <span className="bottom3Title">
-                스터디살롱 : CS/CX의 실무 꿀팁과 Next Career
+                인터뷰 | 여성 IT리더들의 성장 경험을 공유합니다!
               </span>
-              <span className="bottom3SubTitle">2022.11.24 (목)</span>
             </a>
           </div>
-          <div className="articleBottom3">
-            <a href="">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2439%2F2da70321.jpg&w=800&q=75"
-                alt=""
-              />
-              <span className="bottomTitle">
-                회사에서도 SNS처럼 만나면 되잖아!
-              </span>
-              <span className="bottomTag">#경영/전략 #HR #조직문화</span>
-            </a>
-          </div>
-          <div className="articleBottom">
-            <a href="">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2437%2F30d52ee0.jpg&w=800&q=75"
-                alt=""
-              />
-              <span className="bottomTitle">
-                스타트업에서는 어떤 방식으로 시니어를 채용해야 할까?
-              </span>
-              <span className="bottomTag">#HR #조직문화 #경영/전략</span>
-            </a>
-          </div>
-          <div className="articleBottom">
-            <a href="">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2429%2Ffca14c2b.jpg&w=800&q=75"
-                alt=""
-              />
-              <span className="bottomTitle">
-                LG전자 | 애플에서 8년은 일하는 방법을 가르쳐 준 시간
-              </span>
-              <span className="bottomTag">#개발 #IT/기술 #데이터</span>
-            </a>
-          </div>
-          <div className="articleBottom">
-            <a href="">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2429%2Ffca14c2b.jpg&w=800&q=75"
-                alt=""
-              />
-              <span className="bottomTitle">
-                LG전자 | 애플에서 8년은 일하는 방법을 가르쳐 준 시간
-              </span>
-              <span className="bottomTag">#개발 #IT/기술 #데이터</span>
-            </a>
-          </div>
+
+          {/* <div className="articleBottom3">
+              <a href="">
+                <img
+                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2426%2F1fc340dd.jpg&w=1200&q=100"
+                  alt=""
+                />
+                <div className="buttonsTag">
+                  <span className="bottom3online">
+                    <svg
+                      className="bottom3svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="11"
+                      height="12"
+                      viewBox="0 0 11 12"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M5.98.9A5.09 5.09 0 00.32 6.54l1.03-.1a4.07 4.07 0 014.52-4.53L5.98.89zm4.57 4.56l-1.03.1A4.07 4.07 0 015 10.1l-.11 1.03a5.1 5.1 0 005.66-5.66zM5.76 2.94c-.9-.1-1.84.18-2.53.86a3.06 3.06 0 00-.86 2.54l1.02-.11c-.07-.6.12-1.24.57-1.7a2.05 2.05 0 011.7-.57l.1-1.02zM8.5 5.68l-1.04.12a2 2 0 01-2.24 2.24L5.1 9.06a3.06 3.06 0 003.4-3.4zm-2.53-.22c-.3-.3-.8-.3-1.1 0-.3.3-.29.78.02 1.08.3.3.79.3 1.09 0 .3-.3.3-.78 0-1.08z"
+                      ></path>
+                    </svg>
+                    <span className="EventKinds_EventKind__text__sYu5B">
+                      온라인
+                    </span>
+                  </span>
+
+                  <span className="EventKind EventKinds_EventKind__eWUu8 is-community">
+                    <span className="EventKinds_EventKind__text__sYu5C">
+                      네트워킹
+                    </span>
+                  </span>
+                </div>
+                <span className="bottom3Title">
+                  스터디살롱 : CS/CX의 실무 꿀팁과 Next Career
+                </span>
+                <span className="bottom3SubTitle">2022.11.24 (목)</span>
+              </a>
+            </div>
+            <div className="articleBottom3">
+              <a href="">
+                <img
+                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2439%2F2da70321.jpg&w=800&q=75"
+                  alt=""
+                />
+                <span className="bottomTitle">
+                  회사에서도 SNS처럼 만나면 되잖아!
+                </span>
+                <span className="bottomTag">#경영/전략 #HR #조직문화</span>
+              </a>
+            </div> */}
+          {/* <div className="articleBottom">
+              <a href="">
+                <img
+                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2437%2F30d52ee0.jpg&w=800&q=75"
+                  alt=""
+                />
+                <span className="bottomTitle">
+                  스타트업에서는 어떤 방식으로 시니어를 채용해야 할까?
+                </span>
+                <span className="bottomTag">#HR #조직문화 #경영/전략</span>
+              </a>
+            </div>
+            <div className="articleBottom">
+              <a href="">
+                <img
+                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2429%2Ffca14c2b.jpg&w=800&q=75"
+                  alt=""
+                />
+                <span className="bottomTitle">
+                  LG전자 | 애플에서 8년은 일하는 방법을 가르쳐 준 시간
+                </span>
+                <span className="bottomTag">#개발 #IT/기술 #데이터</span>
+              </a>
+            </div>
+            <div className="articleBottom">
+              <a href="">
+                <img
+                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2429%2Ffca14c2b.jpg&w=800&q=75"
+                  alt=""
+                />
+                <span className="bottomTitle">
+                  LG전자 | 애플에서 8년은 일하는 방법을 가르쳐 준 시간
+                </span>
+                <span className="bottomTag">#개발 #IT/기술 #데이터</span>
+              </a>
+            </div> */}
+          {/* </Slider> */}
         </div>
       </div>
     </div>

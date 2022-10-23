@@ -395,6 +395,9 @@
   margin-left: 5px;
 }
 
+.articleContainer3 {
+}
+
 .articleContainer {
   display: flex;
   flex-direction: column;
@@ -406,7 +409,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
+  margin: 0 5px;
 }
 
 .articleCenterText {
@@ -606,6 +610,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  margin-left: 14px;
 }
 
 .articleBottom {
