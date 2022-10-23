@@ -1,0 +1,107 @@
+.gridContainer {
+  margin-top: 40px;
+  display: grid;
+  /* grid-template-columns: 270px 270px 270px 270px; */
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px;
+  margin-left: 210px;
+  margin-right: 185px;
+}
+
+.gridContainerFirst {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  position: relative;
+}
+
+.gridContainerFirst img {
+  width: 100%;
+  height: 100%;
+}
+
+.gridContainerFirst footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gridTitle {
+  margin-top: 15px;
+}
+
+.bookmarkButton {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  width: 22px;
+  height: 22px;
+  top: 8px;
+}
+
+.gridContainerFirst header {
+  display: flex;
+  flex-direction: column;
+  height: 187px;
+}
+
+.gridContainer a {
+  text-decoration: none;
+}
+
+.gridTitle {
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gridTitle2 {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.gridTitle3 {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+
+.addressDot {
+  margin: 0 4px;
+  margin-bottom: 7px;
+}
+
+.gridTitle4 {
+  color: #333;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.gridButton {
+  border: 1px solid #00aead;
+  color: #00aead;
+  border-radius: 2px;
+  background-color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  height: 19px;
+  width: 90px;
+  margin-top: 4px;
+  padding: 0 5px;
+}
+
+.positioning {
+  position: relative;
+}
+
+.positioning em {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

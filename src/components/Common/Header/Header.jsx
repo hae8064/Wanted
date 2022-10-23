@@ -1,7 +1,7 @@
-import React from "react";
-import { ReactComponent as SearchIcon } from "../../assets/icon-search.svg";
-import { ReactComponent as SearchIcon2 } from "../../assets/icon-search2.svg";
-import "./Header.css";
+import React from 'react';
+import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
+import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
+import './Header.css';
 
 function Header() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Recruit.css';
-import { ReactComponent as Recruit1 } from '../../assets/icon-recruit1.svg';
+import { ReactComponent as Recruit1 } from '../../../assets/icon-recruit1.svg';
 
 function Recruit() {
   return (

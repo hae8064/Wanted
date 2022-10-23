@@ -1,6 +1,6 @@
 import React from 'react';
 import './FooterEventBanner.css';
-import { ReactComponent as ArrowBottom } from '../../assets/arrowBottom.svg';
+import { ReactComponent as ArrowBottom } from '../../../assets/arrowBottom.svg';
 
 function FooterEventBanner() {
   return (

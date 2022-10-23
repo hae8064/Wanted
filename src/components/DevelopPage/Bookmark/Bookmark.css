@@ -1,0 +1,150 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 200px;
+  margin-top: 50px;
+}
+
+.mainBookMark {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.mainBookMark span {
+  color: #36f;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.mainBookMark svg {
+  color: #36f;
+}
+
+.mainTitle h3 {
+  font-size: 22px;
+}
+
+.mainTopImgs {
+  display: flex;
+}
+.mainTopText h5 {
+  padding-bottom: 50px;
+}
+
+.topImgsContainer {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTopImgs a {
+  width: 30%;
+  margin-left: 50px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a.topImgsContainer {
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  position: relative;
+}
+.topImgsContainer footer {
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  user-select: none;
+  cursor: pointer;
+  color: inherit;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 9px;
+  height: 104px;
+  width: 200px;
+  border: 1px solid #e1e2e3;
+  border-radius: 0 0 3px 3px;
+}
+
+.topImgsContainer header {
+  width: 197px;
+}
+
+.companyBg img {
+  cursor: pointer;
+  color: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 147px;
+  width: 200px;
+  border-radius: 3px 3px 0 0;
+  background-color: #f2f2f2;
+}
+
+.companyBg {
+  background-image: url(https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F8681%2Fnfnaa497atbuwdq9__400_400.jpg&w=400&q=75);
+}
+
+.topImgsContainer {
+  width: 22%;
+}
+
+.mainTopText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+footer img {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 120px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 120px;
+}
+
+.mainTitle {
+  margin-left: 10px;
+}
+
+.mainBookMark {
+  margin-left: 10px;
+}
+
+.mainTopText h5 {
+  color: #999;
+  margin-top: 1px;
+  font-size: 14px;
+}

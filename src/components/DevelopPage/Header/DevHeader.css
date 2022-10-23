@@ -1,0 +1,392 @@
+.headerTitle {
+  /* display: flex;
+      align-items: center;
+      padding-left: 200px;
+      padding-right: 200px;
+      z-index: 0;
+      position: relative; */
+
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 50px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  display: flex;
+  max-width: 1060px;
+  align-items: center;
+  width: 100%;
+  padding-left: 195px;
+}
+
+.headerTitleLeft {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.headerTitleLeftText {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-right: 15px;
+}
+
+.headerTitleLeftContainer {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e1e2e3;
+  border-radius: 9999px;
+}
+
+.headerTitleLeftContainer svg {
+  overflow: hidden;
+}
+
+.headerLine {
+  font-size: 28px;
+  line-height: 29px;
+  padding: 3px 24px 0;
+  color: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.headerTitleRight {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.headerTitleRightText {
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+  margin-right: 15px;
+}
+
+.headerTitleRightContainer {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e1e2e3;
+  border-radius: 9999px;
+}
+
+.headerTitleRightContainer svg {
+  overflow: hidden;
+}
+
+.headerMiddle {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: sticky;
+  /* z-index: 2; */
+  top: 60px;
+  margin-bottom: 30px;
+}
+
+.headerFilter {
+  display: flex;
+}
+
+.headerFilter button {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  margin-right: 10px;
+  position: relative;
+}
+
+.headerRegion {
+}
+
+.headerRegionLeft {
+  font: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #333;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.headerRegionRight {
+  font: inherit;
+  text-transform: none;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  letter-spacing: normal;
+  white-space: nowrap;
+  color: #36f !important;
+  font-weight: 600;
+  margin-right: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.headerRegionRightOne {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #36f;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerOld {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerOld svg {
+  margin-left: 10px;
+}
+
+.headerFilter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 500px;
+}
+
+.headerFilterRight button {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+}
+
+.headerStack {
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerFilterRightButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 160px;
+  width: 104px;
+}
+
+.headerFilterRightButton svg {
+  margin-left: 10px;
+}
+
+.headerMiddleP {
+  width: 74%;
+  border-top: 1px solid #ececec;
+  border-width: 50%;
+  margin-left: 200px;
+}
+
+.BottomSlickTrack {
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.manyleftButton {
+  position: absolute;
+  left: 200px;
+  top: 25px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e1e2e3;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.manyleftButton svg {
+  font-size: 18px;
+  color: #888;
+}
+
+.manyRightButton {
+  position: absolute;
+  right: 497px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e1e2e3;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.manyRightButton svg {
+  font-size: 18px;
+  color: #888;
+}
+
+.headerBottom {
+  display: flex;
+  font-size: 14px;
+  color: #333333;
+  user-select: none;
+  box-sizing: border-box;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: sticky;
+  top: 1px;
+  z-index: 1;
+  max-width: 1320px;
+  overflow: hidden;
+}
+
+.headerLastP {
+  border-bottom: 1px solid #ececec;
+}
+
+.BottomTrack1 {
+  display: flex;
+
+  user-select: none;
+  box-sizing: border-box;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid transparent;
+  background: rgb(242, 251, 245);
+}
+
+.BottomTrack1 img {
+  user-select: none;
+  font: inherit;
+  text-transform: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+.BottomTrackText {
+  font-size: 12px;
+  margin: 0px 8px 0px 0px;
+  padding: 8px 14px;
+  color: #666;
+  font-weight: 600;
+}
+
+.manyleftButton svg {
+  margin-bottom: 15px;
+  margin-right: 3px;
+}
+
+.manyRightButton {
+  margin-top: 20px;
+}
+
+.manyRightButton svg {
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+
+.headerContainerSti {
+  position: sticky;
+  top: 50px;
+  z-index: 2;
+  background-color: white;
+}
