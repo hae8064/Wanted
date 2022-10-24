@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+import GridCard from "../../Common/GridCard/GridCard";
+import "./DetailGrid.css";
 
 function DetailGrid() {
   return (

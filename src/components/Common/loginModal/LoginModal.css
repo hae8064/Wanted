@@ -1,0 +1,283 @@
+.loginModal {
+  /* width: 400px;
+    height: 626px;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    z-index: 1; */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 400px;
+    height: 626px; */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  z-index: 5;
+}
+
+.loginModalContainer {
+  width: 400px;
+  height: 640px;
+  display: flex;
+  background-color: white;
+  z-index: 6;
+  flex-direction: column;
+}
+
+.loginModalTopIcon {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.icon-logo_new {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  --nav-height: 50px;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+.icon-logo_new:before {
+  content: "\e992";
+}
+
+.loginModalTopIcon button {
+  padding: 15px;
+  width: 54px;
+  height: 54px;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+}
+
+.loginModalTopIcon button svg {
+  color: rgb(153, 153, 153);
+}
+
+.modalTextContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+.mainText {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 10px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 30px;
+}
+
+.mainText2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+}
+
+.subText {
+  margin-top: 16px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.loginModalMiddle {
+  margin: auto 20px;
+}
+
+.MiddleText {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 10px;
+}
+
+.MiddleLoginInput input {
+  width: 95%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+
+  padding-left: 10px;
+}
+
+.loginModalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #36f;
+  height: 54px;
+  border: none;
+  border-radius: 27px;
+  margin-top: 20px;
+}
+
+.loginModalButton:hover {
+  background-color: darkorange;
+}
+
+.loginText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.loginIcon {
+  display: flex;
+  align-items: center;
+}
+
+.loginModalOr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.loginModalOr span {
+  color: #969696;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.loginModalMiddleBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginModalMiddleBottom span {
+  color: #767676;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.loginIcons {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 10px;
+}
+
+.loginIcon1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginIconbutton1 {
+  background-color: #fee500;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 8px;
+  color: #737373;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.loginIconbutton2 {
+  border: none;
+  background-color: #1877f2;
+}
+
+.loginIconbutton3 {
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+}
+
+.loginIconbutton4 {
+  background-color: #fff;
+  background-color: #000;
+}
+
+.loginIconbutton2,
+.loginIconbutton3,
+.loginIconbutton4 {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 8px;
+  color: #737373;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginIconspan {
+  background-color: white;
+  border: none;
+}
+
+.loginIconspan span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+}
+
+.iconspan span {
+  position: fixed;
+  bottom: 10px;
+}
+
+.loginModalBottom {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+  padding-bottom: 10px;
+}

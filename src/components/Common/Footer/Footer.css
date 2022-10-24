@@ -11,6 +11,7 @@
   justify-content: space-evenly;
   padding: 18px 65px 20px 65px;
   align-items: center;
+  width: 1200px;
 }
 
 .footerTopLeft {
@@ -18,15 +19,14 @@
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
-  margin-left: 110px;
+  margin-left: 20px;
 }
 
 .footerTopRight {
   display: flex;
   justify-content: space-evenly;
   flex-grow: 2;
-  margin-left: 120px;
-  margin-right: 20px;
+  margin-left: 250px;
 }
 
 .footerInfo {
@@ -76,6 +76,7 @@
   color: #767676;
   width: calc(100% - 290px);
   margin-right: 40px;
+  margin-bottom: 60px;
 }
 
 .footerLogo {

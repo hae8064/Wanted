@@ -1,3 +1,7 @@
+.mainPositionContainer {
+  position: relative;
+}
+
 .RecruitConiner {
   display: flex;
   align-items: flex-start;
@@ -37,7 +41,7 @@
 }
 
 .slick-prev:before {
-  content: '';
+  content: "";
 }
 
 .slick-prev:before {
@@ -70,6 +74,13 @@ button.slick-arrow.slick-prev::before {
   background-color: transparent;
 }
 
+.slick-arrow.slick-prev {
+  text-indent: -9999px; /* sends the text off-screen */
+}
+
+.slick-arrow.slick-next {
+  text-indent: -9999px; /* sends the text off-screen */
+}
 .slick-dots {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -104,12 +115,6 @@ button.slick-arrow.slick-prev::before {
 .sliderImg2 img {
   width: 100%;
   height: 100%;
-}
-
-.mainLeftTitle {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
 }
 
 .leftSubTitle {
@@ -358,21 +363,6 @@ button.slick-arrow.slick-prev::before {
   height: 10px;
 }
 
-.mainRight {
-  width: 300px;
-  height: 320px;
-  border: 1px solid #e1e2e3;
-  padding: 24px 20px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0px;
-  border-radius: 3px;
-  position: fixed;
-  right: 210px;
-  z-index: 1;
-}
-
 .mainRightTitleButton {
   width: 40px;
   height: 40px;
@@ -498,7 +488,7 @@ button.slick-arrow.slick-prev::before {
 } */
 
 .icon-ic_favorite_black_24px:before {
-  content: '\e99b';
+  content: "\e99b";
   margin-right: 5px;
 }
 
@@ -832,7 +822,7 @@ button.slick-arrow.slick-prev::before {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -844,7 +834,7 @@ button.slick-arrow.slick-prev::before {
 }
 
 .icon-logo_new:before {
-  content: '\e992';
+  content: "\e992";
 }
 
 .loginModalTopIcon button {
@@ -1166,7 +1156,7 @@ button.slick-arrow.slick-prev::before {
 
 .MobileInput_MobileInput_select_arrow__hLBUp.icon-arrow_right {
   transform: translateY(-50%);
-  content: '\e94f';
+  content: "\e94f";
 }
 
 .exampleNumber {

@@ -1,0 +1,207 @@
+.mainRight {
+  width: 340px;
+  height: 320px;
+  border: 1px solid #e1e2e3;
+  padding: 24px 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  border-radius: 3px;
+  position: sticky;
+  /* right: 210px; */
+  top: 70px;
+  z-index: 1;
+  right: 205px;
+  margin-left: 50px;
+}
+
+.mainRightTitleButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #e1e2e3;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.mainRightTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  right: 240px;
+  width: 340px;
+}
+
+.mainRightTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.mainRightMiddle {
+  display: flex;
+  margin-top: 20px;
+}
+
+.mainRightMiddleLeft {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
+
+.mainRightMiddleLeftTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.mainRightMiddleLeftSub {
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.mainRightMiddleRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainRightButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.RightTopButton {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  background-color: #fff;
+  border: 1px solid #36f;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  color: #36f;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RightTopButton span {
+  margin-right: 10px;
+}
+
+.RightTopButton span svg {
+  margin-top: 5px;
+}
+.RightbottomButton {
+  height: 50px;
+  border-radius: 25px;
+  background-color: #36f;
+  border: none;
+}
+
+.RightbottomButton span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.mainRightBottoms {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.heartNumber {
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #e1e2e3;
+  margin-right: 12px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+}
+
+/* .heartNumber svg {
+    content: "\e99b";
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  } */
+
+.icon-ic_favorite_black_24px:before {
+  content: "\e99b";
+  margin-right: 5px;
+}
+
+.icon-ic_favorite_black_24px:before {
+  font-size: 16px;
+  color: #dbdbdb;
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+
+.heartNumber span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.profilesButton {
+  background: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
+
+.profilesButton ul {
+  display: flex;
+  width: 58px;
+  height: 30px;
+  position: relative;
+}
+.profilesButton li {
+  list-style: none;
+}
+
+.profilesButton img {
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #fff;
+}
+
+.profilesButtonimg2 {
+  position: absolute;
+  left: 25px;
+}
+
+.profilesButtonimg3 {
+  position: absolute;
+  left: 10px;
+}
+
+.mainGridContainer {
+  padding-bottom: 10px;
+}
+
+.line {
+  padding-top: 50px;
+  height: 1px;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  margin: 0 -20% 0 -25%;
+}
