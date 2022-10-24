@@ -1,14 +1,22 @@
-import React from "react";
-import "./LoginModal.css";
+import React, { useEffect, useState } from 'react';
+import './LoginModal.css';
 
-const LoginModal = () => {
+const LoginModal = (login) => {
+  const [loginModal, setLoginModal] = useState('loginModal on');
+
+  const { loginData } = login;
+  const closeModal = () => {
+    setLoginModal(!loginModal);
+    console.log(loginModal);
+  };
+
   return (
-    <section class="loginModal">
-      <div class="loginModalContainer">
-        <div class="loginModalTop">
-          <div class="loginModalTopIcon">
-            <i class="icon-logo_new"></i>
-            <button onclick="resetPage()">
+    <section className="loginModal on">
+      <div className="loginModalContainer">
+        <div className="loginModalTop">
+          <div className="loginModalTopIcon">
+            <i className="icon-logo_new"></i>
+            <button>
               <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
                 <path
                   fill="currentColor"
@@ -18,35 +26,35 @@ const LoginModal = () => {
             </button>
           </div>
 
-          <div class="modalTextContainer">
+          <div className="modalTextContainer">
             직장인을 위한
-            <div class="mainText">
+            <div className="mainText">
               <br />
               커리어 플랫폼, 원티드!
             </div>
-            <div class="subText">
+            <div className="subText">
               커리어 성장과 행복을 위한 여정
               <br /> &nbsp;&nbsp;지금 원티드에서 시작하세요.
             </div>
           </div>
         </div>
 
-        <div class="loginModalMiddle">
-          <div class="MiddleText">이메일</div>
-          <div class="MiddleLoginInput">
+        <div className="loginModalMiddle">
+          <div className="MiddleText">이메일</div>
+          <div className="MiddleLoginInput">
             <input
               type="email"
-              class="inputEmail"
+              className="inputEmail"
               placeholder="이메일을 입력해 주세요."
             />
           </div>
           <button
-            class="loginModalButton"
+            className="loginModalButton"
             type="submit"
             //onclick="emailValidation"
-            onclick="emailValidation"
+            // onClick="emailValidation"
           >
-            <div class="loginIcon">
+            <div className="loginIcon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -64,20 +72,22 @@ const LoginModal = () => {
                 </g>
               </svg>
             </div>
-            <div class="loginText">이메일로 계속하기</div>
+            <div className="loginText" onClick={closeModal}>
+              이메일로 계속하기
+            </div>
           </button>
 
-          <div class="loginModalOr">
+          <div className="loginModalOr">
             <span>or</span>
           </div>
 
-          <div class="loginModalMiddleBottom">
+          <div className="loginModalMiddleBottom">
             <span>다음 계정으로 계속하기</span>
           </div>
 
-          <div class="loginIcons">
-            <div class="loginIcon1">
-              <button class="loginIconbutton1">
+          <div className="loginIcons">
+            <div className="loginIcon1">
+              <button className="loginIconbutton1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"
@@ -91,13 +101,13 @@ const LoginModal = () => {
                   ></path>
                 </svg>
               </button>
-              <button class="loginIconspan">
+              <button className="loginIconspan">
                 <span>Kakao</span>
               </button>
             </div>
 
-            <div class="loginIcon1">
-              <button class="loginIconbutton2">
+            <div className="loginIcon1">
+              <button className="loginIconbutton2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="12"
@@ -111,13 +121,13 @@ const LoginModal = () => {
                   ></path>
                 </svg>
               </button>
-              <button class="loginIconspan">
+              <button className="loginIconspan">
                 <span>Facebook</span>
               </button>
             </div>
 
-            <div class="loginIcon1">
-              <button class="loginIconbutton3">
+            <div className="loginIcon1">
+              <button className="loginIconbutton3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23"
@@ -146,13 +156,13 @@ const LoginModal = () => {
                 </svg>
               </button>
 
-              <button class="loginIconspan">
+              <button className="loginIconspan">
                 <span>Google</span>
               </button>
             </div>
 
-            <div class="loginIcon1">
-              <button class="loginIconbutton4">
+            <div className="loginIcon1">
+              <button className="loginIconbutton4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="19"
@@ -167,18 +177,18 @@ const LoginModal = () => {
                 </svg>
               </button>
 
-              <button class="loginIconspan">
+              <button className="loginIconspan">
                 <span>Apple</span>
               </button>
             </div>
           </div>
         </div>
 
-        <div class="loginModalBottom">
-          <span class="bottom1">
+        <div className="loginModalBottom">
+          <span className="bottom1">
             걱정마세요! 여러분의 지원 활동은 SNS에 노출되지 않습니다.
           </span>
-          <span class="bottom2">
+          <span className="bottom2">
             <br />
             회원가입 시 <a href="">개인정보 처리방침</a>과
             <a href="">이용약관</a>을 확인하였으며, 동의합니다.

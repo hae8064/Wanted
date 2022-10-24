@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import { ReactComponent as SearchIcon } from "../../../assets/icon-search.svg";
-import { ReactComponent as SearchIcon2 } from "../../../assets/icon-search2.svg";
-import LoginModal from "../loginModal/LoginModal";
-import "./Header.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
+import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
+import DetailRecruitContainer from '../../DetailRecruit/DetailRecruitContainer';
+import LoginModal from '../loginModal/LoginModal';
+import './Header.css';
 
 function Header() {
   const [login, setLogin] = useState(false);
 
   const doLogin = () => {
-    setLogin(!login);
-    console.log(`값은 ?!! ${login}`);
+    setLogin(true);
+    // console.log(login);
   };
 
   return (
@@ -105,11 +107,18 @@ function Header() {
         {/* svg넣기 */}
         <SearchIcon2 />
 
-        <button className="login" onClick={doLogin}>
-          회원가입/로그인
-        </button>
+        <Link to="/login">
+          <button className="login" onClick={doLogin}>
+            회원가입/로그인
+          </button>
+          {/* {login && <LoginModal closeModal={() => setLogin(!login)} />} */}
+        </Link>
         <a className="companyService">기업 서비스</a>
       </div>
+      {login ? (
+        <LoginModal login={login} />
+      ) : // <LoginModal style={{ display: 'none' }} />
+      null}
     </div>
   );
 }

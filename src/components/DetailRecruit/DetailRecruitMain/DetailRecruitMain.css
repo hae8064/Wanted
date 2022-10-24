@@ -41,7 +41,7 @@
 }
 
 .slick-prev:before {
-  content: "";
+  content: '';
 }
 
 .slick-prev:before {
@@ -488,7 +488,7 @@ button.slick-arrow.slick-prev::before {
 } */
 
 .icon-ic_favorite_black_24px:before {
-  content: "\e99b";
+  content: '\e99b';
   margin-right: 5px;
 }
 
@@ -822,7 +822,7 @@ button.slick-arrow.slick-prev::before {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -834,7 +834,7 @@ button.slick-arrow.slick-prev::before {
 }
 
 .icon-logo_new:before {
-  content: "\e992";
+  content: '\e992';
 }
 
 .loginModalTopIcon button {
@@ -1156,7 +1156,7 @@ button.slick-arrow.slick-prev::before {
 
 .MobileInput_MobileInput_select_arrow__hLBUp.icon-arrow_right {
   transform: translateY(-50%);
-  content: "\e94f";
+  content: '\e94f';
 }
 
 .exampleNumber {
