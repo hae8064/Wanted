@@ -1,0 +1,281 @@
+.loginModal2 {
+  /* width: 400px;
+    height: 626px;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    z-index: 1; */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 400px;
+    height: 626px; */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  z-index: 5;
+}
+
+.loginModalContainer2 {
+  width: 400px;
+  height: 640px;
+
+  /* max-height: calc(100vh - 150px); */
+  display: flex;
+  background-color: white;
+  z-index: 6;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 50px;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* .loginModalContainer2 > :-webkit-scrollbar {
+    display: none;
+  } */
+
+.loginModalTopIcon {
+  margin-top: 15px;
+  position: relative;
+}
+
+.loginModalTopIcon span {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.nameInput,
+.numberInput {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+.nameInput span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+  padding-bottom: 10px;
+}
+
+.nameInput input {
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.numberInput span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+  padding-bottom: 10px;
+}
+
+.numberSelectInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phoneNumber {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #e1e2e3;
+  padding: 0 5px;
+}
+
+.MobileInput_MobileInput_select_arrow__hLBUp.icon-arrow_right {
+  transform: translateY(-50%);
+  content: '\e94f';
+}
+
+.exampleNumber {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.exampleNumber input {
+  width: 65%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.exampleNumber button {
+  height: 54px;
+  border-radius: 5px;
+  background-color: none;
+
+  color: #ccc;
+  border: none;
+  width: 30%;
+  margin-left: 10px;
+}
+
+.exampleNumber button span {
+  font-weight: 700;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.numberResult input {
+  margin-top: 10px;
+  width: 98%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  border: 1px solid #e1e2e3;
+  background-color: #f2f4f7;
+  padding-left: 10px;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.passwordTop {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  margin-top: 20px;
+}
+
+.passwordTop span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #767676;
+}
+
+.password input {
+  margin-top: 5px;
+  width: 98%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333;
+  padding-left: 10px;
+}
+
+.passwordTop span {
+  color: #767676;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+.passwordCheck {
+  margin: 0 15px;
+  margin-top: 20px;
+}
+
+.passwordCheck span {
+  color: #767676;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+.passwordCheck input {
+  font-size: 15px;
+  color: #333;
+}
+
+.agreementCheck {
+  display: flex;
+  margin: 0 15px;
+  margin-top: 20px;
+  align-content: center;
+  border-bottom: 1px solid #dfdddd;
+  padding-bottom: 10px;
+}
+
+.checkButton svg {
+  width: 17px;
+  height: 17px;
+  color: #ececec;
+  margin-right: 13px;
+}
+
+.allAgreement span {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 15px;
+}
+
+.agreementTop {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  margin-top: 5px;
+}
+
+.AgreementMiddle span {
+  color: #939393;
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+.rightA a {
+  font-size: 13px;
+  line-height: 19px;
+  color: #767676;
+  text-decoration: none;
+}
+
+.rightB a {
+  font-size: 13px;
+  line-height: 19px;
+  color: #767676;
+  text-decoration: none;
+  margin-left: 24px;
+}
+
+.agreementBottom {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.submitButton button {
+  width: 94%;
+  background-color: #f2f4f7;
+  border: 1px solid #e1e2e3;
+  height: 54px;
+  border-radius: 27px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #cacaca;
+  margin: 0 10px;
+  position: sticky;
+  z-index: 9;
+  bottom: 0;
+  margin-left: 15px;
+}

@@ -1,22 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import './LoginModal.css';
+import { Link, useNavigate } from 'react-router-dom';
+import SignUpModal from '../SignUpModal/SignUpModal';
 
-const LoginModal = (login) => {
-  const [loginModal, setLoginModal] = useState('loginModal on');
+const LoginModal = ({ offLoginModal, containerState }) => {
+  const [loginModal, setLoginModal] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
+  const [nextPage, setNextPage] = useState(false);
 
-  const { loginData } = login;
   const closeModal = () => {
-    setLoginModal(!loginModal);
-    console.log(loginModal);
+    offLoginModal(loginModal);
+    // console.log(onContainer);
+    // console.log(containerState);
   };
 
+  const signUp = () => {};
+
+  const emailRegEx =
+    /^[A-Za-z0-9]([-_.]?[A-Za-z0-9])*@[A-Za-z0-9]([-_.]?[A-Za-z0-9])*\.[A-Za-z]{2,3}$/;
+
+  const emailCheck = (username) => {
+    if (emailRegEx.test(username)) {
+      console.log('이메일 형식 맞습니다.');
+      setNextPage(true);
+    } else {
+      setNextPage(false);
+      alert('이메일 형식이 아닙니다.');
+    }
+  };
+
+  const navigate = useNavigate();
+
   return (
-    <section className="loginModal on">
+    <section className="loginModal {containerState} ">
       <div className="loginModalContainer">
         <div className="loginModalTop">
           <div className="loginModalTopIcon">
             <i className="icon-logo_new"></i>
-            <button>
+            <button onClick={() => navigate(-1)}>
               <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
                 <path
                   fill="currentColor"
@@ -46,36 +67,75 @@ const LoginModal = (login) => {
               type="email"
               className="inputEmail"
               placeholder="이메일을 입력해 주세요."
+              onChange={(e) => setUserEmail(e.target.value)}
             />
           </div>
-          <button
-            className="loginModalButton"
-            type="submit"
-            //onclick="emailValidation"
-            // onClick="emailValidation"
-          >
-            <div className="loginIcon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
+          {nextPage ? (
+            <Link to="/signUp">
+              {/* <button
+                className="loginModalButton"
+                type="submit"
+                //onclick="emailValidation"
+                // onClick="emailValidation"
+                onClick={() => emailCheck(userEmail)}
               >
-                <g
-                  fill="none"
-                  fill-rule="evenodd"
-                  stroke="#FFF"
-                  stroke-width="2"
+                <div className="loginIcon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="#FFF"
+                      stroke-width="2"
+                    >
+                      <rect
+                        width="17.2"
+                        height="14"
+                        x="3.4"
+                        y="5"
+                        rx="3"
+                      ></rect>
+                      <path d="M3.2 5.6L12 12l8.8-6.4"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div className="loginText">이메일로 계속하기</div>
+              </button> */}
+              <SignUpModal />
+            </Link>
+          ) : (
+            <button
+              className="loginModalButton"
+              type="submit"
+              //onclick="emailValidation"
+              // onClick="emailValidation"
+              onClick={() => emailCheck(userEmail)}
+            >
+              <div className="loginIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
                 >
-                  <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect>
-                  <path d="M3.2 5.6L12 12l8.8-6.4"></path>
-                </g>
-              </svg>
-            </div>
-            <div className="loginText" onClick={closeModal}>
-              이메일로 계속하기
-            </div>
-          </button>
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="#FFF"
+                    stroke-width="2"
+                  >
+                    <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect>
+                    <path d="M3.2 5.6L12 12l8.8-6.4"></path>
+                  </g>
+                </svg>
+              </div>
+              <div className="loginText">이메일로 계속하기</div>
+            </button>
+          )}
 
           <div className="loginModalOr">
             <span>or</span>

@@ -6,11 +6,11 @@ import DetailRecruitContainer from '../../DetailRecruit/DetailRecruitContainer';
 import LoginModal from '../loginModal/LoginModal';
 import './Header.css';
 
-function Header() {
-  const [login, setLogin] = useState(false);
+function Header({ onContainer }) {
+  const [login, setLogin] = useState({ onContainer });
 
   const doLogin = () => {
-    setLogin(true);
+    console.log(onContainer);
     // console.log(login);
   };
 
@@ -115,10 +115,6 @@ function Header() {
         </Link>
         <a className="companyService">기업 서비스</a>
       </div>
-      {login ? (
-        <LoginModal login={login} />
-      ) : // <LoginModal style={{ display: 'none' }} />
-      null}
     </div>
   );
 }

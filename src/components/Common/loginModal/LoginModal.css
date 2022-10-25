@@ -22,6 +22,9 @@
   z-index: 5;
 }
 
+.loginModal .off {
+  display: none;
+}
 .loginModalContainer {
   width: 400px;
   height: 640px;

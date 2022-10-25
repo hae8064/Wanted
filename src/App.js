@@ -11,9 +11,15 @@ import GridContainer from './components/DevelopPage/GridContainer/GridContainer'
 import DetailRecruitContainer from './components/DetailRecruit/DetailRecruitContainer';
 import LoginModal from './components/Common/loginModal/LoginModal';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SignUpModal from './components/Common/SignUpModal/SignUpModal';
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const [on, setOn] = useState('on');
+  const [off, setOff] = useState('off');
+
+  const offLoginModal = (e) => {
+    console.log(e);
+  };
 
   return (
     <div>
@@ -22,7 +28,21 @@ function App() {
       {/* <LoginModal /> */}
       <Routes>
         <Route path="/" element={<DetailRecruitContainer />} />
-        <Route path="/login" element={<LoginModal />} />
+        {offLoginModal ? (
+          <Route
+            path="/login"
+            element={
+              <LoginModal offLoginModal={offLoginModal} containerState={on} />
+            }
+          />
+        ) : (
+          <Route path="/login" element={<LoginModal containerState={off} />} />
+        )}
+        <Route path="/signUp" element={<SignUpModal />} />
+        {/* <Route
+          path="/login"
+          element={<LoginModal offLoginModal={offLoginModal} containerState={}/>}
+        /> */}
       </Routes>
       {/* main 페이지 */}
       {/* <Header />

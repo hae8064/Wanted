@@ -1,8 +1,8 @@
-import React from "react";
-import "./DetailRecruitMain.css";
-import Slider from "react-slick";
-import { ReactComponent as LinkIcon } from "../../../assets/linkIcon.svg";
-import { ReactComponent as BookMarkIcon } from "../../../assets/bookmarkWhite.svg";
+import React from 'react';
+import './DetailRecruitMain.css';
+import Slider from 'react-slick';
+import { ReactComponent as LinkIcon } from '../../../assets/linkIcon.svg';
+import { ReactComponent as BookMarkIcon } from '../../../assets/bookmarkWhite.svg';
 
 function DetailRecruitMain() {
   const setting = {
@@ -19,7 +19,7 @@ function DetailRecruitMain() {
     // },
     // prevArrow: "<button type='button' className='slick-prev'></button>", // 이전 화살표 모양 설정
     // nextArrow: "<button type='button' className='slick-next'></button>",
-    dotsClass: "slick-dots",
+    dotsClass: 'slick-dots',
   };
 
   return (
@@ -45,8 +45,6 @@ function DetailRecruitMain() {
                 alt="blue배경"
               />
             </div>
-
-            <div class="swiper-scrollbar"></div>
           </Slider>
         </div>
       </div>

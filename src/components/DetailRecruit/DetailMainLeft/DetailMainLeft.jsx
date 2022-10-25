@@ -1,5 +1,5 @@
-import React from "react";
-import "./DetailMainLeft.css";
+import React from 'react';
+import './DetailMainLeft.css';
 
 const DetailMainLeft = () => {
   return (
