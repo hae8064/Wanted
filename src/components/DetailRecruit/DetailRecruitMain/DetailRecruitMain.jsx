@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './DetailRecruitMain.css';
 import Slider from 'react-slick';
 import { ReactComponent as LinkIcon } from '../../../assets/linkIcon.svg';
 import { ReactComponent as BookMarkIcon } from '../../../assets/bookmarkWhite.svg';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function DetailRecruitMain() {
   const setting = {

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { ReactComponent as SearchIcon } from "../../../assets/icon-search.svg";
-import { ReactComponent as SearchIcon2 } from "../../../assets/icon-search2.svg";
-import LoginModal from "../loginModal/LoginModal";
-import Hamburger from "./Hamburger";
-import "./Header.css";
+import React, { useState } from 'react';
+import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
+import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
+import LoginModal from '../loginModal/LoginModal';
+import Hamburger from './Hamburger';
+import './Header.css';
 
 function Header() {
   const [login, setLogin] = useState(false);
@@ -117,7 +117,7 @@ function Header() {
           <a className="companyService">기업 서비스</a>
         </div>
       </div>
-      <Hamburger setHamHover={setHamHover} view={hamhover ? "on" : "off"} />
+      <Hamburger setHamHover={setHamHover} view={hamhover ? 'on' : 'off'} />
     </>
   );
 }
