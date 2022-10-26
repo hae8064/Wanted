@@ -3,6 +3,7 @@ import "./MainEventBanner.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { SampleNextArrow, SamplePrevArrow } from "../../../assets/SlickButtons";
 
 function MainEventBanner() {
   const settings = {
@@ -16,8 +17,8 @@ function MainEventBanner() {
     centerMode: true,
     centerPadding: "220px",
     // centerRightPadding: "10px",
-    // nextArrow: ,
-    // prevArrow: ,
+    nextArrow: <SamplePrevArrow className="slick-prev2" />,
+    prevArrow: <SampleNextArrow />,
   };
 
   return (
@@ -70,17 +71,5 @@ function MainEventBanner() {
     </div>
   );
 }
-
-const Next = () => {
-  <>
-    <div></div>
-  </>;
-};
-
-const Prev = () => {
-  <>
-    <div></div>
-  </>;
-};
 
 export default MainEventBanner;

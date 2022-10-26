@@ -1,0 +1,196 @@
+.workerBottomContainer {
+  display: flex;
+}
+
+/* .workerBottomContainer :nth-child(3) {
+  margin-top: 10px;
+} */
+
+.articleBottom.three {
+  margin-top: 50px;
+}
+.articleBottom {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.articleBottom a {
+  text-decoration: none;
+}
+
+.articleBottom img {
+  width: 250px;
+  height: 175px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomTitle {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.bottomTag {
+  margin-top: 10px;
+  color: rgb(122, 122, 122);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+
+.articleContainer2 {
+  margin-top: 50px;
+  border-top: 1px solid rgb(228, 226, 226);
+}
+
+.vodContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomTitle1 {
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  list-style: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #333;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  font-size: 13px;
+}
+
+.bottomTitle2 {
+  width: 270px;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  list-style: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  font-weight: 700;
+  color: #333;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.bottomTag3 {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 50px;
+  line-height: 1.42857143;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  list-style: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #aaa;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+}
+
+.contentsRecommentclassName {
+  margin-top: 60px;
+  background-image: linear-gradient(
+    90deg,
+    #01a9fe -12%,
+    #2f5fef 37%,
+    #046afe 72%,
+    #00d2dd 110%
+  );
+  /* background-color: #36f; */
+  border-radius: 38.5px;
+  padding: 21px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentsRecomment {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.bottomContainer3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 14px;
+}
+
+.articleBottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  overflow: hidden;
+}
+
+.articleTop svg {
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.articleTop svg {
+  width: 16px;
+  height: 16px;
+}
+
+.svgLeftButton {
+  margin-top: 8px;
+}
+
+.svgRightButton {
+  margin-top: 8px;
+}
+
+.articleWhole {
+  display: flex;
+}
+
+.svgCenterButton {
+  margin-left: 5px;
+}

@@ -8,7 +8,7 @@
   justify-content: space-between;
 }
 
-.slide2 {
+/* .slide2 {
   width: 700px;
   height: 490px;
   margin-left: 200px;
@@ -29,7 +29,6 @@
 .slick-prev.slick-arrow::before {
   border: none;
   width: 30px;
-  /* color: #b5b5b5; */
   opacity: 0.1;
   font-size: 26px;
   background-color: transparent;
@@ -41,7 +40,7 @@
 }
 
 .slick-prev:before {
-  content: '';
+  content: "";
 }
 
 .slick-prev:before {
@@ -63,25 +62,27 @@
 
 button.slick-arrow.slick-prev::before {
   display: none;
-}
+} */
+
+/*
 .slick-next.slick-arrow::before {
   font-size: 26px;
   border: none;
   width: 30px;
-  /* color: #b5b5b5; */
   opacity: 0.1;
   font-size: 26px;
   background-color: transparent;
 }
+*/
 
-.slick-arrow.slick-prev {
-  text-indent: -9999px; /* sends the text off-screen */
+/* .slick-arrow.slick-prev {
+  text-indent: -9999px;
 }
 
 .slick-arrow.slick-next {
-  text-indent: -9999px; /* sends the text off-screen */
-}
-.slick-dots {
+  text-indent: -9999px; 
+} */
+/* .slick-dots {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   list-style: none;
@@ -115,7 +116,7 @@ button.slick-arrow.slick-prev::before {
 .sliderImg2 img {
   width: 100%;
   height: 100%;
-}
+} */
 
 .leftSubTitle {
   display: flex;
@@ -488,7 +489,7 @@ button.slick-arrow.slick-prev::before {
 } */
 
 .icon-ic_favorite_black_24px:before {
-  content: '\e99b';
+  content: "\e99b";
   margin-right: 5px;
 }
 
@@ -822,7 +823,7 @@ button.slick-arrow.slick-prev::before {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -834,7 +835,7 @@ button.slick-arrow.slick-prev::before {
 }
 
 .icon-logo_new:before {
-  content: '\e992';
+  content: "\e992";
 }
 
 .loginModalTopIcon button {
@@ -1156,7 +1157,7 @@ button.slick-arrow.slick-prev::before {
 
 .MobileInput_MobileInput_select_arrow__hLBUp.icon-arrow_right {
   transform: translateY(-50%);
-  content: '\e94f';
+  content: "\e94f";
 }
 
 .exampleNumber {

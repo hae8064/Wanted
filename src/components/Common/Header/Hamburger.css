@@ -1,0 +1,273 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css%22");
+
+@font-face {
+  font-family: "icomoon";
+  src: url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.eot?8et930");
+  src: url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.eot?8et930#iefix")
+      format("embedded-opentype"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.woff2?8et930")
+      format("woff2"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.ttf?8et930")
+      format("truetype"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.woff?8et930")
+      format("woff"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.svg?8et930#icomoon")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.eot?8et930");
+  src: url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.eot?8et930#iefix")
+      format("embedded-opentype"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.woff2?8et930")
+      format("woff2"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.ttf?8et930")
+      format("truetype"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.woff?8et930")
+      format("woff"),
+    url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.svg?8et930#icomoon")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon" !important;
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mainHamburger.off {
+  display: none;
+}
+
+.mainHamburgerContainer {
+  border-left: 1px solid #f7f9fa;
+  border-right: 1px solid #f7f9fa;
+  height: calc(100vh - 50px);
+  width: 220px;
+  background-color: #fff;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 10;
+  left: 180px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+}
+
+/* .mainHamburger.on {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+}
+*/
+
+.mainHamburger.on {
+  display: flex;
+}
+
+.mainHamburgerTitle {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  padding: 0 20px;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 2.86;
+  letter-spacing: normal;
+  color: #333;
+}
+
+.mainHamburger.on ul {
+  list-style: none;
+}
+
+.mainHamburgerTitle {
+  padding: 0;
+}
+
+.hamburgerSubList {
+  justify-content: flex-start;
+}
+
+.hamburgerSubList li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  /* padding: 0 20px; */
+  width: 100%;
+
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #333;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 200px;
+}
+
+.Explore_GigsCategoryItem__l4LhT.Explore_hasCurrentCategory__wxhIs {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 50px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  padding: 8px 20px;
+}
+
+.Explore_GigsCategoryItem_link__OlnwE {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 50px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  text-decoration: inherit;
+  cursor: pointer;
+  color: inherit;
+  align-items: center;
+  flex: 1 1;
+  width: 100%;
+  display: block;
+  height: max-content;
+  background-color: #fff !important;
+  padding: 0 18px 0 0;
+}
+
+.Explore_GigsCategoryItem_banner__eRpF8 {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 50px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  list-style: none;
+  cursor: pointer;
+  color: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background: #f5f7ff
+    url(https://image.wanted.co.kr/gigs/www/wanted/gigs_banner_background_img.png)
+    no-repeat 100%;
+  background-size: 160px 50px;
+}
+
+.Explore_GigsCategoryItem_banner__eRpF8 span {
+  margin-left: 16px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #0a4ff4;
+}
+
+.mainHamburgerTitle:hover {
+  color: blue;
+  background-color: #f7f9fa;
+}
+
+.hamburgerSubList li:hover {
+  color: blue;
+  background-color: #f7f9fa;
+}
+
+.container.develop {
+  background-color: #f7f9fa;
+  height: 447px;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 400px;
+  top: 50px;
+  z-index: 10;
+  display: block;
+}
+
+.container.develop ul {
+  width: 800px;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  position: relative;
+}
+
+.hamSubTitle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  padding: 0 20px;
+  height: 40px;
+}
+
+.hamSubTitle span {
+  padding-top: 14px;
+  display: inline-block;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  vertical-align: middle;
+  max-width: 140px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

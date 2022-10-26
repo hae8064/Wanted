@@ -1,6 +1,6 @@
-import React from 'react';
-import './SignUpModal.css';
-import { useNavigate } from 'react-router';
+import React from "react";
+import "./SignUpModal.css";
+import { useNavigate } from "react-router";
 
 const SignUpModal = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const SignUpModal = () => {
       <div class="loginModalContainer2">
         <div class="loginModalTopIcon">
           <span>회원가입</span>
-          <button onClick={() => navigate(-2)}>
+          <button onClick={() => navigate(-1)}>
             <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
               <path
                 fill="currentColor"
@@ -219,7 +219,7 @@ const SignUpModal = () => {
             <span>비밀번호</span>
             <input type="password" placeholder="비밀번호를 입력해 주세요." />
             <span class="passwordFooter">
-              영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{' '}
+              영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{" "}
               <br /> 입력해 주세요.
             </span>
           </div>
