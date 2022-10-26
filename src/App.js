@@ -15,8 +15,9 @@ import SignUpModal from './components/Common/SignUpModal/SignUpModal';
 import MainContainer from './components/MainPage/MainContainer';
 
 function App() {
-  const [on, setOn] = useState('on');
+  const [on, setOn] = useState('off');
   const [off, setOff] = useState('off');
+  const [loginModal, setLoginModal] = useState('off');
 
   const offLoginModal = (e) => {
     console.log(e);
@@ -24,22 +25,26 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header setOn={setOn} />
 
       {/* <LoginModal /> */}
       <Routes>
         <Route path="/" element={<MainContainer />} />
         <Route path="/detailRecruit" element={<DetailRecruitContainer />} />
-        {offLoginModal ? (
+        {on === 'on' ? (
           <Route
             path="/login"
             element={
-              <LoginModal offLoginModal={offLoginModal} containerState={on} />
+              <LoginModal
+                offLoginModal={offLoginModal}
+                containerState={setOn}
+              />
             }
           />
         ) : (
           <Route path="/login" element={<LoginModal containerState={off} />} />
         )}
+
         <Route path="/signUp" element={<SignUpModal />} />
       </Routes>
       {/* main 페이지 */}

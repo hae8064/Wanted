@@ -32,7 +32,7 @@ const LoginModal = ({ offLoginModal, containerState }) => {
   const navigate = useNavigate();
 
   return (
-    <section className="loginModal {containerState} ">
+    <section className="loginModal">
       <div className="loginModalContainer">
         <div className="loginModalTop">
           <div className="loginModalTopIcon">
@@ -126,7 +126,7 @@ const LoginModal = ({ offLoginModal, containerState }) => {
                     fill="none"
                     fill-rule="evenodd"
                     stroke="#FFF"
-                    stroke-width="2"
+                    strokeWidth="2"
                   >
                     <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect>
                     <path d="M3.2 5.6L12 12l8.8-6.4"></path>
