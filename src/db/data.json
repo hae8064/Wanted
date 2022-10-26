@@ -10,7 +10,7 @@
     },
     {
       "title": "마케팅광고",
-      "subSection": "develop"
+      "subSection": "marketing"
     },
     {
       "title": "디자인",
@@ -22,11 +22,11 @@
     },
     {
       "title": "고객서비스리테일",
-      "subSection": "develop"
+      "subSection": "marketing"
     },
     {
       "title": "HR",
-      "subSection": "develop"
+      "subSection": "marketing"
     },
     {
       "title": "게임제작",
@@ -42,7 +42,7 @@
     },
     {
       "title": "금융",
-      "subSection": "develop"
+      "subSection": "marketing"
     },
     {
       "title": "제조생산",
@@ -54,11 +54,11 @@
     },
     {
       "title": "의료제약바이오",
-      "subSection": "develop"
+      "subSection": "marketing"
     },
     {
       "title": "교육",
-      "subSection": "develop"
+      "subSection": "marketing"
     },
     {
       "title": "식음료",
@@ -79,7 +79,7 @@
   ],
   "develop": [
     {
-      "title": "경영지원"
+      "title": "개발전체"
     },
     {
       "title": "자금담당"

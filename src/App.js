@@ -13,6 +13,7 @@ import LoginModal from './components/Common/loginModal/LoginModal';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SignUpModal from './components/Common/SignUpModal/SignUpModal';
 import MainContainer from './components/MainPage/MainContainer';
+import DevelopContainer from './components/DevelopPage/DevelopContainer';
 
 function App() {
   const [on, setOn] = useState('off');
@@ -46,6 +47,7 @@ function App() {
         )}
 
         <Route path="/signUp" element={<SignUpModal />} />
+        <Route path="/developPage" element={<DevelopContainer />} />
       </Routes>
       {/* main 페이지 */}
       {/* <Header />

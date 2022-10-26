@@ -1,21 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./Hamburger.css";
-import dummy from "../../../db/data.json";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Hamburger.css';
+import dummy from '../../../db/data.json';
 
 const Hamburger = ({ view, setHamHover }) => {
   const [viewContainer, setViewContainer] = useState(view);
-  const [subTitle, setSubTitle] = useState("");
+  const [subTitle, setSubTitle] = useState('');
 
   console.log(`mainHamburger ` + view);
   return (
     <div
-      className={"mainHamburger " + view}
+      className={'mainHamburger ' + view}
       onMouseLeave={() => setHamHover(false)}
     >
       <div className="mainHamburgerContainer">
         <ul className="hamburgerSubList">
-          <Link to="/" style={{ textDecoration: "none", marginBottom: 0 }}>
+          <Link
+            to="/developPage"
+            style={{ textDecoration: 'none', marginBottom: 0 }}
+          >
             <em>
               <span className="mainHamburgerTitle">직군전체</span>
             </em>
@@ -46,11 +49,11 @@ const Hamburger = ({ view, setHamHover }) => {
         </ul>
       </div>
 
-      {subTitle === "" ? null : (
+      {subTitle === '' ? null : (
         <div
-          className={"container " + subTitle}
+          className={'container ' + subTitle}
           style={
-            subTitle === "develop" ? { width: "800px" } : { width: "600px" }
+            subTitle === 'develop' ? { width: '650px' } : { width: '450px' }
           }
         >
           <ul>
