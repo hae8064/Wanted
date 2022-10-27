@@ -15,10 +15,7 @@ const Hamburger = ({ view, setHamHover }) => {
     >
       <div className="mainHamburgerContainer">
         <ul className="hamburgerSubList">
-          <Link
-            to="/developPage"
-            style={{ textDecoration: 'none', marginBottom: 0 }}
-          >
+          <Link to="/" style={{ textDecoration: 'none', marginBottom: 0 }}>
             <em>
               <span className="mainHamburgerTitle">직군전체</span>
             </em>
@@ -59,9 +56,15 @@ const Hamburger = ({ view, setHamHover }) => {
           <ul>
             {dummy.develop.map((data) => (
               <li key={data.index} className="hamSubTitle">
-                <Link to="/">
-                  <span>{data.title}</span>
-                </Link>
+                {data.title === '개발전체' ? (
+                  <Link to="/developPage">
+                    <span>{data.title}</span>
+                  </Link>
+                ) : (
+                  <Link to="/">
+                    <span>{data.title}</span>
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
