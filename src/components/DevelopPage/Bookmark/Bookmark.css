@@ -135,11 +135,7 @@ footer img {
   top: 120px;
 }
 
-.mainTitle {
-  margin-left: 10px;
-}
-
-.mainBookMark {
+.devMainTitle {
   margin-left: 10px;
 }
 
@@ -147,4 +143,7 @@ footer img {
   color: #999;
   margin-top: 1px;
   font-size: 14px;
+}
+.mainBookMark {
+  margin-left: 8px;
 }

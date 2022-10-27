@@ -16,7 +16,7 @@ function Bookmark() {
         </svg>
       </button>
 
-      <div class="mainTitle">
+      <div class="devMainTitle">
         <h3>적극 채용 중인 회사</h3>
       </div>
 
