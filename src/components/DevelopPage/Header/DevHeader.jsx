@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Header from '../../Common/Header/Header';
 import './DevHeader.css';
+import { throttle } from 'lodash';
 
 function DevHeader() {
+  const [scrollEvent, setScrollEvent] = useState(false);
+
+  const onScrollFn = useMemo(
+    () =>
+      throttle(() => {
+        if (window.scrollY > 200) {
+          //scroll 높이 200 이상시
+          setScrollEvent(true); //useState를 이용해 view컨트롤
+        } else {
+          setScrollEvent(false);
+        }
+      }, 100),
+    []
+  );
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScrollFn);
+    return () => {
+      //컴포넌트 나갈 떄 작동
+      window.removeEventListener('scroll', onScrollFn);
+    };
+  }, []);
   return (
     <>
       <div class="headerTitle">
@@ -191,7 +214,11 @@ function DevHeader() {
           </div>
         </div>
 
-        <p className="headerLastP"></p>
+        {scrollEvent ? (
+          <p className="headerLastP2"></p>
+        ) : (
+          <p className="headerLastP"></p>
+        )}
       </div>
     </>
   );

@@ -313,6 +313,10 @@
   border-bottom: 1px solid #ececec;
 }
 
+.headerLastP2 {
+  border-bottom: 1px solid blue;
+}
+
 .BottomTrack1 {
   display: flex;
 
