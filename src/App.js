@@ -31,7 +31,7 @@ function App() {
       {/* <LoginModal /> */}
       <Routes>
         <Route path="/" element={<MainContainer />} />
-        <Route path="/detailRecruit" element={<DetailRecruitContainer />} />
+        <Route path="/detailRecruit/:id" element={<DetailRecruitContainer />} />
         {on === 'on' ? (
           <Route
             path="/login"

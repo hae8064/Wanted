@@ -7,7 +7,11 @@ function GridContainer() {
   return (
     <div class="devGridContainer">
       {dummy.developGridContainer.map((container) => (
-        <Link to="/" className="gridContainerFirst">
+        <Link
+          key={container.index}
+          to={`/detailRecruit/${container.id}`}
+          className="gridContainerFirst"
+        >
           <header>
             <svg
               class="bookmarkButton"
