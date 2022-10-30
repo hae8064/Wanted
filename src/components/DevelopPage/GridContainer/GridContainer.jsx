@@ -8,7 +8,7 @@ function GridContainer() {
     <div class="devGridContainer">
       {dummy.developGridContainer.map((container) => (
         <Link
-          key={container.index}
+          key={container.id}
           to={`/detailRecruit/${container.id}`}
           className="gridContainerFirst"
         >

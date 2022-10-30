@@ -1039,5 +1039,79 @@
       "country": "한국",
       "price": "500000"
     }
+  ],
+  "manyButtons": [
+    {
+      "className": "manybuttons career",
+      "spanText": "커리어고민"
+    },
+    {
+      "className": "manybuttons companylife",
+      "spanText": "회사생활"
+    },
+    {
+      "className": "manybuttons curture",
+      "spanText": "조직문화"
+    },
+    {
+      "className": "manybuttons passmove",
+      "spanText": "취업/이직"
+    },
+    {
+      "className": "manybuttons leader",
+      "spanText": "리더십"
+    },
+    {
+      "className": "manybuttons personrel",
+      "spanText": "인간관계"
+    },
+    {
+      "className": "manybuttons lifestyle",
+      "spanText": "라이프스타일"
+    },
+    {
+      "className": "manybuttons ittech",
+      "spanText": "IT/기술"
+    },
+    {
+      "className": "manybuttons contents",
+      "spanText": "콘텐츠제작"
+    },
+    {
+      "className": "manybuttons develop",
+      "spanText": "개발"
+    },
+    {
+      "className": "manybuttons service",
+      "spanText": "서비스기획"
+    },
+    {
+      "className": "manybuttons marketing",
+      "spanText": "마케팅"
+    },
+    {
+      "className": "manybuttons md",
+      "spanText": "MD"
+    },
+    {
+      "className": "manybuttons career",
+      "spanText": "커리어고민"
+    },
+    {
+      "className": "manybuttons companylife",
+      "spanText": "회사생활"
+    },
+    {
+      "className": "manybuttons curture",
+      "spanText": "조직문화"
+    },
+    {
+      "className": "manybuttons passmove",
+      "spanText": "취업/이직"
+    },
+    {
+      "className": "manybuttons leader",
+      "spanText": "리더십"
+    }
   ]
 }

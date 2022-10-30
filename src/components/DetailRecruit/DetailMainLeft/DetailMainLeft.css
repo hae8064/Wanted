@@ -122,41 +122,6 @@
   font-weight: 600;
 }
 
-.mapTitle {
-  margin-bottom: 20px;
-}
-
-.mapTitleLeft {
-  color: #999;
-  width: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  margin-right: 45px;
-}
-
-.mapTitleRight,
-.mapSubTitleRight {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
-
-.mapSubTitleLeft {
-  color: #999;
-  width: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  margin-right: 30px;
-}
-
-.imgMap img {
-  margin-top: 20px;
-  width: 700px;
-  height: 254px;
-  object-fit: fill;
-  margin-bottom: 70px;
-}
-
 .bottomBanner {
   display: flex;
   border-radius: 3px;
