@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps';
 
-const NaverMapContainer = ({ mapLat, mapLng }) => {
+const NaverMapContainer = ({ props }) => {
   const NAVER_API_KEY = process.env.REACT_APP_NAVER_MAP_API_KEY;
   const mapRef = useRef(null);
 
@@ -52,21 +52,16 @@ const NaverMapContainer = ({ mapLat, mapLng }) => {
     //     zoomControl={true} // 지도 zoom 허용
     //   />
     // </RenderAfterNavermapsLoaded>
-
-    <RenderAfterNavermapsLoaded // render 후 지도 호출(비동기 랜더링)
-      ncpClientId={'Client ID'} // 지도서비스 Client ID
-      error={<p>error</p>}
-      loading={<p>Maps Loading</p>}
-      submodules={['geocoder']} //추가로 사용할 서브모듈이 있는경우
-    >
-      <NaverMap
-        id="react-naver-maps"
-        style={{ width: '100%', height: '100vh' }}
-        center={{ lat: mapLat, lng: mapLng }}
-      >
-        <Marker position={{ lat: mapLat, lng: mapLng }} />
-      </NaverMap>
-    </RenderAfterNavermapsLoaded>
+    <NaverMap
+      mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
+      style={{
+        width: '100%', // 네이버지도 가로 길이
+        height: '85vh', // 네이버지도 세로 길이
+      }}
+      defaultCenter={{ lat: 37.5408428, lng: 126.9458903 }} // 지도 초기 위치
+      defaultZoom={21} // 지도 초기 확대 배율
+      zoomControl={true}
+    />
   );
 };
 

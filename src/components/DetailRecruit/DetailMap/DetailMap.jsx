@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './DetailMap.css';
 import NaverMapContainer from './NaverMap';
 
 const DetailMap = () => {
-  let mapLat = '37.3595704';
-  let mapLng = '127.105399';
   // const mapElement = useRef(null);
 
   // useEffect(() => {
@@ -41,13 +40,15 @@ const DetailMap = () => {
           서울 용산구 한강대로 366 트윈시티 남산 2 패스트파이브
         </span>
       </div>
-      <div class="imgMap">
-        <img
-          src="/imgs/11111.png"
-          alt=""
-          onClick={<NaverMapContainer mapLat={mapLat} mapLng={mapLng} />}
-        />
-      </div>
+      <Link to="/naverMap">
+        <div class="imgMap">
+          <img
+            src="/imgs/11111.png"
+            alt=""
+            onClick={console.log('네이버 api')}
+          />
+        </div>
+      </Link>
     </div>
   );
 };

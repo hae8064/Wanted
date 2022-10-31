@@ -14,6 +14,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SignUpModal from './components/Common/SignUpModal/SignUpModal';
 import MainContainer from './components/MainPage/MainContainer';
 import DevelopContainer from './components/DevelopPage/DevelopContainer';
+import NaverMapContainer from './components/DetailRecruit/DetailMap/NaverMap';
+import { RenderAfterNavermapsLoaded } from 'react-naver-maps';
 
 function App() {
   const [on, setOn] = useState('off');
@@ -23,6 +25,9 @@ function App() {
   const offLoginModal = (e) => {
     console.log(e);
   };
+
+  let mapLat = '37.3595704';
+  let mapLng = '127.105399';
 
   return (
     <div>
@@ -48,6 +53,16 @@ function App() {
 
         <Route path="/signUp" element={<SignUpModal />} />
         <Route path="/developPage" element={<DevelopContainer />} />
+        <Route
+          path="/naverMap"
+          element={
+            <RenderAfterNavermapsLoaded
+              ncpClientId={process.env.REACT_APP_NAVER_MAP_API_KEY} // 자신의 네이버 계정에서 발급받은 Client ID
+              error={<p>Maps Load Error</p>}
+              loading={<NaverMapContainer />}
+            ></RenderAfterNavermapsLoaded>
+          }
+        />
       </Routes>
       {/* main 페이지 */}
       {/* <Header />
