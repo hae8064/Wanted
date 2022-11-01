@@ -1,0 +1,7 @@
+.searchBarContaineroff {
+  display: none;
+}
+
+.searchBarContaineron {
+  display: flex;
+}

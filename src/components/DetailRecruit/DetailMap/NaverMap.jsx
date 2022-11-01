@@ -52,6 +52,17 @@ const NaverMapContainer = ({ props }) => {
     //     zoomControl={true} // 지도 zoom 허용
     //   />
     // </RenderAfterNavermapsLoaded>
+    // <NaverMap
+    //   mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
+    //   style={{
+    //     width: '100%', // 네이버지도 가로 길이
+    //     height: '85vh', // 네이버지도 세로 길이
+    //   }}
+    //   defaultCenter={{ lat: 37.5408428, lng: 126.9458903 }} // 지도 초기 위치
+    //   defaultZoom={21} // 지도 초기 확대 배율
+    //   zoomControl={true}
+    // />
+
     <NaverMap
       mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
       style={{
@@ -61,7 +72,13 @@ const NaverMapContainer = ({ props }) => {
       defaultCenter={{ lat: 37.5408428, lng: 126.9458903 }} // 지도 초기 위치
       defaultZoom={21} // 지도 초기 확대 배율
       zoomControl={true}
-    />
+    >
+      <Marker
+        position={{ lat: 37.5408428, lng: 126.9458903 }}
+        title={'고려빌딩'}
+        clickable={true}
+      />
+    </NaverMap>
   );
 };
 

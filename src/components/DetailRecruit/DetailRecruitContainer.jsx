@@ -225,7 +225,7 @@ function DetailRecruitContainer() {
             respone={card.respone}
             city={card.city}
             country={card.country}
-            price={card.price}
+            price={card.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           />
         ))}
       </div>

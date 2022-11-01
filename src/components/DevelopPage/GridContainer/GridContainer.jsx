@@ -45,7 +45,11 @@ function GridContainer() {
               {container.region} <span class="addressDot">.</span>{' '}
               <span>{container.country}</span>
             </span>
-            <span class="gridTitle4">채용보상금 {container.price}원</span>
+            <span class="gridTitle4">
+              채용보상금{' '}
+              {container.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              원
+            </span>
           </footer>
         </Link>
       ))}

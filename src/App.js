@@ -26,9 +26,6 @@ function App() {
     console.log(e);
   };
 
-  let mapLat = '37.3595704';
-  let mapLng = '127.105399';
-
   return (
     <div>
       <Header setOn={setOn} />

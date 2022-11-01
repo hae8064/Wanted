@@ -5,15 +5,22 @@ import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg'
 import LoginModal from '../loginModal/LoginModal';
 import Hamburger from './Hamburger';
 import './Header.css';
+import HeaderSearch from './HeaderSearch';
 
 function Header({ setOn }) {
   const [login, setLogin] = useState(false);
 
   const [hamhover, setHamHover] = useState(false);
 
+  const [searchOn, setSearchOn] = useState(false);
+
   const doLogin = () => {
     setLogin(!login);
     // console.log(setLoginModal);
+  };
+
+  const changeSearchOn = () => {
+    setSearchOn(false);
   };
 
   return (
@@ -111,7 +118,9 @@ function Header({ setOn }) {
 
         <div className="headerRight">
           {/* svg넣기 */}
-          <SearchIcon2 />
+          <div className="searchIconHeader" onClick={() => setSearchOn(true)}>
+            <SearchIcon2 />
+          </div>
 
           <Link to="/login">
             <button className="login" onClick={() => setOn('on')}>
@@ -122,6 +131,10 @@ function Header({ setOn }) {
         </div>
       </div>
       <Hamburger setHamHover={setHamHover} view={hamhover ? 'on' : 'off'} />
+      <HeaderSearch
+        on={searchOn ? 'on' : 'off'}
+        changeSearchOn={changeSearchOn}
+      />
     </>
   );
 }
