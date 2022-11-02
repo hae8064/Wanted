@@ -57,12 +57,26 @@
   flex-direction: column;
   position: fixed;
   z-index: 15;
-  bottom: 230px;
-  background-color: #fff;
-  padding: 0 190px;
-  padding-top: 60px;
+  /* bottom: 230px; */
+  /* padding: 0 190px; */
+  /* padding-top: 60px; */
   width: 100%;
+  /* height: 250px; */
+  height: 100%;
+  /* bottom: ; */
+  top: 10px;
+}
+
+.searchInputWhite {
+  padding: 0 190px;
   height: 250px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.searchBlack {
+  height: 100%;
+  background-color: rgba(76, 76, 76, 0.7);
 }
 
 .formSearch {
@@ -95,6 +109,10 @@
   color: #767676;
 }
 
+.formSearch form input:focus {
+  background-color: #fff;
+  outline-color: rgb(162, 162, 214);
+}
 .tagTop {
   display: flex;
   align-items: center;
@@ -110,6 +128,7 @@
 .tagBottom {
   width: 1130px;
   display: flex;
+  padding-bottom: 50px;
 }
 .tagTopLeft {
   font-size: 13px;
