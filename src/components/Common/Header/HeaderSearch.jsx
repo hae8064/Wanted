@@ -2,11 +2,13 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './HeaderSearch.css';
 import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
+import SearchResult from '../SearchResult/SearchResult';
 
 const HeaderSearch = ({ on, changeSearchOn }) => {
   const [searchView, setSearchView] = useState(on);
   let searchRef = useRef(null);
   const inputRef = useRef(null);
+  const [inputData, setInputData] = useState('');
 
   // 검색 리스트 렌더링용 (true이면 보여준다)
   let [inputFocus, setInputFocus] = useState(false);
@@ -21,6 +23,7 @@ const HeaderSearch = ({ on, changeSearchOn }) => {
         setSearchView('off');
         changeSearchOn();
         console.log('close');
+        setInputData('');
       }
       searchRef.current.focus();
     }
@@ -30,12 +33,19 @@ const HeaderSearch = ({ on, changeSearchOn }) => {
     return () => {
       document.removeEventListener('mousedown', handleOutside);
     };
-  }, [searchRef, searchView]);
+  }, [searchRef, searchView, inputData]);
 
   useLayoutEffect(() => {
     if (searchRef.current !== null) searchRef.current.focus();
   });
 
+  const onInputChange = (e) => {
+    setInputData(e.target.value);
+  };
+
+  const onSubmitData = (e) => {
+    <SearchResult title={setInputData} />;
+  };
   return (
     <div className={'searchBarContainer' + on}>
       {/* <div
@@ -46,13 +56,15 @@ const HeaderSearch = ({ on, changeSearchOn }) => {
     > */}
       <div className="searchInputWhite">
         <div className="formSearch">
-          <form action="">
+          <form action={`/search/${inputData}`} onClick={onSubmitData}>
             <SearchIcon2 className="searchIconInput" />
             <input
               ref={searchRef}
               type="search"
               placeholder="#태그, 회사, 포지션 검색"
               autoComplete="off"
+              onChange={onInputChange}
+              value={inputData}
             />
           </form>
         </div>

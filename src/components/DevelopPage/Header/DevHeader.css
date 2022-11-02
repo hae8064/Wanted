@@ -366,6 +366,167 @@
   margin-left: 5px;
 }
 
+.BottomTrack2 {
+  display: flex;
+
+  user-select: none;
+  box-sizing: border-box;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid transparent;
+  background: rgb(243, 249, 254);
+}
+
+.BottomTrack3 {
+  display: flex;
+  user-select: none;
+  box-sizing: border-box;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid transparent;
+  background: rgb(243, 242, 251);
+}
+
+.BottomTrack4 {
+  display: flex;
+  user-select: none;
+  box-sizing: border-box;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid transparent;
+  background: rgb(246, 248, 238);
+}
+
+.BottomTrack5 {
+  display: flex;
+  user-select: none;
+  box-sizing: border-box;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid transparent;
+  background: rgb(247, 242, 249);
+}
+
+.BottomTrack6 {
+  display: flex;
+  user-select: none;
+  box-sizing: border-box;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid transparent;
+  background: rgb(238, 250, 249);
+}
+
+.BottomTrack2 img,
+.BottomTrack3 img,
+.BottomTrack4 img,
+.BottomTrack5 img,
+.BottomTrack6 img {
+  user-select: none;
+  font: inherit;
+  text-transform: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
 .BottomTrackText {
   font-size: 12px;
   margin: 0px 8px 0px 0px;

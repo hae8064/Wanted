@@ -10,7 +10,7 @@ import Bookmark from './components/DevelopPage/Bookmark/Bookmark';
 import GridContainer from './components/DevelopPage/GridContainer/GridContainer';
 import DetailRecruitContainer from './components/DetailRecruit/DetailRecruitContainer';
 import LoginModal from './components/Common/loginModal/LoginModal';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import SignUpModal from './components/Common/SignUpModal/SignUpModal';
 import MainContainer from './components/MainPage/MainContainer';
 import DevelopContainer from './components/DevelopPage/DevelopContainer';
@@ -22,6 +22,7 @@ function App() {
   const [on, setOn] = useState('off');
   const [off, setOff] = useState('off');
   const [loginModal, setLoginModal] = useState('off');
+  const location = useLocation();
 
   const offLoginModal = (e) => {
     console.log(e);
@@ -61,7 +62,7 @@ function App() {
             ></RenderAfterNavermapsLoaded>
           }
         />
-        <Route path="/search" element={<SearchResult />} />
+        <Route path={`/search/:id`} element={<SearchResult />} />
       </Routes>
       {/* main 페이지 */}
       {/* <Header />

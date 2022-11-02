@@ -147,35 +147,35 @@ function DevHeader() {
                 alt=""
               />
             </button>
-            <button class="BottomTrack1">
+            <button class="BottomTrack2">
               <span class="BottomTrackText">재택근무</span>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F5d873f3a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
                 alt=""
               />
             </button>
-            <button class="BottomTrack1">
+            <button class="BottomTrack3">
               <span class="BottomTrackText">퇴사율 10% 이하</span>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F7d3cdb3c-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
                 alt=""
               />
             </button>
-            <button class="BottomTrack1">
+            <button class="BottomTrack4">
               <span class="BottomTrackText">급성장 중</span>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
                 alt=""
               />
             </button>
-            <button class="BottomTrack1">
+            <button class="BottomTrack5">
               <span class="BottomTrackText">병역특례</span>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F6eda33d2-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
                 alt=""
               />
             </button>
-            <button class="BottomTrack1">
+            <button class="BottomTrack6">
               <span class="BottomTrackText">50인 이하</span>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F3a965d18-c524-11ec-901c-acde48001122.png&w=50&q=75"
