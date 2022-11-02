@@ -1,0 +1,244 @@
+.searchResultContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ececec;
+}
+
+.searchTop {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 160px;
+  background-color: white;
+}
+
+.searchTopButton {
+  font-size: 48px;
+  color: #333;
+  line-height: 2;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.searchBottomContainer {
+  height: 100%;
+}
+
+.positionTop {
+  display: flex;
+  margin-left: 200px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: 15px;
+}
+
+.headerMiddlePosition {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 20px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* z-index: 2; */
+  margin-bottom: 30px;
+}
+
+.headerFilter {
+  display: flex;
+}
+
+.headerFilter button {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  margin-right: 10px;
+  position: relative;
+}
+
+.headerRegion {
+}
+
+.headerRegionLeft {
+  font: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #333;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.headerRegionRight {
+  font: inherit;
+  text-transform: none;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  letter-spacing: normal;
+  white-space: nowrap;
+  color: #36f !important;
+  font-weight: 600;
+  margin-right: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.headerRegionRightOne {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #36f;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerOld {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerOld svg {
+  margin-left: 10px;
+}
+
+.headerFilter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 500px;
+}
+
+.headerFilterRight button {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+}
+
+.headerStack {
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerFilterRightButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 160px;
+  width: 104px;
+}
+
+.headerFilterRightButton svg {
+  margin-left: 10px;
+}
+
+.headerMiddleP {
+  width: 74%;
+  border-top: 1px solid #ececec;
+  border-width: 50%;
+  margin-left: 200px;
+}
+
+.headerMiddleP {
+  width: 74%;
+  border-top: 1px solid lightgrey;
+  border-width: 50%;
+  margin-left: 200px;
+}
+
+.BottomSlickTrack {
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.manyleftButton {
+  position: absolute;
+  left: 200px;
+  top: 25px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e1e2e3;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.manyleftButton svg {
+  font-size: 18px;
+  color: #888;
+}
+
+.manyRightButton {
+  position: absolute;
+  right: 497px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e1e2e3;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.manyRightButton svg {
+  font-size: 18px;
+  color: #888;
+}
+
+.positionGrid {
+  margin-top: 20px;
+  display: grid;
+  /* grid-template-columns: 270px 270px 270px 270px; */
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px;
+  margin-left: 205px;
+  margin-right: 185px;
+}

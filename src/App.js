@@ -16,6 +16,7 @@ import MainContainer from './components/MainPage/MainContainer';
 import DevelopContainer from './components/DevelopPage/DevelopContainer';
 import NaverMapContainer from './components/DetailRecruit/DetailMap/NaverMap';
 import { RenderAfterNavermapsLoaded } from 'react-naver-maps';
+import SearchResult from './components/Common/SearchResult/SearchResult';
 
 function App() {
   const [on, setOn] = useState('off');
@@ -60,6 +61,7 @@ function App() {
             ></RenderAfterNavermapsLoaded>
           }
         />
+        <Route path="/search" element={<SearchResult />} />
       </Routes>
       {/* main 페이지 */}
       {/* <Header />
