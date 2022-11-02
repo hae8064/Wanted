@@ -37,44 +37,46 @@ const HeaderSearch = ({ on, changeSearchOn }) => {
     > */}
       <div className="formSearch">
         <form action="">
+          <SearchIcon2 className="searchIconInput" />
           <input
             type="search"
             placeholder="#태그, 회사, 포지션 검색"
             autoComplete="off"
           />
-          <SearchIcon2 />
         </form>
       </div>
 
       <div className="tagContainer">
         <div className="tagTop">
           <div className="tagTopLeft">추천태그로 검색해보세요</div>
-          <Link to="/">
-            <div className="tagTopRight">기업태그 홈 이동하기</div>
-            <svg width="12" height="12" viewBox="0 0 12 12">
-              <path
-                fill="currentColor"
-                d="M4.22 9.72a.75.75 0 001.06 1.06l4.25-4.25a.75.75 0 000-1.06L5.28 1.22a.75.75 0 00-1.06 1.06L7.94 6 4.22 9.72z"
-              ></path>
-            </svg>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <div className="tagTopRight">
+              기업태그 홈 이동하기
+              <svg width="12" height="12" viewBox="0 0 12 12">
+                <path
+                  fill="currentColor"
+                  d="M4.22 9.72a.75.75 0 001.06 1.06l4.25-4.25a.75.75 0 000-1.06L5.28 1.22a.75.75 0 00-1.06 1.06L7.94 6 4.22 9.72z"
+                ></path>
+              </svg>
+            </div>
           </Link>
         </div>
         <div className="tagBottom">
-          <ul>
+          <ul className="tagUl">
             <li className="tagListItem">
-              <button className="tagListButton">#수유실</button>
+              <button className="tagListButton1">#퇴사율5%이하</button>
             </li>
             <li className="tagListItem">
-              <button className="tagListButton">#퇴사율5%이하</button>
+              <button className="tagListButton2">#어학교육</button>
             </li>
             <li className="tagListItem">
-              <button className="tagListButton">#어학교육</button>
+              <button className="tagListButton3">#핀테크</button>
             </li>
             <li className="tagListItem">
-              <button className="tagListButton">#핀테크</button>
+              <button className="tagListButton4">#연봉상위2~5%</button>
             </li>
             <li className="tagListItem">
-              <button className="tagListButton">#연봉상위2~5%</button>
+              <button className="tagListButton5">#수유실</button>
             </li>
           </ul>
         </div>
