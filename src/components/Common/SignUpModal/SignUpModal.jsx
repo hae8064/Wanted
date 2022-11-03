@@ -12,6 +12,9 @@ const SignUpModal = () => {
   const [passwdCheck, setPasswdCheck] = useState("");
   // 비밀번호 span color 기본 red 설정
   const [spanColor, setSpanColor] = useState(false);
+  //회원가입 버튼 활성화
+  const [signUpBtn, setSignUpBtn] = useState(false);
+  const [testBtn, setTestBtn] = useState(false);
 
   const allAgreementEvent = (e) => {
     setAllCheck(!allCheck);
@@ -20,6 +23,12 @@ const SignUpModal = () => {
     if (firstCheck === false || secondCheck === false) {
       setFirstCheck(true);
       setSecondCheck(true);
+    }
+
+    if (firstCheck === true && secondCheck === true && testBtn === true) {
+      setSignUpBtn(true);
+    } else {
+      setSignUpBtn(false);
     }
   };
 
@@ -49,6 +58,14 @@ const SignUpModal = () => {
       alert("회원가입 성공!");
     } else {
       alert("비밀번호가 일치하지 않습니다.");
+    }
+  };
+
+  const onSignBtnActive = () => {
+    if (firstCheck === false && secondCheck === false) {
+      setSignUpBtn(true);
+    } else {
+      setSignUpBtn(false);
     }
   };
   const navigate = useNavigate();
@@ -302,6 +319,7 @@ const SignUpModal = () => {
               type="checkbox"
               checked={allCheck}
               onClick={allAgreementEvent}
+              onChange={onSignBtnActive}
             />
           </div>
           <div className="allAgreement">
@@ -322,6 +340,7 @@ const SignUpModal = () => {
               type="checkbox"
               checked={firstCheck}
               onClick={firstagreementEvent}
+              onChange={onSignBtnActive}
             />
           </div>
           <div className="AgreementMiddle">
@@ -345,6 +364,7 @@ const SignUpModal = () => {
               type="checkbox"
               checked={secondCheck}
               onClick={secondAgreementEvent}
+              onChange={onSignBtnActive}
             />
           </div>
           <div className="AgreementMiddle">
@@ -356,7 +376,15 @@ const SignUpModal = () => {
         </div>
 
         <div className="submitButton">
-          <button type="submit" onClick={onSignUp}>
+          <button
+            type="submit"
+            onClick={onSignUp}
+            style={
+              signUpBtn
+                ? { backgroundColor: "lightBlue", color: "white" }
+                : { backgroundColor: "lightGrey", color: "white" }
+            }
+          >
             회원가입하기
           </button>
         </div>
