@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import './DetailMap.css';
-import NaverMapContainer from './NaverMap';
+import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import "./DetailMap.css";
+import NaverMapContainer from "./NaverMap";
 
 const DetailMap = () => {
   // const mapElement = useRef(null);
@@ -45,7 +45,7 @@ const DetailMap = () => {
           <img
             src="/imgs/11111.png"
             alt=""
-            onClick={console.log('네이버 api')}
+            onClick={console.log("네이버 api")}
           />
         </div>
       </Link>

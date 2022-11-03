@@ -1,37 +1,37 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './HeaderSearch.css';
-import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
-import SearchResult from '../SearchResult/SearchResult';
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import "./HeaderSearch.css";
+import { ReactComponent as SearchIcon2 } from "../../../assets/icon-search2.svg";
+import SearchResult from "../SearchResult/SearchResult";
 
 const HeaderSearch = ({ on, changeSearchOn }) => {
   const [searchView, setSearchView] = useState(on);
   let searchRef = useRef(null);
   const inputRef = useRef(null);
-  const [inputData, setInputData] = useState('');
+  const [inputData, setInputData] = useState("");
 
   // 검색 리스트 렌더링용 (true이면 보여준다)
   let [inputFocus, setInputFocus] = useState(false);
 
-  let searchClassName = 'searchBarContaineroff';
+  let searchClassName = "searchBarContaineroff";
 
   /* 외부 영역을 클릭했을 때 검색창이 닫히도록 */
   useEffect(() => {
     function handleOutside(e) {
       // current.contains(e.target) : 컴포넌트 특정 영역 외 클릭 감지를 위해 사용
       if (searchRef.current && !searchRef.current.contains(e.target)) {
-        setSearchView('off');
+        setSearchView("off");
         changeSearchOn();
-        console.log('close');
-        setInputData('');
+        console.log("close");
+        setInputData("");
       }
       searchRef.current.focus();
     }
     searchRef.current.focus();
 
-    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener("mousedown", handleOutside);
     return () => {
-      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener("mousedown", handleOutside);
     };
   }, [searchRef, searchView, inputData]);
 
@@ -47,7 +47,7 @@ const HeaderSearch = ({ on, changeSearchOn }) => {
     <SearchResult title={setInputData} />;
   };
   return (
-    <div className={'searchBarContainer' + on}>
+    <div className={"searchBarContainer" + on}>
       {/* <div
       ref={searchRef}
       className={
@@ -72,7 +72,7 @@ const HeaderSearch = ({ on, changeSearchOn }) => {
         <div className="tagContainer">
           <div className="tagTop">
             <div className="tagTopLeft">추천태그로 검색해보세요</div>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <div className="tagTopRight">
                 기업태그 홈 이동하기
                 <svg width="12" height="12" viewBox="0 0 12 12">

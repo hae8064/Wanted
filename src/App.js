@@ -1,27 +1,27 @@
-import { useState } from 'react';
-import Header from './components/Common/Header/Header';
-import MainEventBanner from './components/MainPage/MainEventBanner/MainEventBanner';
-import Main from './components/MainPage/Main/Main';
-import FooterEventBanner from './components/MainPage/FooterEventBanner/FooterEventBanner';
-import Recruit from './components/MainPage/Recruit/Recruit';
-import Footer from './components/Common/Footer/Footer';
-import DevHeader from './components/DevelopPage/Header/DevHeader.jsx';
-import Bookmark from './components/DevelopPage/Bookmark/Bookmark';
-import GridContainer from './components/DevelopPage/GridContainer/GridContainer';
-import DetailRecruitContainer from './components/DetailRecruit/DetailRecruitContainer';
-import LoginModal from './components/Common/loginModal/LoginModal';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
-import SignUpModal from './components/Common/SignUpModal/SignUpModal';
-import MainContainer from './components/MainPage/MainContainer';
-import DevelopContainer from './components/DevelopPage/DevelopContainer';
-import NaverMapContainer from './components/DetailRecruit/DetailMap/NaverMap';
-import { RenderAfterNavermapsLoaded } from 'react-naver-maps';
-import SearchResult from './components/Common/SearchResult/SearchResult';
+import { useState } from "react";
+import Header from "./components/Common/Header/Header";
+import MainEventBanner from "./components/MainPage/MainEventBanner/MainEventBanner";
+import Main from "./components/MainPage/Main/Main";
+import FooterEventBanner from "./components/MainPage/FooterEventBanner/FooterEventBanner";
+import Recruit from "./components/MainPage/Recruit/Recruit";
+import Footer from "./components/Common/Footer/Footer";
+import DevHeader from "./components/DevelopPage/Header/DevHeader.jsx";
+import Bookmark from "./components/DevelopPage/Bookmark/Bookmark";
+import GridContainer from "./components/DevelopPage/GridContainer/GridContainer";
+import DetailRecruitContainer from "./components/DetailRecruit/DetailRecruitContainer";
+import LoginModal from "./components/Common/loginModal/LoginModal";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import SignUpModal from "./components/Common/SignUpModal/SignUpModal";
+import MainContainer from "./components/MainPage/MainContainer";
+import DevelopContainer from "./components/DevelopPage/DevelopContainer";
+import NaverMapContainer from "./components/DetailRecruit/DetailMap/NaverMap";
+import { RenderAfterNavermapsLoaded } from "react-naver-maps";
+import SearchResult from "./components/Common/SearchResult/SearchResult";
 
 function App() {
-  const [on, setOn] = useState('off');
-  const [off, setOff] = useState('off');
-  const [loginModal, setLoginModal] = useState('off');
+  const [on, setOn] = useState("off");
+  const [off, setOff] = useState("off");
+  const [loginModal, setLoginModal] = useState("off");
   const location = useLocation();
 
   const offLoginModal = (e) => {
@@ -36,7 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContainer />} />
         <Route path="/detailRecruit/:id" element={<DetailRecruitContainer />} />
-        {on === 'on' ? (
+        {on === "on" ? (
           <Route
             path="/login"
             element={

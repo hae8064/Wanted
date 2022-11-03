@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps';
+import React, { useEffect, useRef, useState } from "react";
+import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
 
 const NaverMapContainer = ({ props }) => {
   const NAVER_API_KEY = process.env.REACT_APP_NAVER_MAP_API_KEY;
@@ -64,10 +64,10 @@ const NaverMapContainer = ({ props }) => {
     // />
 
     <NaverMap
-      mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
+      mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
       style={{
-        width: '100%', // 네이버지도 가로 길이
-        height: '85vh', // 네이버지도 세로 길이
+        width: "100%", // 네이버지도 가로 길이
+        height: "85vh", // 네이버지도 세로 길이
       }}
       defaultCenter={{ lat: 37.5408428, lng: 126.9458903 }} // 지도 초기 위치
       defaultZoom={21} // 지도 초기 확대 배율
@@ -75,7 +75,7 @@ const NaverMapContainer = ({ props }) => {
     >
       <Marker
         position={{ lat: 37.5408428, lng: 126.9458903 }}
-        title={'고려빌딩'}
+        title={"고려빌딩"}
         clickable={true}
       />
     </NaverMap>

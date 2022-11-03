@@ -242,3 +242,10 @@
   margin-left: 205px;
   margin-right: 185px;
 }
+
+.searchResultNot {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 400px;
+}

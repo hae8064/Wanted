@@ -1,11 +1,72 @@
-import React, { useEffect } from 'react';
-import './SearchResult.css';
-import dummy from '../../../db/data.json';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import "./SearchResult.css";
+import dummy from "../../../db/data.json";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const SearchResult = ({ title }) => {
-  let pathName = window.location.pathname.split('/')[2];
+  let pathName = window.location.pathname.split("/")[2];
   const decodeUrl = decodeURI(pathName);
+
+  const [searchCount, setSearchCount] = useState(0);
+  const [searchView, setSearchView] = useState(false);
+
+  const result = dummy.developGridContainer
+    .filter((search) => {
+      return (
+        search.gridTitle.includes(decodeUrl) ||
+        search.gridTitle2.includes(decodeUrl) ||
+        search.region.includes(decodeUrl) ||
+        search.country.includes(decodeUrl) ||
+        search.price.includes(decodeUrl)
+      );
+    })
+    .map((search) => (
+      <Link
+        key={search.id}
+        to={`/detailRecruit/${search.id}`}
+        className="gridContainerFirst"
+      >
+        <header>
+          <svg
+            class="bookmarkButton"
+            width="22"
+            height="22"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
+              fill="white"
+            ></path>
+            <path
+              d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
+              fill="black"
+              fill-opacity="0.25"
+            ></path>
+          </svg>
+          <img src={search.img} alt="" />
+        </header>
+        <footer>
+          <span class="gridTitle">{search.gridTitle}</span>
+          <span class="gridTitle2">{search.gridTitle2}</span>
+          <button class="gridButton">
+            <span>{search.gridButton}</span>
+          </button>
+          <span class="gridTitle3">
+            {search.region} <span class="addressDot">.</span>{" "}
+            <span>{search.country}</span>
+          </span>
+          <span class="gridTitle4">
+            채용보상금{" "}
+            {search.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원
+          </span>
+        </footer>
+      </Link>
+    ));
+
   console.log(decodeUrl);
   return (
     <div className="searchResultContainer">
@@ -166,56 +227,14 @@ const SearchResult = ({ title }) => {
       </div>
 
       {/* 그리드 컨테이너 */}
+
       <div className="positionGrid">
-        {dummy.developGridContainer.map((container) => (
-          <Link
-            key={container.id}
-            to={`/detailRecruit/${container.id}`}
-            className="gridContainerFirst"
-          >
-            <header>
-              <svg
-                class="bookmarkButton"
-                width="22"
-                height="22"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="https://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
-                  fill="white"
-                ></path>
-                <path
-                  d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                  fill="black"
-                  fill-opacity="0.25"
-                ></path>
-              </svg>
-              <img src={container.img} alt="" />
-            </header>
-            <footer>
-              <span class="gridTitle">{container.gridTitle}</span>
-              <span class="gridTitle2">{container.gridTitle2}</span>
-              <button class="gridButton">
-                <span>{container.gridButton}</span>
-              </button>
-              <span class="gridTitle3">
-                {container.region} <span class="addressDot">.</span>{' '}
-                <span>{container.country}</span>
-              </span>
-              <span class="gridTitle4">
-                채용보상금{' '}
-                {container.price
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                원
-              </span>
-            </footer>
-          </Link>
-        ))}
+        {/* 조건문에 따라 filter logic */}
+        {result.length > 0 ? (
+          result
+        ) : (
+          <h2 className="searchResultNot">검색결과가 없습니다.</h2>
+        )}
       </div>
     </div>
   );
