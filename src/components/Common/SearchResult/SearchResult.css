@@ -249,3 +249,7 @@
   position: relative;
   left: 400px;
 }
+
+.searchPositionCount {
+  margin-left: 20px;
+}

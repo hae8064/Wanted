@@ -128,3 +128,22 @@
   font-size: 16px;
   z-index: 10;
 }
+
+.mainSlideSvgLeft {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 163px;
+  left: 133px;
+  z-index: 1;
+}
+
+.mainSlideSvgRight {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 1352px;
+  bottom: 160px;
+  z-index: 1;
+  color: #888;
+}
