@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import './LoginModal.css';
-import { Link, useNavigate } from 'react-router-dom';
-import SignUpModal from '../SignUpModal/SignUpModal';
+import React, { useEffect, useState } from "react";
+import "./LoginModal.css";
+import { Link, useNavigate } from "react-router-dom";
+import SignUpModal from "../SignUpModal/SignUpModal";
 
 const LoginModal = ({ offLoginModal, containerState }) => {
   const [loginModal, setLoginModal] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
+  const [userEmail, setUserEmail] = useState("");
   const [nextPage, setNextPage] = useState(false);
 
   const closeModal = () => {
@@ -21,11 +21,11 @@ const LoginModal = ({ offLoginModal, containerState }) => {
 
   const emailCheck = (username) => {
     if (emailRegEx.test(username)) {
-      console.log('이메일 형식 맞습니다.');
+      console.log("이메일 형식 맞습니다.");
       setNextPage(true);
     } else {
       setNextPage(false);
-      alert('이메일 형식이 아닙니다.');
+      alert("이메일 형식이 아닙니다.");
     }
   };
 

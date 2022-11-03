@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignUpModal.css";
 import { useNavigate } from "react-router";
 
 const SignUpModal = () => {
+  const [allCheck, setAllCheck] = useState(false);
+  const [firstCheck, setFirstCheck] = useState(false);
+  const [secondCheck, setSecondCheck] = useState(false);
+
+  const allAgreementEvent = (e) => {
+    setAllCheck(!allCheck);
+    setFirstCheck(!firstCheck);
+    setSecondCheck(!secondCheck);
+    if (firstCheck === false || secondCheck === false) {
+      setFirstCheck(true);
+      setSecondCheck(true);
+    }
+  };
+
+  const firstagreementEvent = (e) => {
+    setFirstCheck(!firstCheck);
+  };
+
+  const secondAgreementEvent = (e) => {
+    setSecondCheck(!secondCheck);
+  };
   const navigate = useNavigate();
   return (
-    <section class="loginModal2">
-      <div class="loginModalContainer2">
-        <div class="loginModalTopIcon">
+    <section className="loginModal2">
+      <div className="loginModalContainer2">
+        <div className="loginModalTopIcon">
           <span>회원가입</span>
           <button onClick={() => navigate(-1)}>
             <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
@@ -19,15 +40,15 @@ const SignUpModal = () => {
           </button>
         </div>
 
-        <div class="nameInput">
+        <div className="nameInput">
           <span>이름</span>
           <input type="text" placeholder="이름을 입력해 주세요." />
         </div>
 
-        <div class="numberInput">
+        <div className="numberInput">
           <span>휴대폰 번호</span>
-          <div class="numberSelectInput">
-            <select class="phoneNumber">
+          <div className="numberSelectInput">
+            <select className="phoneNumber">
               <option value="+82">대한민국 +82 </option>
               <option value="+81">+81 Japan</option>
               <option value="+886">+886 Taiwan</option>
@@ -201,30 +222,30 @@ const SignUpModal = () => {
               <option value="+260">+260 Zambia</option>
               <option value="+263">+263 Zimbabwe</option>
             </select>
-            <i class="MobileInput_MobileInput_select_arrow__hLBUp icon-arrow_right"></i>
+            <i className="MobileInput_MobileInput_select_arrow__hLBUp icon-arrow_right"></i>
           </div>
-          <div class="exampleNumber">
+          <div className="exampleNumber">
             <input type="text" placeholder="(예시) 01024138607" />
             <button>
               <span>인증번호 받기</span>
             </button>
           </div>
-          <div class="numberResult">
+          <div className="numberResult">
             <input type="text" placeholder="인증번호를 입력해 주세요." />
           </div>
         </div>
 
-        <div class="password">
-          <div class="passwordTop">
+        <div className="password">
+          <div className="passwordTop">
             <span>비밀번호</span>
             <input type="password" placeholder="비밀번호를 입력해 주세요." />
-            <span class="passwordFooter">
+            <span className="passwordFooter">
               영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{" "}
               <br /> 입력해 주세요.
             </span>
           </div>
 
-          <div class="passwordCheck">
+          <div className="passwordCheck">
             <span>비밀번호 확인</span>
             <input
               type="password"
@@ -233,55 +254,73 @@ const SignUpModal = () => {
           </div>
         </div>
 
-        <div class="agreementCheck">
-          <div class="checkButton">
-            <svg width="24" height="24" viewBox="0 0 24 24">
+        <div className="agreementCheck">
+          <div className="checkButton">
+            {/* <svg width="24" height="24" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
                 d="M18.75 21.75H5.25a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v13.5a3 3 0 0 1-3 3zm0-1.5a1.5 1.5 0 0 0 1.5-1.5V5.25a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v13.5a1.5 1.5 0 0 0 1.5 1.5h13.5z"
               ></path>
-            </svg>
+            </svg> */}
+            <input
+              classNameName="allAgreement"
+              type="checkbox"
+              checked={allCheck}
+              onClick={allAgreementEvent}
+            />
           </div>
-          <div class="allAgreement">
+          <div className="allAgreement">
             <span>전체 동의</span>
           </div>
         </div>
 
-        <div class="agreementTop">
-          <div class="checkButton">
-            <svg width="17" height="17" viewBox="0 0 24 24">
+        <div className="agreementTop">
+          <div className="checkButton">
+            {/* <svg width="17" height="17" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
                 d="M18.75 21.75H5.25a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v13.5a3 3 0 0 1-3 3zm0-1.5a1.5 1.5 0 0 0 1.5-1.5V5.25a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v13.5a1.5 1.5 0 0 0 1.5 1.5h13.5z"
               ></path>
-            </svg>
+            </svg> */}
+            <input
+              className="firshCheck"
+              type="checkbox"
+              checked={firstCheck}
+              onClick={firstagreementEvent}
+            />
           </div>
-          <div class="AgreementMiddle">
+          <div className="AgreementMiddle">
             <span>개인정보 수집 및 이용 동의 (필수)</span>
           </div>
-          <div class="rightA">
+          <div className="rightA">
             <a href="/">자세히</a>
           </div>
         </div>
 
-        <div class="agreementBottom">
-          <div class="checkButton">
-            <svg width="24" height="24" viewBox="0 0 24 24">
+        <div className="agreementBottom">
+          <div className="checkButton">
+            {/* <svg width="24" height="24" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
                 d="M18.75 21.75H5.25a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v13.5a3 3 0 0 1-3 3zm0-1.5a1.5 1.5 0 0 0 1.5-1.5V5.25a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v13.5a1.5 1.5 0 0 0 1.5 1.5h13.5z"
               ></path>
-            </svg>
+            </svg> */}
+            <input
+              className="secondCheck"
+              type="checkbox"
+              checked={secondCheck}
+              onClick={secondAgreementEvent}
+            />
           </div>
-          <div class="AgreementMiddle">
+          <div className="AgreementMiddle">
             <span>이벤트 소식 등 알림 정보 받기</span>
           </div>
-          <div class="rightB">
+          <div className="rightB">
             <a href="/">자세히</a>
           </div>
         </div>
 
-        <div class="submitButton">
+        <div className="submitButton">
           <button type="submit">회원가입하기</button>
         </div>
       </div>
