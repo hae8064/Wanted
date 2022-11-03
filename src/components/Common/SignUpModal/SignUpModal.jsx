@@ -3,9 +3,15 @@ import "./SignUpModal.css";
 import { useNavigate } from "react-router";
 
 const SignUpModal = () => {
+  const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+
   const [allCheck, setAllCheck] = useState(false);
   const [firstCheck, setFirstCheck] = useState(false);
   const [secondCheck, setSecondCheck] = useState(false);
+  const [password, setPassword] = useState("");
+  const [passwdCheck, setPasswdCheck] = useState("");
+  // 비밀번호 span color 기본 red 설정
+  const [spanColor, setSpanColor] = useState(false);
 
   const allAgreementEvent = (e) => {
     setAllCheck(!allCheck);
@@ -23,6 +29,27 @@ const SignUpModal = () => {
 
   const secondAgreementEvent = (e) => {
     setSecondCheck(!secondCheck);
+  };
+
+  const onPasswordEvent = (e) => {
+    if (!passwordRegex.test(e.target.value)) {
+      setSpanColor(false);
+    } else {
+      //비밀번호 유효성 맞으면 span text 검은색으로 변경
+      setSpanColor(true);
+    }
+  };
+
+  const onPasswdCheck = (e) => {
+    setPasswdCheck(e.target.value);
+  };
+
+  const onSignUp = (e) => {
+    if (passwdCheck === password) {
+      alert("회원가입 성공!");
+    } else {
+      alert("비밀번호가 일치하지 않습니다.");
+    }
   };
   const navigate = useNavigate();
   return (
@@ -238,8 +265,15 @@ const SignUpModal = () => {
         <div className="password">
           <div className="passwordTop">
             <span>비밀번호</span>
-            <input type="password" placeholder="비밀번호를 입력해 주세요." />
-            <span className="passwordFooter">
+            <input
+              type="password"
+              placeholder="비밀번호를 입력해 주세요."
+              onChange={onPasswordEvent}
+            />
+            <span
+              className="passwordFooter"
+              style={spanColor ? { color: "black" } : { color: "red" }}
+            >
               영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{" "}
               <br /> 입력해 주세요.
             </span>
@@ -250,6 +284,7 @@ const SignUpModal = () => {
             <input
               type="password"
               placeholder="비밀번호를 다시 한번 입력해 주세요."
+              onClick={onPasswdCheck}
             />
           </div>
         </div>
@@ -321,7 +356,9 @@ const SignUpModal = () => {
         </div>
 
         <div className="submitButton">
-          <button type="submit">회원가입하기</button>
+          <button type="submit" onClick={onSignUp}>
+            회원가입하기
+          </button>
         </div>
       </div>
     </section>
