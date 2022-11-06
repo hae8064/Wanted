@@ -5,11 +5,7 @@ import { json, Link } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 function GridContainer() {
-  const [productList, setProductList] = useState([]);
-  const [items, setItems] = useState(10);
-  const [preItems, setPreItems] = useState(0);
-
-  //새로운 블로그
+  //무한 스크롤 구현 state
   const [itemIndex, setItemIndex] = useState(0);
   const [result, setResult] = useState(dummy.developGridContainer.slice(0, 8));
 
@@ -49,21 +45,6 @@ function GridContainer() {
     window.addEventListener('scroll', _infiniteScroll, true);
     return () => window.removeEventListener('scroll', _infiniteScroll, true);
   }, [_infiniteScroll]);
-
-  const fetchData = () => {
-    setTimeout(() => {
-      // fetch(`/db/data.json`, {
-      //   method: "GET",
-      // })
-      // .then(res => res.json())
-      // .then(data => )
-      // fetch('/db/data.json')
-      //   .then((res) => res.json())
-      //   .then((res) => {
-      //     let result = res.data.slice(ths);
-      //   });
-    }, 3000);
-  };
 
   return (
     <div class="devGridContainer">
