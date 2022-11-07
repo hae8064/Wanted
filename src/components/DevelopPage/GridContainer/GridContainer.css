@@ -3,7 +3,7 @@
   display: grid;
   /* grid-template-columns: 270px 270px 270px 270px; */
   grid-template-columns: 25% 25% 25% 25%;
-  /* grid-template-rows: 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px 385px; */
+  /* grid-template-rows: 385px 385px 385px 385px; */
   margin-left: 210px;
   margin-right: 185px;
 }
@@ -13,6 +13,7 @@
   flex-direction: column;
   margin-right: 15px;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .gridContainerFirst img {

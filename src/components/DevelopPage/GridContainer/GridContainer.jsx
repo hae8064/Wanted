@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import './GridContainer.css';
-import dummy from '../../../db/data.json';
-import { json, Link } from 'react-router-dom';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import React, { useCallback, useEffect, useState } from "react";
+import "./GridContainer.css";
+import dummy from "../../../db/data.json";
+import { json, Link } from "react-router-dom";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function GridContainer() {
   //무한 스크롤 구현 state
@@ -10,6 +10,7 @@ function GridContainer() {
   const [result, setResult] = useState(dummy.developGridContainer.slice(0, 8));
 
   const _infiniteScroll = useCallback(() => {
+    console.log("@@@@");
     let scrollHeight = Math.max(
       document.documentElement.scrollHeight,
       document.body.scrollHeight
@@ -20,16 +21,7 @@ function GridContainer() {
     );
     let clientHeight = document.documentElement.clientHeight;
 
-    if (scrollTop + clientHeight === scrollHeight) {
-      setTimeout(() => {
-        setItemIndex(itemIndex + 8);
-        setResult(
-          result.concat(
-            dummy.developGridContainer.slice(itemIndex + 8, itemIndex + 16)
-          )
-        );
-      }, 1500);
-    } else if (scrollTop + clientHeight <= scrollHeight) {
+    if (scrollTop + clientHeight <= scrollHeight) {
       setTimeout(() => {
         setItemIndex(itemIndex + 8);
         setResult(
@@ -42,8 +34,8 @@ function GridContainer() {
   }, [itemIndex, result]);
 
   useEffect(() => {
-    window.addEventListener('scroll', _infiniteScroll, true);
-    return () => window.removeEventListener('scroll', _infiniteScroll, true);
+    window.addEventListener("scroll", _infiniteScroll, true);
+    return () => window.removeEventListener("scroll", _infiniteScroll, true);
   }, [_infiniteScroll]);
 
   return (
@@ -84,12 +76,12 @@ function GridContainer() {
               <span>{container.gridButton}</span>
             </button>
             <span class="gridTitle3">
-              {container.region} <span class="addressDot">.</span>{' '}
+              {container.region} <span class="addressDot">.</span>{" "}
               <span>{container.country}</span>
             </span>
             <span class="gridTitle4">
-              채용보상금{' '}
-              {container.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              채용보상금{" "}
+              {container.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               원
             </span>
           </footer>
