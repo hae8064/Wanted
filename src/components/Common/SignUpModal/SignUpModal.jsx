@@ -20,7 +20,10 @@ const SignUpModal = ({ modalOn }) => {
   const [spanColor, setSpanColor] = useState(false);
   //회원가입 버튼 활성화
   const [signUpBtn, setSignUpBtn] = useState(false);
+
   const [testBtn, setTestBtn] = useState(false);
+
+  const [testSignUpBtn, setTestSignUpBtn] = useState([]);
 
   //회원가입 모달창 off
   const modalOff = () => {
@@ -48,11 +51,11 @@ const SignUpModal = ({ modalOn }) => {
       setSecondCheck(true);
     }
 
-    if (firstCheck === true && secondCheck === true && testBtn === true) {
-      setSignUpBtn(true);
-    } else {
-      setSignUpBtn(false);
-    }
+    // if (firstCheck === true && secondCheck === true && testBtn === true) {
+    //   setSignUpBtn(true);
+    // } else {
+    //   setSignUpBtn(false);
+    // }
   };
 
   const firstagreementEvent = (e) => {
@@ -75,6 +78,7 @@ const SignUpModal = ({ modalOn }) => {
     } else {
       //비밀번호 유효성 맞으면 span text 검은색으로 변경
       setSpanColor(true);
+      setPassword(e.target.value);
     }
   };
 
@@ -82,7 +86,7 @@ const SignUpModal = ({ modalOn }) => {
     setPasswdCheck(e.target.value);
   };
 
-  const onSignUp = (e) => {
+  const onSignUp = () => {
     if (passwdCheck === password) {
       alert('회원가입 성공!');
     } else {
@@ -91,17 +95,16 @@ const SignUpModal = ({ modalOn }) => {
   };
 
   const onSignBtnActive = () => {
-    if (firstCheck === false && secondCheck === false) {
-      setSignUpBtn(true);
-    } else {
-      setSignUpBtn(false);
-    }
+    // if (firstCheck === false && secondCheck === false) {
+    //   setSignUpBtn(true);
+    // } else {
+    //   setSignUpBtn(false);
+    // }
   };
 
   //useEffect를 이용해서 phone state값이 변경될 때 마다 rendering하여 inputValue delay지연
   useEffect(() => {
     let phoneSplitArr = phone.split('');
-    console.log(phone.split(''));
     if (
       phone.length === 11 &&
       Number(phoneSplitArr[0]) === 0 &&
@@ -109,11 +112,27 @@ const SignUpModal = ({ modalOn }) => {
       Number(phoneSplitArr[2]) === 0
     ) {
       setPhoneButton('on');
-      console.log(phoneButton);
     } else {
       setPhoneButton('off');
     }
   }, [phone]);
+
+  //회원가입 버튼 활성화 (input창 5군데 + firstCheck 체크 + secondCheck 체크)
+  useEffect(() => {
+    if (
+      testSignUpBtn.length >= 4 &&
+      firstCheck === true &&
+      secondCheck === true
+    ) {
+      if (passwdCheck === password) {
+        setSignUpBtn(true);
+      } else {
+        setSignUpBtn(false);
+      }
+    } else {
+      setSignUpBtn(false);
+    }
+  }, [testSignUpBtn, firstCheck, secondCheck, allCheck, password, passwdCheck]);
 
   const onPhoneNumber = (e) => {
     setPhone(e.target.value);
@@ -136,7 +155,13 @@ const SignUpModal = ({ modalOn }) => {
 
         <div className="nameInput">
           <span>이름</span>
-          <input type="text" placeholder="이름을 입력해 주세요." />
+          <input
+            type="text"
+            placeholder="이름을 입력해 주세요."
+            onClick={() => {
+              setTestSignUpBtn(testSignUpBtn.concat(true));
+            }}
+          />
         </div>
 
         <div className="numberInput">
@@ -323,13 +348,22 @@ const SignUpModal = ({ modalOn }) => {
               type="text"
               placeholder="(예시) 01024138607"
               onChange={onPhoneNumber}
+              onClick={() => {
+                setTestSignUpBtn(testSignUpBtn.concat(true));
+              }}
             />
             <button className={'phoneButton' + phoneButton}>
               <span>인증번호 받기</span>
             </button>
           </div>
           <div className="numberResult">
-            <input type="text" placeholder="인증번호를 입력해 주세요." />
+            <input
+              type="text"
+              placeholder="인증번호를 입력해 주세요."
+              onClick={() => {
+                setTestSignUpBtn(testSignUpBtn.concat(true));
+              }}
+            />
           </div>
         </div>
 
@@ -340,6 +374,9 @@ const SignUpModal = ({ modalOn }) => {
               type="password"
               placeholder="비밀번호를 입력해 주세요."
               onChange={onPasswordEvent}
+              onClick={() => {
+                setTestSignUpBtn(testSignUpBtn.concat(true));
+              }}
             />
             <span
               className="passwordFooter"
@@ -355,7 +392,10 @@ const SignUpModal = ({ modalOn }) => {
             <input
               type="password"
               placeholder="비밀번호를 다시 한번 입력해 주세요."
-              onClick={onPasswdCheck}
+              onClick={() => {
+                setTestSignUpBtn(testSignUpBtn.concat(true));
+              }}
+              onChange={onPasswdCheck}
             />
           </div>
         </div>
