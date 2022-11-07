@@ -3,7 +3,7 @@ import "./LoginModal.css";
 import { Link, useNavigate } from "react-router-dom";
 import SignUpModal from "../SignUpModal/SignUpModal";
 
-const LoginModal = ({ offLoginModal, containerState }) => {
+const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
   const [loginModal, setLoginModal] = useState(false);
   const [userEmail, setUserEmail] = useState("");
   const [nextPage, setNextPage] = useState(false);
@@ -12,6 +12,16 @@ const LoginModal = ({ offLoginModal, containerState }) => {
     offLoginModal(loginModal);
     // console.log(onContainer);
     // console.log(containerState);
+  };
+
+  //로그인 모달 off
+  const modalOff = () => {
+    modalOn(0);
+  };
+
+  //회원가입 모달 on
+  const modalSignUpOn = () => {
+    modalOn(2);
   };
 
   const signUp = () => {};
@@ -23,6 +33,7 @@ const LoginModal = ({ offLoginModal, containerState }) => {
     if (emailRegEx.test(username)) {
       console.log("이메일 형식 맞습니다.");
       setNextPage(true);
+      modalSignUpOn();
     } else {
       setNextPage(false);
       alert("이메일 형식이 아닙니다.");
@@ -32,12 +43,14 @@ const LoginModal = ({ offLoginModal, containerState }) => {
   const navigate = useNavigate();
 
   return (
+    // <section className="loginModal">
     <section className="loginModal">
       <div className="loginModalContainer">
         <div className="loginModalTop">
           <div className="loginModalTopIcon">
             <i className="icon-logo_new"></i>
-            <button onClick={() => navigate(-1)}>
+            {/* <button onClick={() => navigate(-1)}> */}
+            <button onClick={modalOff}>
               <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
                 <path
                   fill="currentColor"

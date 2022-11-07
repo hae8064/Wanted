@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
-import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
-import LoginModal from '../loginModal/LoginModal';
-import Hamburger from './Hamburger';
-import './Header.css';
-import HeaderSearch from './HeaderSearch';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { ReactComponent as SearchIcon } from "../../../assets/icon-search.svg";
+import { ReactComponent as SearchIcon2 } from "../../../assets/icon-search2.svg";
+import LoginModal from "../loginModal/LoginModal";
+import Hamburger from "./Hamburger";
+import "./Header.css";
+import HeaderSearch from "./HeaderSearch";
 
-function Header({ setOn }) {
+function Header({ setOn, getLoginModal }) {
   const [login, setLogin] = useState(false);
 
   const [hamhover, setHamHover] = useState(false);
 
   const [searchOn, setSearchOn] = useState(false);
 
+  const [loginModalOn, setLoginModalOn] = useState(1);
+
   const doLogin = () => {
     setLogin(!login);
     // console.log(setLoginModal);
+  };
+
+  //appjs state props 변경
+  const loginChange = () => {
+    getLoginModal(loginModalOn);
   };
 
   const changeSearchOn = () => {
@@ -122,17 +129,17 @@ function Header({ setOn }) {
             <SearchIcon2 />
           </div>
 
-          <Link to="/login">
-            <button className="login" onClick={() => setOn('on')}>
-              회원가입/로그인
-            </button>
-          </Link>
+          {/* <Link to="/login"> */}
+          <button className="login" onClick={loginChange}>
+            회원가입/로그인
+          </button>
+          {/* </Link> */}
           <a className="companyService">기업 서비스</a>
         </div>
       </div>
-      <Hamburger setHamHover={setHamHover} view={hamhover ? 'on' : 'off'} />
+      <Hamburger setHamHover={setHamHover} view={hamhover ? "on" : "off"} />
       <HeaderSearch
-        on={searchOn ? 'on' : 'off'}
+        on={searchOn ? "on" : "off"}
         changeSearchOn={changeSearchOn}
       />
     </>

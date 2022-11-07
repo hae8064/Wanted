@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SignUpModal.css";
 import { useNavigate } from "react-router";
 
-const SignUpModal = () => {
+const SignUpModal = ({ modalOn }) => {
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
   const [allCheck, setAllCheck] = useState(false);
@@ -15,6 +15,11 @@ const SignUpModal = () => {
   //회원가입 버튼 활성화
   const [signUpBtn, setSignUpBtn] = useState(false);
   const [testBtn, setTestBtn] = useState(false);
+
+  //회원가입 모달창 off
+  const modalOff = () => {
+    modalOn(0);
+  };
 
   const allAgreementEvent = (e) => {
     setAllCheck(!allCheck);
@@ -74,7 +79,7 @@ const SignUpModal = () => {
       <div className="loginModalContainer2">
         <div className="loginModalTopIcon">
           <span>회원가입</span>
-          <button onClick={() => navigate(-1)}>
+          <button onClick={modalOff}>
             <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
               <path
                 fill="currentColor"

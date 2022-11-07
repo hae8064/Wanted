@@ -21,7 +21,9 @@ import SearchResult from "./components/Common/SearchResult/SearchResult";
 function App() {
   const [on, setOn] = useState("off");
   const [off, setOff] = useState("off");
-  const [loginModal, setLoginModal] = useState("off");
+
+  //로그인 모달창 on/off state
+  const [loginModal, setLoginModal] = useState(0);
   const location = useLocation();
 
   const offLoginModal = (e) => {
@@ -30,8 +32,8 @@ function App() {
 
   return (
     <div>
-      <Header setOn={setOn} />
-
+      <Header setOn={setOn} getLoginModal={setLoginModal} />
+      {console.log(loginModal)}
       {/* <LoginModal /> */}
       <Routes>
         <Route path="/" element={<MainContainer />} />
@@ -64,6 +66,14 @@ function App() {
         />
         <Route path={`/search/:id`} element={<SearchResult />} />
       </Routes>
+
+      {/* 모달창 loginModal 기본 0 로그인 1 회원가입 2 */}
+      {loginModal === 1 ? (
+        <LoginModal modalOn={setLoginModal} />
+      ) : loginModal === 2 ? (
+        <SignUpModal modalOn={setLoginModal} />
+      ) : null}
+
       {/* main 페이지 */}
       {/* <Header />
       <MainEventBanner />
