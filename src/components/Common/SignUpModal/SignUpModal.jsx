@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./SignUpModal.css";
-import { useNavigate } from "react-router";
+import React, { useState } from 'react';
+import './SignUpModal.css';
+import { useNavigate } from 'react-router';
 
 const SignUpModal = ({ modalOn }) => {
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
@@ -8,8 +8,8 @@ const SignUpModal = ({ modalOn }) => {
   const [allCheck, setAllCheck] = useState(false);
   const [firstCheck, setFirstCheck] = useState(false);
   const [secondCheck, setSecondCheck] = useState(false);
-  const [password, setPassword] = useState("");
-  const [passwdCheck, setPasswdCheck] = useState("");
+  const [password, setPassword] = useState('');
+  const [passwdCheck, setPasswdCheck] = useState('');
   // 비밀번호 span color 기본 red 설정
   const [spanColor, setSpanColor] = useState(false);
   //회원가입 버튼 활성화
@@ -25,6 +25,19 @@ const SignUpModal = ({ modalOn }) => {
     setAllCheck(!allCheck);
     setFirstCheck(!firstCheck);
     setSecondCheck(!secondCheck);
+    if (firstCheck === true && secondCheck === true) {
+      setAllCheck(!allCheck);
+      if (allCheck === false) {
+        setFirstCheck(true);
+        setSecondCheck(true);
+      } else {
+        setFirstCheck(false);
+        setSecondCheck(false);
+      }
+
+      return;
+    }
+
     if (firstCheck === false || secondCheck === false) {
       setFirstCheck(true);
       setSecondCheck(true);
@@ -38,10 +51,16 @@ const SignUpModal = ({ modalOn }) => {
   };
 
   const firstagreementEvent = (e) => {
+    if (allCheck === true) {
+      setAllCheck(!allCheck);
+    }
     setFirstCheck(!firstCheck);
   };
 
   const secondAgreementEvent = (e) => {
+    if (allCheck === true) {
+      setAllCheck(!allCheck);
+    }
     setSecondCheck(!secondCheck);
   };
 
@@ -60,9 +79,9 @@ const SignUpModal = ({ modalOn }) => {
 
   const onSignUp = (e) => {
     if (passwdCheck === password) {
-      alert("회원가입 성공!");
+      alert('회원가입 성공!');
     } else {
-      alert("비밀번호가 일치하지 않습니다.");
+      alert('비밀번호가 일치하지 않습니다.');
     }
   };
 
@@ -294,9 +313,9 @@ const SignUpModal = ({ modalOn }) => {
             />
             <span
               className="passwordFooter"
-              style={spanColor ? { color: "black" } : { color: "red" }}
+              style={spanColor ? { color: 'black' } : { color: 'red' }}
             >
-              영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{" "}
+              영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{' '}
               <br /> 입력해 주세요.
             </span>
           </div>
@@ -386,8 +405,8 @@ const SignUpModal = ({ modalOn }) => {
             onClick={onSignUp}
             style={
               signUpBtn
-                ? { backgroundColor: "lightBlue", color: "white" }
-                : { backgroundColor: "lightGrey", color: "white" }
+                ? { backgroundColor: 'lightBlue', color: 'white' }
+                : { backgroundColor: 'lightGrey', color: 'white' }
             }
           >
             회원가입하기
