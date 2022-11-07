@@ -7,7 +7,8 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
   const [loginModal, setLoginModal] = useState(false);
   const [userEmail, setUserEmail] = useState("");
   const [nextPage, setNextPage] = useState(false);
-
+  //유효성 검사 통과 시 버튼 활성화
+  const [buttonActive, setButtonActive] = useState("off");
   const closeModal = () => {
     offLoginModal(loginModal);
     // console.log(onContainer);
@@ -33,10 +34,20 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
     if (emailRegEx.test(username)) {
       console.log("이메일 형식 맞습니다.");
       setNextPage(true);
+      setButtonActive("on");
       modalSignUpOn();
     } else {
       setNextPage(false);
       alert("이메일 형식이 아닙니다.");
+    }
+  };
+
+  const onButtonActive = (e) => {
+    setUserEmail(e.target.value);
+    if (emailRegEx.test(userEmail)) {
+      setButtonActive("on");
+    } else {
+      setButtonActive("off");
     }
   };
 
@@ -80,7 +91,8 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
               type="email"
               className="inputEmail"
               placeholder="이메일을 입력해 주세요."
-              onChange={(e) => setUserEmail(e.target.value)}
+              // onChange={(e) => setUserEmail(e.target.value)}
+              onChange={onButtonActive}
             />
           </div>
           {nextPage ? (
@@ -122,7 +134,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
             </Link>
           ) : (
             <button
-              className="loginModalButton"
+              className={"loginModalButton" + buttonActive}
               type="submit"
               //onclick="emailValidation"
               // onClick="emailValidation"
@@ -146,6 +158,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
                   </g>
                 </svg>
               </div>
+              {/* <div className="loginText">이메일로 계속하기</div> */}
               <div className="loginText">이메일로 계속하기</div>
             </button>
           )}

@@ -150,7 +150,19 @@
   padding-left: 10px;
 }
 
-.loginModalButton {
+.loginModalButtonoff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: lightgrey;
+  height: 54px;
+  border: none;
+  border-radius: 27px;
+  margin-top: 20px;
+}
+
+.loginModalButtonon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,9 +174,9 @@
   margin-top: 20px;
 }
 
-.loginModalButton:hover {
+/* .loginModalButton:hover {
   background-color: darkorange;
-}
+} */
 
 .loginText {
   font-size: 16px;
