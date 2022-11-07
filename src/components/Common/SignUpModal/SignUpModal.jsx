@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './SignUpModal.css';
 import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 
 const SignUpModal = ({ modalOn }) => {
+  const navigate = useNavigate();
+
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
   const [allCheck, setAllCheck] = useState(false);
@@ -10,6 +13,9 @@ const SignUpModal = ({ modalOn }) => {
   const [secondCheck, setSecondCheck] = useState(false);
   const [password, setPassword] = useState('');
   const [passwdCheck, setPasswdCheck] = useState('');
+  const [phone, setPhone] = useState('');
+  const [phoneButton, setPhoneButton] = useState('off');
+
   // 비밀번호 span color 기본 red 설정
   const [spanColor, setSpanColor] = useState(false);
   //회원가입 버튼 활성화
@@ -34,7 +40,6 @@ const SignUpModal = ({ modalOn }) => {
         setFirstCheck(false);
         setSecondCheck(false);
       }
-
       return;
     }
 
@@ -92,7 +97,28 @@ const SignUpModal = ({ modalOn }) => {
       setSignUpBtn(false);
     }
   };
-  const navigate = useNavigate();
+
+  //useEffect를 이용해서 phone state값이 변경될 때 마다 rendering하여 inputValue delay지연
+  useEffect(() => {
+    let phoneSplitArr = phone.split('');
+    console.log(phone.split(''));
+    if (
+      phone.length === 11 &&
+      Number(phoneSplitArr[0]) === 0 &&
+      Number(phoneSplitArr[1]) === 1 &&
+      Number(phoneSplitArr[2]) === 0
+    ) {
+      setPhoneButton('on');
+      console.log(phoneButton);
+    } else {
+      setPhoneButton('off');
+    }
+  }, [phone]);
+
+  const onPhoneNumber = (e) => {
+    setPhone(e.target.value);
+  };
+
   return (
     <section className="loginModal2">
       <div className="loginModalContainer2">
@@ -293,8 +319,12 @@ const SignUpModal = ({ modalOn }) => {
             <i className="MobileInput_MobileInput_select_arrow__hLBUp icon-arrow_right"></i>
           </div>
           <div className="exampleNumber">
-            <input type="text" placeholder="(예시) 01024138607" />
-            <button>
+            <input
+              type="text"
+              placeholder="(예시) 01024138607"
+              onChange={onPhoneNumber}
+            />
+            <button className={'phoneButton' + phoneButton}>
               <span>인증번호 받기</span>
             </button>
           </div>

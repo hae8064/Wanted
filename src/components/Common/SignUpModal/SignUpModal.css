@@ -103,7 +103,7 @@
 
 .MobileInput_MobileInput_select_arrow__hLBUp.icon-arrow_right {
   transform: translateY(-50%);
-  content: "\e94f";
+  content: '\e94f';
 }
 
 .exampleNumber {
@@ -122,7 +122,31 @@
   padding-left: 10px;
 }
 
-.exampleNumber button {
+/* .exampleNumber button {
+  height: 54px;
+  border-radius: 5px;
+  background-color: none;
+
+  color: #ccc;
+  border: none;
+  width: 30%;
+  margin-left: 10px;
+} */
+
+.phoneButtonon {
+  height: 54px;
+  border-radius: 5px;
+  background-color: lightblue;
+  border: none;
+  width: 30%;
+  margin-left: 10px;
+}
+
+.phoneButtonon span {
+  color: white !important;
+}
+
+.phoneButtonoff {
   height: 54px;
   border-radius: 5px;
   background-color: none;
