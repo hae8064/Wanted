@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
-import "./LoginModal.css";
-import { Link, useNavigate } from "react-router-dom";
-import SignUpModal from "../SignUpModal/SignUpModal";
+import React, { useEffect, useState } from 'react';
+import './LoginModal.css';
+import { Link, useNavigate } from 'react-router-dom';
+import SignUpModal from '../SignUpModal/SignUpModal';
 
 const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
+  //회원가입 된 이메일
+  const signInEmail = 'lbh8064@naver.com';
   const [loginModal, setLoginModal] = useState(false);
-  const [userEmail, setUserEmail] = useState("");
+  const [userEmail, setUserEmail] = useState('');
   const [nextPage, setNextPage] = useState(false);
   //유효성 검사 통과 시 버튼 활성화
-  const [buttonActive, setButtonActive] = useState("off");
+  const [buttonActive, setButtonActive] = useState('off');
   const closeModal = () => {
     offLoginModal(loginModal);
     // console.log(onContainer);
@@ -22,7 +24,11 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
 
   //회원가입 모달 on
   const modalSignUpOn = () => {
-    modalOn(2);
+    if (userEmail === signInEmail) {
+      modalOn(3);
+    } else {
+      modalOn(2);
+    }
   };
 
   const signUp = () => {};
@@ -32,22 +38,22 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
 
   const emailCheck = (username) => {
     if (emailRegEx.test(username)) {
-      console.log("이메일 형식 맞습니다.");
+      console.log('이메일 형식 맞습니다.');
       setNextPage(true);
-      setButtonActive("on");
+      setButtonActive('on');
       modalSignUpOn();
     } else {
       setNextPage(false);
-      alert("이메일 형식이 아닙니다.");
+      alert('이메일 형식이 아닙니다.');
     }
   };
 
   const onButtonActive = (e) => {
     setUserEmail(e.target.value);
     if (emailRegEx.test(userEmail)) {
-      setButtonActive("on");
+      setButtonActive('on');
     } else {
-      setButtonActive("off");
+      setButtonActive('off');
     }
   };
 
@@ -134,7 +140,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
             </Link>
           ) : (
             <button
-              className={"loginModalButton" + buttonActive}
+              className={'loginModalButton' + buttonActive}
               type="submit"
               //onclick="emailValidation"
               // onClick="emailValidation"
