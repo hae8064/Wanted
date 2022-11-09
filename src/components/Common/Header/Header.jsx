@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
 import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
@@ -7,7 +7,8 @@ import LoginModal from '../loginModal/LoginModal';
 import Hamburger from './Hamburger';
 import './Header.css';
 import HeaderSearch from './HeaderSearch';
-function Header({ setOn, getLoginModal, setHeaderLogin }) {
+import { useRef } from 'react';
+function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
   const [login, setLogin] = useState(false);
 
   const [hamhover, setHamHover] = useState(false);
@@ -15,6 +16,10 @@ function Header({ setOn, getLoginModal, setHeaderLogin }) {
   const [searchOn, setSearchOn] = useState(false);
 
   const [loginModalOn, setLoginModalOn] = useState(1);
+
+  const [profilePopUp, setProfilePopUp] = useState('off');
+
+  const refLogoutContainer = useRef(null);
 
   const doLogin = () => {
     setLogin(!login);
@@ -29,6 +34,33 @@ function Header({ setOn, getLoginModal, setHeaderLogin }) {
   const changeSearchOn = () => {
     setSearchOn(false);
   };
+
+  //프로필 버튼 클릭시
+  const onProfileButton = () => {
+    setProfilePopUp('on');
+  };
+
+  const onLogout = () => {
+    setHeaderLogout(false);
+  };
+  /* 외부 영역을 클릭했을 때 검색창이 닫히도록 */
+  useEffect(() => {
+    function handleOutside(e) {
+      // current.contains(e.target) : 컴포넌트 특정 영역 외 클릭 감지를 위해 사용
+      if (
+        refLogoutContainer.current &&
+        !refLogoutContainer.current.contains(e.target)
+      ) {
+        setProfilePopUp('off');
+        changeSearchOn();
+        console.log('close');
+      }
+    }
+    document.addEventListener('mousedown', handleOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleOutside);
+    };
+  }, [refLogoutContainer]);
 
   return (
     <>
@@ -149,13 +181,51 @@ function Header({ setOn, getLoginModal, setHeaderLogin }) {
                 </span>
               </div>
               <div className="loginProfileIcon">
-                <button className="profileButton">
+                <button className="profileButton" onClick={onProfileButton}>
                   <img
                     className="IconProfile"
                     src="imgs/profileIcon.png"
                     alt="프로필"
                   />
                 </button>
+              </div>
+              <div
+                className={'profileUl' + profilePopUp}
+                ref={refLogoutContainer}
+              >
+                <ul className="profileContainer">
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLi">
+                      <span>MY 원티드</span>
+                    </li>
+                  </Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLiProfile">프로필</li>
+                  </Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLi">지원 현황</li>
+                  </Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLi">제안받기 현황</li>
+                  </Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLi">좋아요</li>
+                  </Link>
+                  <Link to="/bookmark" style={{ textDecoration: 'none' }}>
+                    <li className="profileLiBookMark">북마크</li>
+                  </Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLi">추천</li>
+                  </Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLi">포인트</li>
+                  </Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <li className="profileLogout" onClick={onLogout}>
+                      로그아웃
+                    </li>
+                  </Link>
+                </ul>
               </div>
             </div>
           ) : (

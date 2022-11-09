@@ -41,6 +41,7 @@ function App() {
         setOn={setOn}
         getLoginModal={setLoginModal}
         setHeaderLogin={headerLogin}
+        setHeaderLogout={setHeaderLogin}
       />
 
       {/* <LoginModal /> */}
