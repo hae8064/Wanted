@@ -24,7 +24,6 @@ const Password = ({ modalOn, setHeaderLogin }) => {
     } else {
       //로컬스토리지 로그인 정보 저장
       localStorage.setItem('id', 'lbh8064@naver.com');
-      localStorage.setItem('password', password);
       setHeaderLogin(true);
       modalOn(0);
     }

@@ -42,7 +42,6 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
 
   const onLogout = () => {
     localStorage.removeItem('id');
-    localStorage.removeItem('password');
     setHeaderLogout(false);
   };
 
