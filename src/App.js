@@ -25,6 +25,10 @@ function App() {
 
   //로그인 모달창 on/off state
   const [loginModal, setLoginModal] = useState(0);
+
+  //로그인 유무 Header Props전달
+  const [headerLogin, setHeaderLogin] = useState(false);
+
   const location = useLocation();
 
   const offLoginModal = (e) => {
@@ -33,8 +37,12 @@ function App() {
 
   return (
     <div>
-      <Header setOn={setOn} getLoginModal={setLoginModal} />
-      {console.log(loginModal)}
+      <Header
+        setOn={setOn}
+        getLoginModal={setLoginModal}
+        setHeaderLogin={headerLogin}
+      />
+
       {/* <LoginModal /> */}
       <Routes>
         <Route path="/" element={<MainContainer />} />
@@ -69,12 +77,13 @@ function App() {
       </Routes>
 
       {/* 모달창 loginModal 기본 0 로그인 1 회원가입 2 비밀번호 3*/}
+      {console.log('잘 로그인 되었는가.' + headerLogin)}
       {loginModal === 1 ? (
         <LoginModal modalOn={setLoginModal} />
       ) : loginModal === 2 ? (
         <SignUpModal modalOn={setLoginModal} />
       ) : loginModal === 3 ? (
-        <Password modalOn={setLoginModal} />
+        <Password modalOn={setLoginModal} setHeaderLogin={setHeaderLogin} />
       ) : null}
 
       {/* main 페이지 */}

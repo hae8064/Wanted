@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import './Password.css';
 
-const Password = ({ modalOn }) => {
+const Password = ({ modalOn, setHeaderLogin }) => {
   //비밀번호 value 임시로 저장해놓기
   const pwd = 'bonghee1234@';
   const [password, setPassword] = useState('');
@@ -22,6 +22,7 @@ const Password = ({ modalOn }) => {
       alert('비밀번호가 일치하지 않습니다!');
       setPassword('');
     } else {
+      setHeaderLogin(true);
       modalOn(0);
     }
   };
