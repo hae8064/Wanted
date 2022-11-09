@@ -41,8 +41,11 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
   };
 
   const onLogout = () => {
+    localStorage.removeItem('id');
+    localStorage.removeItem('password');
     setHeaderLogout(false);
   };
+
   /* 외부 영역을 클릭했을 때 검색창이 닫히도록 */
   useEffect(() => {
     function handleOutside(e) {
@@ -162,7 +165,8 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
           </div>
 
           {/* <Link to="/login"> */}
-          {setHeaderLogin === true ? (
+          {setHeaderLogin === true ||
+          localStorage.getItem('id') === 'lbh8064@naver.com' ? (
             // <>로그인</>
             <div className="loginLiContainer">
               <div className="alarmContainer">
