@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
 import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
+import { ReactComponent as AlarmIcon } from '../../../assets/alarmButton.svg';
 import LoginModal from '../loginModal/LoginModal';
 import Hamburger from './Hamburger';
 import './Header.css';
 import HeaderSearch from './HeaderSearch';
-
 function Header({ setOn, getLoginModal, setHeaderLogin }) {
   const [login, setLogin] = useState(false);
 
@@ -131,7 +131,33 @@ function Header({ setOn, getLoginModal, setHeaderLogin }) {
 
           {/* <Link to="/login"> */}
           {setHeaderLogin === true ? (
-            <>로그인</>
+            // <>로그인</>
+            <div className="loginLiContainer">
+              <div className="alarmContainer">
+                <button className="alarmButton">
+                  <AlarmIcon />
+                </button>
+                <span className="Badge_Badge__BJTzL">
+                  <svg className="svgN" width="5" height="5" viewBox="0 0 6 6">
+                    <g fill="#fff" fill-rule="nonzero">
+                      <path
+                        d="M6.647 11L6.647 7.259 6.688 7.259 9.158 11 11 11 11 5 9.353 5 9.353 8.357 9.322 8.357 7.089 5 5 5 5 11z"
+                        transform="translate(-123 -375) translate(20 365) translate(98 5)"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div className="loginProfileIcon">
+                <button className="profileButton">
+                  <img
+                    className="IconProfile"
+                    src="imgs/profileIcon.png"
+                    alt="프로필"
+                  />
+                </button>
+              </div>
+            </div>
           ) : (
             <button className="login" onClick={loginChange}>
               회원가입/로그인

@@ -337,3 +337,55 @@ body {
   font-weight: 400;
   margin-left: 20px;
 }
+
+.alarmContainer {
+  position: relative;
+}
+
+.alarmButton {
+  background: none;
+  border: none;
+  margin-left: 10px;
+}
+
+.Badge_Badge__BJTzL {
+  background-color: rgb(51, 102, 255);
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 1;
+  left: 30px;
+  bottom: 20px;
+}
+
+.svgN {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  color: white;
+  z-index: 3;
+  width: 5px;
+  height: 5px;
+}
+
+.loginLiContainer {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.profileButton {
+  border: none;
+  height: 28px;
+  width: 28px;
+  margin-left: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.IconProfile {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
