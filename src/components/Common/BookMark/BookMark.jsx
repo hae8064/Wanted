@@ -4,13 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { bookAdd } from "../../../redux/reducers/addsub";
 import dummy from "../../../db/data.json";
 import { Link } from "react-router-dom";
+import { deleteBook } from "../../../redux/actions";
 
 const BookMark = () => {
   //   const dispatch = useDispatch();
 
   const bookItem = useSelector((store) => store.bookReducer);
+  const dispatch = useDispatch();
 
-  console.log(bookItem);
   return (
     <>
       <h2>북마크 목록</h2>
@@ -24,7 +25,7 @@ const BookMark = () => {
                   <div className="gridContainerFirst">
                     <header>
                       <svg
-                        class="bookmarkButton"
+                        class="bookmarkButtonon"
                         width="22"
                         height="22"
                         viewBox="0 0 18 18"
@@ -33,6 +34,7 @@ const BookMark = () => {
                         // onClick={onSvgClick}
                         onClick={() => {
                           console.log("북마크 삭제@@");
+                          dispatch(deleteBook(item.id));
                         }}
                       >
                         <path
