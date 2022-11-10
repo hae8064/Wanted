@@ -3,7 +3,7 @@ import "./GridContainer.css";
 import dummy from "../../../db/data.json";
 import { json, Link } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addBook, deleteBook } from "../../../redux/actions";
 import bookReducer from "../../../redux/reducers/book-reducer";
 
@@ -17,6 +17,8 @@ function GridContainer() {
   //북마크 아이콘 배경 blue 변경
   const [blueIcon, setBlueIcon] = useState("off");
   const [bookId, setBookId] = useState([]);
+
+  const bookItem = useSelector((store) => store.bookReducer);
 
   const _infiniteScroll = useCallback(() => {
     console.log("@@@@");
@@ -71,12 +73,13 @@ function GridContainer() {
                 // setBookId(bookId.concat(container.id));
                 setBookId((prevList) => [...prevList, container.id]);
 
-                console.log("컨테이너 id" + container.id);
-                console.log("@@@@@redux State " + bookReducer);
-
                 //만약 북마크 한번 더 누르면 제거
-                if (bookId.find((v) => v === container.id)) {
-                  setBookId(bookId.filter((e) => e !== container.id));
+                // if (bookId.find((v) => v === container.id)) {
+                //   setBookId(bookId.filter((e) => e !== container.id));
+                //   dispatch(deleteBook(container.id));
+                // }
+
+                if (bookItem.find((v) => v === container.id)) {
                   dispatch(deleteBook(container.id));
                 }
               }}
