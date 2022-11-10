@@ -3,11 +3,20 @@ import "./GridContainer.css";
 import dummy from "../../../db/data.json";
 import { json, Link } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { useDispatch } from "react-redux";
+import { addBook, deleteBook } from "../../../redux/actions";
+import bookReducer from "../../../redux/reducers/book-reducer";
 
 function GridContainer() {
+  const dispatch = useDispatch();
+
   //무한 스크롤 구현 state
   const [itemIndex, setItemIndex] = useState(0);
   const [result, setResult] = useState(dummy.developGridContainer.slice(0, 8));
+
+  //북마크 아이콘 배경 blue 변경
+  const [blueIcon, setBlueIcon] = useState("off");
+  const [bookId, setBookId] = useState([]);
 
   const _infiniteScroll = useCallback(() => {
     console.log("@@@@");
@@ -38,22 +47,39 @@ function GridContainer() {
     return () => window.removeEventListener("scroll", _infiniteScroll, true);
   }, [_infiniteScroll]);
 
+  useEffect(() => {
+    console.log("북마크 id목록 " + bookId);
+  }, [bookId]);
+
   return (
-    <div class="devGridContainer">
+    <div className="devGridContainer">
       {result.map((container) => (
-        <Link
-          key={container.id}
-          to={`/detailRecruit/${container.id}`}
-          className="gridContainerFirst"
-        >
+        <div className="gridContainerFirst">
           <header>
+            {/* {bookId.find(container.id) ? setBlueIcon("on") : setBlueIcon("off")} */}
             <svg
-              class="bookmarkButton"
+              className={"bookmarkButton" + blueIcon}
               width="22"
               height="22"
               viewBox="0 0 18 18"
               fill="none"
               xmlns="https://www.w3.org/2000/svg"
+              // onClick={onSvgClick}
+              onClick={() => {
+                console.log("북마크 추가@@");
+                dispatch(addBook(container.id));
+                // setBookId(bookId.concat(container.id));
+                setBookId((prevList) => [...prevList, container.id]);
+
+                console.log("컨테이너 id" + container.id);
+                console.log("@@@@@redux State " + bookReducer);
+
+                //만약 북마크 한번 더 누르면 제거
+                if (bookId.find((v) => v === container.id)) {
+                  setBookId(bookId.filter((e) => e !== container.id));
+                  dispatch(deleteBook(container.id));
+                }
+              }}
             >
               <path
                 fill-rule="evenodd"
@@ -67,25 +93,32 @@ function GridContainer() {
                 fill-opacity="0.25"
               ></path>
             </svg>
-            <img src={container.img} alt="" />
+
+            <Link
+              key={container.id}
+              to={`/detailRecruit/${container.id}`}
+              style={{ height: "190px" }}
+            >
+              <img src={container.img} alt="" />
+            </Link>
           </header>
           <footer>
-            <span class="gridTitle">{container.gridTitle}</span>
-            <span class="gridTitle2">{container.gridTitle2}</span>
-            <button class="gridButton">
+            <span className="gridTitle">{container.gridTitle}</span>
+            <span className="gridTitle2">{container.gridTitle2}</span>
+            <button className="gridButton">
               <span>{container.gridButton}</span>
             </button>
-            <span class="gridTitle3">
-              {container.region} <span class="addressDot">.</span>{" "}
+            <span className="gridTitle3">
+              {container.region} <span className="addressDot">.</span>{" "}
               <span>{container.country}</span>
             </span>
-            <span class="gridTitle4">
+            <span className="gridTitle4">
               채용보상금{" "}
               {container.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               원
             </span>
           </footer>
-        </Link>
+        </div>
       ))}
     </div>
   );
