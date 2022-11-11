@@ -1,11 +1,12 @@
-import React from "react";
-import "./BookMark.css";
-import { useSelector, useDispatch } from "react-redux";
-import { bookAdd } from "../../../redux/reducers/addsub";
-import dummy from "../../../db/data.json";
-import { Link } from "react-router-dom";
-import { deleteBook } from "../../../redux/actions";
+import React from 'react';
+import './BookMark.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { bookAdd } from '../../../redux/reducers/addsub';
+import dummy from '../../../db/data.json';
+import { Link } from 'react-router-dom';
+import { deleteBook } from '../../../redux/actions';
 
+//북마크 페이지
 const BookMark = () => {
   //   const dispatch = useDispatch();
 
@@ -33,7 +34,7 @@ const BookMark = () => {
                         xmlns="https://www.w3.org/2000/svg"
                         // onClick={onSvgClick}
                         onClick={() => {
-                          console.log("북마크 삭제@@");
+                          console.log('북마크 삭제@@');
                           dispatch(deleteBook(item.id));
                         }}
                       >
@@ -60,17 +61,17 @@ const BookMark = () => {
                         <span>{item.gridButton}</span>
                       </button>
                       <span className="gridTitle3">
-                        {item.region} <span className="addressDot">.</span>{" "}
+                        {item.region} <span className="addressDot">.</span>{' '}
                         <span>{item.country}</span>
                       </span>
                       <span className="gridTitle4">
-                        채용보상금{" "}
+                        채용보상금{' '}
                         {item.price
                           .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                         원
                       </span>
-                    </footer>{" "}
+                    </footer>{' '}
                   </div>
                 ) : null}
               </>
