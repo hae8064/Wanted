@@ -15,7 +15,7 @@ const BookMark = () => {
 
   return (
     <>
-      <h2>북마크 목록</h2>
+      <h2 className="bookmarkMainTitle">북마크 목록</h2>
 
       <div className="devGridContainer">
         {dummy.developGridContainer.map((item) => (
