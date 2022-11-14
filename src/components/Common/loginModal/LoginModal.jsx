@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import './LoginModal.css';
-import { Link, useNavigate } from 'react-router-dom';
-import SignUpModal from '../SignUpModal/SignUpModal';
+import React, { useEffect, useState } from "react";
+import "./LoginModal.css";
+import { Link, useNavigate } from "react-router-dom";
+import SignUpModal from "../SignUpModal/SignUpModal";
+import Alert from "react-bootstrap/Alert";
+import Button from "react-bootstrap/Button";
+import AlertEmail from "../Alert/Alert";
 
 const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
   //회원가입 된 이메일
-  const signInEmail = 'lbh8064@naver.com';
+  const signInEmail = "lbh8064@naver.com";
   const [loginModal, setLoginModal] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
+  const [userEmail, setUserEmail] = useState("");
   const [nextPage, setNextPage] = useState(false);
   //유효성 검사 통과 시 버튼 활성화
-  const [buttonActive, setButtonActive] = useState('off');
+  const [buttonActive, setButtonActive] = useState("off");
+  const [bootAlert, setBootAlert] = useState(false);
+
   const closeModal = () => {
     offLoginModal(loginModal);
     // console.log(onContainer);
@@ -38,22 +43,24 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
 
   const emailCheck = (username) => {
     if (emailRegEx.test(username)) {
-      console.log('이메일 형식 맞습니다.');
+      console.log("이메일 형식 맞습니다.");
       setNextPage(true);
-      setButtonActive('on');
+      setButtonActive("on");
       modalSignUpOn();
     } else {
       setNextPage(false);
-      alert('이메일 형식이 아닙니다.');
+      setBootAlert(true);
+      username = "";
+      // alert("이메일 형식이 아닙니다.");
     }
   };
 
   const onButtonActive = (e) => {
     setUserEmail(e.target.value);
     if (emailRegEx.test(userEmail)) {
-      setButtonActive('on');
+      setButtonActive("on");
     } else {
-      setButtonActive('off');
+      setButtonActive("off");
     }
   };
 
@@ -62,6 +69,8 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
   return (
     // <section className="loginModal">
     <section className="loginModal">
+      {bootAlert ? <AlertEmail bootAlert={setBootAlert} /> : null}
+
       <div className="loginModalContainer">
         <div className="loginModalTop">
           <div className="loginModalTopIcon">
@@ -89,7 +98,6 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
             </div>
           </div>
         </div>
-
         <div className="loginModalMiddle">
           <div className="MiddleText">이메일</div>
           <div className="MiddleLoginInput">
@@ -140,7 +148,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
             </Link>
           ) : (
             <button
-              className={'loginModalButton' + buttonActive}
+              className={"loginModalButton" + buttonActive}
               type="submit"
               //onclick="emailValidation"
               // onClick="emailValidation"
@@ -275,7 +283,6 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
             </div>
           </div>
         </div>
-
         <div className="loginModalBottom">
           <span className="bottom1">
             걱정마세요! 여러분의 지원 활동은 SNS에 노출되지 않습니다.

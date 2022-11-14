@@ -1,16 +1,20 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import './Password.css';
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import AlertPassword from "../Alert/AlertPassword";
+import "./Password.css";
 
 const Password = ({ modalOn, setHeaderLogin }) => {
   //비밀번호 value 임시로 저장해놓기
-  const pwd = 'bonghee1234@';
-  const [password, setPassword] = useState('');
+  const pwd = "bonghee1234@";
+  const [password, setPassword] = useState("");
   //비밀번호 일치하는지 확인 State
   const [pwdCheck, setPwdCheck] = useState(false);
 
-  const [buttonActive, setButtonActive] = useState('off');
+  const [buttonActive, setButtonActive] = useState("off");
+
+  //부트스트랩 alert창
+  const [bootAlert, setBootAlert] = useState(false);
 
   //비밀번호 모달 off
   const modalOff = () => {
@@ -19,11 +23,11 @@ const Password = ({ modalOn, setHeaderLogin }) => {
 
   const onLoginEvent = () => {
     if (pwdCheck === false) {
-      alert('비밀번호가 일치하지 않습니다!');
-      setPassword('');
+      setBootAlert(true);
+      setPassword("");
     } else {
       //로컬스토리지 로그인 정보 저장
-      localStorage.setItem('id', 'lbh8064@naver.com');
+      localStorage.setItem("id", "lbh8064@naver.com");
       setHeaderLogin(true);
       modalOn(0);
     }
@@ -32,7 +36,7 @@ const Password = ({ modalOn, setHeaderLogin }) => {
   useEffect(() => {
     if (password === pwd) {
       setPwdCheck(true);
-      setButtonActive('on');
+      setButtonActive("on");
     }
   }, [password]);
 
@@ -42,6 +46,7 @@ const Password = ({ modalOn, setHeaderLogin }) => {
 
   return (
     <section className="passwordModal">
+      {bootAlert ? <AlertPassword bootAlert={setBootAlert} /> : null}
       <div className="passwordContainer">
         <div className="loginModalTopIcon">
           <i className="icon-logo_new"></i>
@@ -77,7 +82,7 @@ const Password = ({ modalOn, setHeaderLogin }) => {
           </div>
         </div>
         <button
-          className={'passwordloginModalButton' + buttonActive}
+          className={"passwordloginModalButton" + buttonActive}
           type="submit"
           onClick={onLoginEvent}
         >
