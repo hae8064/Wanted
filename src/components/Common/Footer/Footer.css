@@ -12,6 +12,7 @@
   padding: 18px 65px 20px 65px;
   align-items: center;
   width: 1200px;
+  box-sizing: content-box;
 }
 
 .footerTopLeft {
@@ -47,6 +48,10 @@
   line-height: 2.6;
   margin-right: 45px;
   white-space: nowrap;
+}
+
+.footerTag {
+  box-sizing: content-box;
 }
 
 .footerTag a {

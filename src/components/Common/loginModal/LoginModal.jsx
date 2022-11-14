@@ -50,7 +50,6 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
     } else {
       setNextPage(false);
       setBootAlert(true);
-      username = "";
       // alert("이메일 형식이 아닙니다.");
     }
   };

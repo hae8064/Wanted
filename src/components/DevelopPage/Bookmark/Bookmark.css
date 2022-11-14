@@ -29,6 +29,7 @@
 
 .mainTopImgs {
   display: flex;
+  margin-bottom: 60px;
 }
 .mainTopText h5 {
   padding-bottom: 50px;
@@ -146,4 +147,12 @@ footer img {
 }
 .mainBookMark {
   margin-left: 8px;
+}
+
+.devMainTitleH3 {
+  font-size: 20px;
+}
+
+.mainTopTextH4 {
+  font-size: 18px;
 }

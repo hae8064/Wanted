@@ -1,5 +1,5 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -18,8 +18,8 @@ function Footer() {
           <div class="footerInfo">고객센터</div>
         </div>
 
-        <div class="footerTopRight">
-          <div class="footerTag">
+        <div className="footerTopRight">
+          <div className="footerTag">
             <a href="/">
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_instagram.png&w=20&q=100"

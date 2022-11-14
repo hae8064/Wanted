@@ -1,6 +1,7 @@
-import React from 'react';
-import './Bookmark.css';
-import { ReactComponent as BookmarkIcon } from '../../../assets/bookmark.svg';
+import React from "react";
+import "./Bookmark.css";
+import { ReactComponent as BookmarkIcon } from "../../../assets/bookmark.svg";
+import "bootstrap/dist/css/bootstrap.css";
 
 function Bookmark() {
   return (
@@ -17,7 +18,7 @@ function Bookmark() {
       </button>
 
       <div class="devMainTitle">
-        <h3>적극 채용 중인 회사</h3>
+        <h3 className="devMainTitleH3">적극 채용 중인 회사</h3>
       </div>
 
       <div class="mainTopImgs">
@@ -36,8 +37,8 @@ function Bookmark() {
               alt=""
             />
             <div class="mainTopText">
-              <h4>케이에이치(시너지타워)</h4>
-              <h5>11개 포지션</h5>
+              <h4 className="mainTopTextH4">케이에이치(시너지타워)</h4>
+              <h5 className="mainTopTextH5">11개 포지션</h5>
             </div>
           </footer>
         </a>
@@ -56,8 +57,8 @@ function Bookmark() {
               alt=""
             />
             <div class="mainTopText">
-              <h4>케이에이치(시너지타워)</h4>
-              <h5>11개 포지션</h5>
+              <h4 className="mainTopTextH4">케이에이치(시너지타워)</h4>
+              <h5 className="mainTopTextH5">11개 포지션</h5>
             </div>
           </footer>
         </a>
@@ -76,8 +77,8 @@ function Bookmark() {
               alt=""
             />
             <div class="mainTopText">
-              <h4>케이에이치(시너지타워)</h4>
-              <h5>11개 포지션</h5>
+              <h4 className="mainTopTextH4">케이에이치(시너지타워)</h4>
+              <h5 className="mainTopTextH5">11개 포지션</h5>
             </div>
           </footer>
         </a>
@@ -96,8 +97,8 @@ function Bookmark() {
               alt=""
             />
             <div class="mainTopText">
-              <h4>케이에이치(시너지타워)</h4>
-              <h5>11개 포지션</h5>
+              <h4 className="mainTopTextH4">케이에이치(시너지타워)</h4>
+              <h5 className="mainTopTextH5">11개 포지션</h5>
             </div>
           </footer>
         </a>
@@ -117,8 +118,8 @@ function Bookmark() {
               alt=""
             />
             <div class="mainTopText">
-              <h4>케이에이치(시너지타워)</h4>
-              <h5>11개 포지션</h5>
+              <h4 className="mainTopTextH4">케이에이치(시너지타워)</h4>
+              <h5 className="mainTopTextH5">11개 포지션</h5>
             </div>
           </footer>
         </a>

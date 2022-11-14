@@ -168,6 +168,10 @@
   text-overflow: ellipsis;
 }
 
+.headerFilterRightText {
+  font-size: 13px;
+}
+
 .headerRegionRightOne {
   position: absolute;
   top: -8px;
