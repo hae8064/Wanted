@@ -1,11 +1,11 @@
 .alertEmail {
-  position: sticky;
-  top: 250px;
+  position: absolute !important;
+  top: 200px;
   z-index: 10;
 }
 
 .alertPassword {
-  position: sticky;
-  top: 250px;
+  position: absolute !important;
+  top: 100px;
   z-index: 10;
 }
