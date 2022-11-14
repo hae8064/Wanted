@@ -161,7 +161,7 @@
   color: #333;
 }
 
-.profilesButton {
+.profilesButton2 {
   background: none;
   margin: 0;
   padding: 0;
@@ -169,19 +169,20 @@
   flex-direction: row;
   border: none;
   margin-top: 15px;
+  box-sizing: content-box;
 }
 
-.profilesButton ul {
+.profilesButton2 ul {
   display: flex;
   width: 58px;
   height: 30px;
   position: relative;
 }
-.profilesButton li {
+.profilesButton2 li {
   list-style: none;
 }
 
-.profilesButton img {
+.profilesButton2 img {
   border-radius: 50%;
   width: 26px;
   height: 26px;

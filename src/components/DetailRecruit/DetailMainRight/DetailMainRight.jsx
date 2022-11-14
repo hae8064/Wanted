@@ -42,7 +42,7 @@ const DetailMainRight = () => {
           <i class="icon-ic_favorite_black_24px"></i>
           <span>9</span>
         </button>
-        <button class="profilesButton">
+        <button class="profilesButton2">
           <ul>
             <li>
               <img
