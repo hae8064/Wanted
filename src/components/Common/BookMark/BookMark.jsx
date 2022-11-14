@@ -1,10 +1,10 @@
-import React from 'react';
-import './BookMark.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { bookAdd } from '../../../redux/reducers/addsub';
-import dummy from '../../../db/data.json';
-import { Link } from 'react-router-dom';
-import { deleteBook } from '../../../redux/actions';
+import React from "react";
+import "./BookMark.css";
+import { useSelector, useDispatch } from "react-redux";
+import { bookAdd } from "../../../redux/reducers/addsub";
+import dummy from "../../../db/data.json";
+import { Link } from "react-router-dom";
+import { deleteBook } from "../../../redux/actions";
 
 //북마크 페이지
 const BookMark = () => {
@@ -26,7 +26,7 @@ const BookMark = () => {
                   <div className="gridContainerFirst">
                     <header>
                       <svg
-                        class="bookmarkButtonon"
+                        class="bookmarkButtonoff"
                         width="22"
                         height="22"
                         viewBox="0 0 18 18"
@@ -34,7 +34,7 @@ const BookMark = () => {
                         xmlns="https://www.w3.org/2000/svg"
                         // onClick={onSvgClick}
                         onClick={() => {
-                          console.log('북마크 삭제@@');
+                          console.log("북마크 삭제@@");
                           dispatch(deleteBook(item.id));
                         }}
                       >
@@ -46,8 +46,7 @@ const BookMark = () => {
                         ></path>
                         <path
                           d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                          fill="black"
-                          fill-opacity="0.25"
+                          fill="#36f"
                         ></path>
                       </svg>
                       <Link key={item.id} to={`/detailRecruit/${item.id}`}>
@@ -61,17 +60,17 @@ const BookMark = () => {
                         <span>{item.gridButton}</span>
                       </button>
                       <span className="gridTitle3">
-                        {item.region} <span className="addressDot">.</span>{' '}
+                        {item.region} <span className="addressDot">.</span>{" "}
                         <span>{item.country}</span>
                       </span>
                       <span className="gridTitle4">
-                        채용보상금{' '}
+                        채용보상금{" "}
                         {item.price
                           .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         원
                       </span>
-                    </footer>{' '}
+                    </footer>{" "}
                   </div>
                 ) : null}
               </>
