@@ -1,0 +1,20 @@
+.accordionSpan1 {
+  margin: 0 20px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #333;
+}
+
+.accordionSpan2 {
+  font-size: 13px;
+  line-height: 24px;
+  color: #666;
+}
+
+.accordionContainer {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #333333 !important;
+  font-size: 14px;
+}
