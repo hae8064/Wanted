@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
-import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
-import { ReactComponent as AlarmIcon } from '../../../assets/alarmButton.svg';
-import LoginModal from '../loginModal/LoginModal';
-import Hamburger from './Hamburger';
-import './Header.css';
-import HeaderSearch from './HeaderSearch';
-import { useRef } from 'react';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { ReactComponent as SearchIcon } from "../../../assets/icon-search.svg";
+import { ReactComponent as SearchIcon2 } from "../../../assets/icon-search2.svg";
+import { ReactComponent as AlarmIcon } from "../../../assets/alarmButton.svg";
+import LoginModal from "../loginModal/LoginModal";
+import Hamburger from "./Hamburger";
+import "./Header.css";
+import HeaderSearch from "./HeaderSearch";
+import { useRef } from "react";
 function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
   const [login, setLogin] = useState(false);
 
@@ -17,7 +17,7 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
 
   const [loginModalOn, setLoginModalOn] = useState(1);
 
-  const [profilePopUp, setProfilePopUp] = useState('off');
+  const [profilePopUp, setProfilePopUp] = useState("off");
 
   const refLogoutContainer = useRef(null);
 
@@ -37,11 +37,11 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
 
   //프로필 버튼 클릭시
   const onProfileButton = () => {
-    setProfilePopUp('on');
+    setProfilePopUp("on");
   };
 
   const onLogout = () => {
-    localStorage.removeItem('id');
+    localStorage.removeItem("id");
     setHeaderLogout(false);
   };
 
@@ -53,14 +53,14 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
         refLogoutContainer.current &&
         !refLogoutContainer.current.contains(e.target)
       ) {
-        setProfilePopUp('off');
+        setProfilePopUp("off");
         changeSearchOn();
-        console.log('close');
+        console.log("close");
       }
     }
-    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener("mousedown", handleOutside);
     return () => {
-      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener("mousedown", handleOutside);
     };
   }, [refLogoutContainer]);
 
@@ -165,7 +165,7 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
 
           {/* <Link to="/login"> */}
           {setHeaderLogin === true ||
-          localStorage.getItem('id') === 'lbh8064@naver.com' ? (
+          localStorage.getItem("id") === "lbh8064@naver.com" ? (
             // <>로그인</>
             <div className="loginLiContainer">
               <div className="alarmContainer">
@@ -193,37 +193,37 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
                 </button>
               </div>
               <div
-                className={'profileUl' + profilePopUp}
+                className={"profileUl" + profilePopUp}
                 ref={refLogoutContainer}
               >
                 <ul className="profileContainer">
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLi">
                       <span>MY 원티드</span>
                     </li>
                   </Link>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLiProfile">프로필</li>
                   </Link>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLi">지원 현황</li>
                   </Link>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLi">제안받기 현황</li>
                   </Link>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLi">좋아요</li>
                   </Link>
-                  <Link to="/bookmark" style={{ textDecoration: 'none' }}>
+                  <Link to="/bookmark" style={{ textDecoration: "none" }}>
                     <li className="profileLiBookMark">북마크</li>
                   </Link>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLi">추천</li>
                   </Link>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLi">포인트</li>
                   </Link>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
                     <li className="profileLogout" onClick={onLogout}>
                       로그아웃
                     </li>
@@ -241,9 +241,9 @@ function Header({ setOn, getLoginModal, setHeaderLogin, setHeaderLogout }) {
           <a className="companyService">기업 서비스</a>
         </div>
       </div>
-      <Hamburger setHamHover={setHamHover} view={hamhover ? 'on' : 'off'} />
+      <Hamburger setHamHover={setHamHover} view={hamhover ? "on" : "off"} />
       <HeaderSearch
-        on={searchOn ? 'on' : 'off'}
+        on={searchOn ? "on" : "off"}
         changeSearchOn={changeSearchOn}
       />
     </>

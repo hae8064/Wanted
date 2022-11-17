@@ -230,6 +230,28 @@ body {
   align-items: center;
 }
 
+/* .headermenu {
+  --nav-height: 50px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  height: inherit;
+  text-align: center;
+  margin: 0 50px;
+  display: flex;
+  flex: 1 1;
+  justify-content: space-around;
+  align-items: center;
+} */
+
 .headerRight {
   display: flex;
   justify-content: center;

@@ -1,12 +1,11 @@
-import React from 'react';
-import './main.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
-import ArticleSliderContainer from '../MainArticleSliderContainer/ArticleSliderContainer';
-import MainWorkerContainer from '../mainWorkerContainer/MainWorkerContainer';
-import EventSliderContainer from './EventSliderContainer/EventSliderContainer';
-import dummy from '../../../db/data.json';
+import React from "react";
+import "./main.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import ArticleSliderContainer from "../MainArticleSliderContainer/ArticleSliderContainer";
+import MainWorkerContainer from "../mainWorkerContainer/MainWorkerContainer";
+import EventSliderContainer from "./EventSliderContainer/EventSliderContainer";
 
 function Main() {
   const setting = {
@@ -31,7 +30,80 @@ function Main() {
     // nextArrow: "<button type='button' class='slick-next'>Next</button>",
   };
 
-  const manyButtons = [];
+  const manyButtons = [
+    {
+      className: "manybuttons career",
+      spanText: "커리어고민",
+    },
+    {
+      className: "manybuttons companylife",
+      spanText: "회사생활",
+    },
+    {
+      className: "manybuttons curture",
+      spanText: "조직문화",
+    },
+    {
+      className: "manybuttons passmove",
+      spanText: "취업/이직",
+    },
+    {
+      className: "manybuttons leader",
+      spanText: "리더십",
+    },
+    {
+      className: "manybuttons personrel",
+      spanText: "인간관계",
+    },
+    {
+      className: "manybuttons lifestyle",
+      spanText: "라이프스타일",
+    },
+    {
+      className: "manybuttons ittech",
+      spanText: "IT/기술",
+    },
+    {
+      className: "manybuttons contents",
+      spanText: "콘텐츠제작",
+    },
+    {
+      className: "manybuttons develop",
+      spanText: "개발",
+    },
+    {
+      className: "manybuttons service",
+      spanText: "서비스기획",
+    },
+    {
+      className: "manybuttons marketing",
+      spanText: "마케팅",
+    },
+    {
+      className: "manybuttons md",
+      spanText: "MD",
+    },
+    {
+      className: "manybuttons career",
+      spanText: "커리어고민",
+    },
+    {
+      className: "manybuttons companylife",
+      spanText: "회사생활",
+    },
+    {
+      className: "manybuttons curture",
+      spanText: "조직문화",
+    },
+    {
+      className: "manybuttons passmove",
+      spanText: "취업/이직",
+    },
+    {
+      className: "manybuttons leader",
+      spanText: "리더십",
+    },
+  ];
 
   return (
     <div className="main">
@@ -87,7 +159,7 @@ function Main() {
 
       <div className="manybuttonsContainer">
         <div className="manyButton">
-          {/* <div className="leftButtonContainer">
+          <div className="leftButtonContainer">
             <button className="manyleftButton">
               <svg
                 className="SvgIcon_SvgIcon__root__svg__DKYBi"
@@ -96,9 +168,9 @@ function Main() {
                 <path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path>
               </svg>
             </button>
-          </div> */}
+          </div>
 
-          {dummy.manyButtons.map((comp) => {
+          {manyButtons.map((comp) => {
             return (
               <button className={comp.className}>
                 <span className="buttonTexts">{comp.spanText}</span>
@@ -106,14 +178,14 @@ function Main() {
             );
           })}
 
-          {/* <button className="manyRightButton">
+          <button className="manyRightButton">
             <svg
               className="SvgIcon_SvgIcon__root__svg__DKYBi"
               viewBox="0 0 18 18"
             >
               <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
             </svg>
-          </button> */}
+          </button>
         </div>
 
         <div className="manybuttonsRight">
@@ -339,12 +411,12 @@ function Main() {
           직군/직무를 입력하면 관련 콘텐츠를 추천해 드려요.
         </span>
         <em className="eys">👀</em>
-        <svg className="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18">
+        <svg className="SvgIcon_SvgIcon__root__svg__DKYBi2" viewBox="0 0 18 18">
           <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
         </svg>
       </div>
 
-      {/* 이벤트 component*/}
+      {/* 커리어 성장을 위한 맞춤 이벤트 component*/}
       <EventSliderContainer />
     </div>
   );

@@ -1,16 +1,16 @@
 .headerTitle {
   /* display: flex;
       align-items: center;
-      padding-left: 200px;
-      padding-right: 200px;
+      padding-left: 12.5rem;
+      padding-right: 12.5rem;
       z-index: 0;
       position: relative; */
 
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
-  --nav-height: 50px;
-  font-size: 14px;
+  --nav-height: 3.125rem;
+  font-size: 0.875rem;
   line-height: 1.42857143;
   color: #333333;
   font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
@@ -21,10 +21,32 @@
   padding: 0;
   border: 0;
   display: flex;
-  max-width: 1060px;
+  max-width: 66.25rem;
   align-items: center;
   width: 100%;
-  padding-left: 195px;
+  padding-left: 12.1875rem;
+}
+
+.headerTitleNoPc {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 3.125rem;
+  font-size: 0.875rem;
+  line-height: 1.42857143;
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  display: flex;
+  max-width: 66.25rem;
+  align-items: center;
+  width: 100%;
+  padding-left: 2.5rem;
 }
 
 .headerTitleLeft {
@@ -36,21 +58,21 @@
 }
 
 .headerTitleLeftText {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #333;
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 
 .headerTitleLeftContainer {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #e1e2e3;
-  border-radius: 9999px;
+  border: 0.0625rem solid #e1e2e3;
+  border-radius: 624.9375rem;
 }
 
 .headerTitleLeftContainer svg {
@@ -58,14 +80,14 @@
 }
 
 .headerLine {
-  font-size: 28px;
-  line-height: 29px;
-  padding: 3px 24px 0;
+  font-size: 1.75rem;
+  line-height: 1.8125rem;
+  padding: 0.1875rem 1.5rem 0;
   color: #ececec;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .headerTitleRight {
@@ -77,21 +99,21 @@
 }
 
 .headerTitleRightText {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #333;
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 
 .headerTitleRightContainer {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #e1e2e3;
-  border-radius: 9999px;
+  border: 0.0625rem solid #e1e2e3;
+  border-radius: 624.9375rem;
 }
 
 .headerTitleRightContainer svg {
@@ -100,31 +122,44 @@
 
 .headerMiddle {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  justify-content: space-between;
+  margin-top: 3.125rem;
+  padding-left: 12.5rem;
+  padding-right: 12.5rem;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   position: sticky;
   /* z-index: 2; */
-  top: 60px;
-  margin-bottom: 30px;
+  top: 3.75rem;
+  margin-bottom: 1.875rem;
 }
 
-.headerFilter {
+.headerMiddleNoPc {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.125rem;
+  align-items: center;
+  margin-right: auto;
+  position: sticky;
+  /* z-index: 2; */
+  top: 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+.headerFilter2 {
   display: flex;
 }
 
-.headerFilter button {
+.headerFilter2 button {
   display: flex;
   align-items: center;
-  height: 40px;
-  padding: 0 15px;
-  border: 1px solid #ececec;
+  height: 2.5rem;
+  padding: 0 0.9375rem;
+  border: 0.0625rem solid #ececec;
   background-color: #fff;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   position: relative;
 }
 
@@ -140,12 +175,12 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 400;
   letter-spacing: normal;
   color: #333;
   white-space: nowrap;
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 
 .headerRegionRight {
@@ -158,7 +193,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: normal;
   white-space: nowrap;
   color: #36f !important;
@@ -169,25 +204,25 @@
 }
 
 .headerFilterRightText {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .headerRegionRightOne {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -0.5rem;
+  right: -0.5rem;
 
   cursor: pointer;
   margin: 0;
   padding: 0;
   border: 0;
   background-color: #36f;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: #fff;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -201,22 +236,23 @@
 }
 
 .headerOld svg {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
-.headerFilter {
+.headerFilter2 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  margin-right: 500px;
+  /* margin-right: 31.25rem;
+   */
 }
 
 .headerFilterRight button {
   display: flex;
   align-items: center;
-  height: 40px;
-  padding: 0 15px;
-  border: 1px solid #ececec;
+  height: 2.5rem;
+  padding: 0 0.9375rem;
+  border: 0.0625rem solid #ececec;
   background-color: #fff;
 }
 
@@ -228,97 +264,117 @@
 .headerFilterRightButton {
   display: flex;
   justify-content: flex-end;
-  margin-left: 160px;
-  width: 104px;
+  margin-left: 10rem;
+  width: 6.5rem;
 }
 
 .headerFilterRightButton svg {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 .headerMiddleP {
   width: 74%;
-  border-top: 1px solid #ececec;
+  border-top: 0.0625rem solid #ececec;
   border-width: 50%;
-  margin-left: 200px;
+  margin-left: 12.5rem;
+}
+
+.headerMiddlePNoPc {
+  width: 95%;
+  border-top: 0.0625rem solid #ececec;
+  border-width: 50%;
 }
 
 .BottomSlickTrack {
   display: flex;
-  height: 90px;
+  height: 5.625rem;
   justify-content: center;
   align-items: center;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 12.5rem;
+  padding-right: 12.5rem;
   position: relative;
   z-index: 2;
   flex-shrink: 0;
   overflow: hidden;
 }
 
+.BottomSlickTrackNoPc {
+  height: 5.625rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 95%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.BottomSlickTrackNoPc > button {
+  white-space: nowrap;
+}
+
 .manyleftButton {
   position: absolute;
-  left: 200px;
-  top: 25px;
-  width: 40px;
-  height: 40px;
+  left: 12.5rem;
+  top: 1.5625rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e1e2e3;
+  border: 0.0625rem solid #e1e2e3;
   border-radius: 50%;
   background-color: #fff;
   z-index: 2;
 }
 
 .manyleftButton svg {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #888;
 }
 
 .manyRightButton {
   position: absolute;
-  right: 497px;
-  width: 40px;
-  height: 40px;
+  right: 31.0625rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e1e2e3;
+  border: 0.0625rem solid #e1e2e3;
   border-radius: 50%;
   background-color: #fff;
   z-index: 2;
 }
 
 .manyRightButton svg {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #888;
 }
 
 .headerBottom {
   display: flex;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #333333;
   user-select: none;
   box-sizing: border-box;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 12.5rem;
+  padding-right: 12.5rem;
   margin: 0;
   padding: 0;
   border: 0;
   position: sticky;
-  top: 1px;
+  top: 0.0625rem;
   z-index: 1;
-  max-width: 1320px;
+  max-width: 82.5rem;
   overflow: hidden;
 }
 
 .headerLastP {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 0.0625rem solid #ececec;
 }
 
 .headerLastP2 {
-  border-bottom: 1px solid blue;
+  border-bottom: 0.0625rem solid blue;
 }
 
 .BottomTrack1 {
@@ -334,18 +390,18 @@
   font-family: inherit;
   margin: 0;
   position: relative;
-  height: 32px;
-  padding: 8px 14px;
-  border-radius: 20px;
+  height: 2rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  font-size: 13px;
-  line-height: 16px;
+  margin-right: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: rgb(242, 251, 245);
 }
 
@@ -355,8 +411,8 @@
   text-transform: none;
   cursor: pointer;
   font-family: inherit;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
   box-sizing: border-box;
@@ -365,9 +421,9 @@
   padding: 0;
   border: 0;
   display: block;
-  width: 16px;
-  height: 16px;
-  margin-left: 5px;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.3125rem;
 }
 
 .BottomTrack2 {
@@ -383,18 +439,18 @@
   font-family: inherit;
   margin: 0;
   position: relative;
-  height: 32px;
-  padding: 8px 14px;
-  border-radius: 20px;
+  height: 2rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  font-size: 13px;
-  line-height: 16px;
+  margin-right: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: rgb(243, 249, 254);
 }
 
@@ -410,18 +466,18 @@
   font-family: inherit;
   margin: 0;
   position: relative;
-  height: 32px;
-  padding: 8px 14px;
-  border-radius: 20px;
+  height: 2rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  font-size: 13px;
-  line-height: 16px;
+  margin-right: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: rgb(243, 242, 251);
 }
 
@@ -437,18 +493,18 @@
   font-family: inherit;
   margin: 0;
   position: relative;
-  height: 32px;
-  padding: 8px 14px;
-  border-radius: 20px;
+  height: 2rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  font-size: 13px;
-  line-height: 16px;
+  margin-right: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: rgb(246, 248, 238);
 }
 
@@ -464,18 +520,18 @@
   font-family: inherit;
   margin: 0;
   position: relative;
-  height: 32px;
-  padding: 8px 14px;
-  border-radius: 20px;
+  height: 2rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  font-size: 13px;
-  line-height: 16px;
+  margin-right: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: rgb(247, 242, 249);
 }
 
@@ -491,18 +547,18 @@
   font-family: inherit;
   margin: 0;
   position: relative;
-  height: 32px;
-  padding: 8px 14px;
-  border-radius: 20px;
+  height: 2rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  font-size: 13px;
-  line-height: 16px;
+  margin-right: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: rgb(238, 250, 249);
 }
 
@@ -516,8 +572,8 @@
   text-transform: none;
   cursor: pointer;
   font-family: inherit;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 0.8125rem;
+  line-height: 1rem;
   font-weight: 400;
   color: #333;
   box-sizing: border-box;
@@ -526,36 +582,41 @@
   padding: 0;
   border: 0;
   display: block;
-  width: 16px;
-  height: 16px;
-  margin-left: 5px;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.3125rem;
 }
 
 .BottomTrackText {
-  font-size: 12px;
-  margin: 0px 8px 0px 0px;
-  padding: 8px 14px;
+  font-size: 0.75rem;
+  margin: 0rem 0.5rem 0rem 0rem;
+  padding: 0.5rem 0.875rem;
   color: #666;
   font-weight: 600;
 }
 
 .manyleftButton svg {
-  margin-bottom: 15px;
-  margin-right: 3px;
+  margin-bottom: 0.9375rem;
+  margin-right: 0.1875rem;
 }
 
 .manyRightButton {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .manyRightButton svg {
-  margin-bottom: 15px;
-  margin-right: 5px;
+  margin-bottom: 0.9375rem;
+  margin-right: 0.3125rem;
 }
 
 .headerContainerSti {
   position: sticky;
-  top: 50px;
+  top: 3.125rem;
   z-index: 2;
   background-color: white;
+}
+
+.headerContainerStiNoPc {
+  width: 100%;
+  padding-left: 2.5rem;
 }

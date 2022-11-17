@@ -1,0 +1,167 @@
+.headerTablet {
+  /* height: 50px; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-bottom: solid 1px grey;
+  background-color: #fff;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+}
+
+.headerTablet img {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 3.125rem;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  margin-top: -0.125rem;
+  margin-right: 0.9375rem;
+  height: 14px;
+  width: 17px;
+}
+
+.hamburgerbar {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 3.125rem;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  margin-top: -0.125rem;
+  margin-right: 0.9375rem;
+  height: 14px;
+  width: 17px;
+}
+
+.logoLeftTablet {
+  display: flex;
+  flex-direction: row;
+}
+
+.logowantedTablet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 0.625rem;
+}
+
+.logowanted img {
+  width: 17px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.headermenuTablet {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  margin-left: 0.9375rem;
+}
+
+.recruit2,
+.partpay2,
+.jobpaper2,
+.community2,
+.freejob2,
+.aipass2,
+.event2 {
+  list-style: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+  text-decoration: inherit;
+  cursor: pointer;
+  color: inherit;
+  position: relative;
+  vertical-align: middle;
+  line-height: 20px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+.community2 em,
+.event2 em {
+  left: 43px;
+  color: blue;
+  position: absolute;
+  top: 3px;
+}
+
+.recruit2,
+.partpay2,
+.jobpaper2,
+.community2,
+.freejob2,
+.aipass2,
+.event2 {
+  margin-right: 0.625rem;
+  font-size: 0.8125rem;
+}
+
+.signUpTablet {
+  color: #36f;
+  font-size: 0.875rem;
+  line-height: 2rem;
+  height: 2.125rem;
+  border: 1px solid #36f;
+  border-radius: 1.0625rem;
+  padding: 0 0.875rem;
+  background: none;
+  font-family: inherit;
+}
+
+.headerBottomTablet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerBottomTabletRight {
+  display: flex;
+  margin-right: 35px;
+}
+
+.MenuTablet {
+  background: none;
+  padding: 0 5px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1;
+  border: none;
+}
