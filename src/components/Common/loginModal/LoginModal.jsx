@@ -5,6 +5,7 @@ import SignUpModal from "../SignUpModal/SignUpModal";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import AlertEmail from "../Alert/Alert";
+import { LoginStyledButton } from "../StyledComponents/LoginStyledButton";
 
 const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
   //회원가입 된 이메일
@@ -110,12 +111,9 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
           </div>
           {nextPage ? (
             <Link to="/signUp">
-              {/* <button
-                className="loginModalButton"
-                type="submit"
-                //onclick="emailValidation"
-                // onClick="emailValidation"
+              <LoginStyledButton
                 onClick={() => emailCheck(userEmail)}
+                color={buttonActive}
               >
                 <div className="loginIcon">
                   <svg
@@ -128,7 +126,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
                       fill="none"
                       fill-rule="evenodd"
                       stroke="#FFF"
-                      stroke-width="2"
+                      strokeWidth="2"
                     >
                       <rect
                         width="17.2"
@@ -142,16 +140,14 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
                   </svg>
                 </div>
                 <div className="loginText">이메일로 계속하기</div>
-              </button> */}
+              </LoginStyledButton>
+
               <SignUpModal />
             </Link>
           ) : (
-            <button
-              className={"loginModalButton" + buttonActive}
-              type="submit"
-              //onclick="emailValidation"
-              // onClick="emailValidation"
+            <LoginStyledButton
               onClick={() => emailCheck(userEmail)}
+              color={buttonActive}
             >
               <div className="loginIcon">
                 <svg
@@ -173,7 +169,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
               </div>
               {/* <div className="loginText">이메일로 계속하기</div> */}
               <div className="loginText">이메일로 계속하기</div>
-            </button>
+            </LoginStyledButton>
           )}
 
           <div className="loginModalOr">

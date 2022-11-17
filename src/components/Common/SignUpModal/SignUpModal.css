@@ -103,7 +103,7 @@
 
 .MobileInput_MobileInput_select_arrow__hLBUp.icon-arrow_right {
   transform: translateY(-50%);
-  content: '\e94f';
+  content: "\e94f";
 }
 
 .exampleNumber {
@@ -288,7 +288,7 @@
   margin-bottom: 30px;
 }
 
-.submitButton button {
+/* .submitButton button {
   width: 94%;
   background-color: #f2f4f7;
   border: 1px solid #e1e2e3;
@@ -302,4 +302,4 @@
   z-index: 9;
   bottom: 0;
   margin-left: 15px;
-}
+} */

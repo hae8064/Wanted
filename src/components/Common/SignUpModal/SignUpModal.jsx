@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
-import './SignUpModal.css';
-import { useNavigate } from 'react-router';
-import { useEffect } from 'react';
+import React, { useState } from "react";
+import "./SignUpModal.css";
+import { useNavigate } from "react-router";
+import { useEffect } from "react";
+import {
+  PhoneButton,
+  SignUpStyledButton,
+} from "../StyledComponents/LoginStyledButton";
 
 const SignUpModal = ({ modalOn }) => {
   const navigate = useNavigate();
@@ -11,10 +15,10 @@ const SignUpModal = ({ modalOn }) => {
   const [allCheck, setAllCheck] = useState(false);
   const [firstCheck, setFirstCheck] = useState(false);
   const [secondCheck, setSecondCheck] = useState(false);
-  const [password, setPassword] = useState('');
-  const [passwdCheck, setPasswdCheck] = useState('');
-  const [phone, setPhone] = useState('');
-  const [phoneButton, setPhoneButton] = useState('off');
+  const [password, setPassword] = useState("");
+  const [passwdCheck, setPasswdCheck] = useState("");
+  const [phone, setPhone] = useState("");
+  const [phoneButton, setPhoneButton] = useState("off");
 
   // 비밀번호 span color 기본 red 설정
   const [spanColor, setSpanColor] = useState(false);
@@ -88,9 +92,9 @@ const SignUpModal = ({ modalOn }) => {
 
   const onSignUp = () => {
     if (passwdCheck === password) {
-      alert('회원가입 성공!');
+      alert("회원가입 성공!");
     } else {
-      alert('비밀번호가 일치하지 않습니다.');
+      alert("비밀번호가 일치하지 않습니다.");
     }
   };
 
@@ -104,16 +108,16 @@ const SignUpModal = ({ modalOn }) => {
 
   //useEffect를 이용해서 phone state값이 변경될 때 마다 rendering하여 inputValue delay지연
   useEffect(() => {
-    let phoneSplitArr = phone.split('');
+    let phoneSplitArr = phone.split("");
     if (
       phone.length === 11 &&
       Number(phoneSplitArr[0]) === 0 &&
       Number(phoneSplitArr[1]) === 1 &&
       Number(phoneSplitArr[2]) === 0
     ) {
-      setPhoneButton('on');
+      setPhoneButton("on");
     } else {
-      setPhoneButton('off');
+      setPhoneButton("off");
     }
   }, [phone]);
 
@@ -352,9 +356,16 @@ const SignUpModal = ({ modalOn }) => {
                 setTestSignUpBtn(testSignUpBtn.concat(true));
               }}
             />
-            <button className={'phoneButton' + phoneButton}>
-              <span>인증번호 받기</span>
-            </button>
+
+            <PhoneButton color={phoneButton}>
+              <span
+                style={
+                  phoneButton === "on" ? { color: "white" } : { color: "#ccc" }
+                }
+              >
+                인증번호 받기
+              </span>
+            </PhoneButton>
           </div>
           <div className="numberResult">
             <input
@@ -380,9 +391,9 @@ const SignUpModal = ({ modalOn }) => {
             />
             <span
               className="passwordFooter"
-              style={spanColor ? { color: 'black' } : { color: 'red' }}
+              style={spanColor ? { color: "black" } : { color: "red" }}
             >
-              영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{' '}
+              영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상{" "}
               <br /> 입력해 주세요.
             </span>
           </div>
@@ -470,17 +481,13 @@ const SignUpModal = ({ modalOn }) => {
         </div>
 
         <div className="submitButton">
-          <button
+          <SignUpStyledButton
             type="submit"
             onClick={onSignUp}
-            style={
-              signUpBtn
-                ? { backgroundColor: 'lightBlue', color: 'white' }
-                : { backgroundColor: 'lightGrey', color: 'white' }
-            }
+            color={signUpBtn}
           >
             회원가입하기
-          </button>
+          </SignUpStyledButton>
         </div>
       </div>
     </section>

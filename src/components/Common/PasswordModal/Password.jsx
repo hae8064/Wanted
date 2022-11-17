@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import AlertPassword from "../Alert/AlertPassword";
+import { PasswordButton } from "../StyledComponents/LoginStyledButton";
 import "./Password.css";
 
 const Password = ({ modalOn, setHeaderLogin }) => {
@@ -37,6 +38,8 @@ const Password = ({ modalOn, setHeaderLogin }) => {
     if (password === pwd) {
       setPwdCheck(true);
       setButtonActive("on");
+    } else {
+      setButtonActive("off");
     }
   }, [password]);
 
@@ -81,11 +84,7 @@ const Password = ({ modalOn, setHeaderLogin }) => {
             />
           </div>
         </div>
-        <button
-          className={"passwordloginModalButton" + buttonActive}
-          type="submit"
-          onClick={onLoginEvent}
-        >
+        <PasswordButton color={buttonActive} onClick={onLoginEvent}>
           <div className="loginIcon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +100,7 @@ const Password = ({ modalOn, setHeaderLogin }) => {
           </div>
           {/* <div className="loginText">이메일로 계속하기</div> */}
           <div className="loginText">로그인</div>
-        </button>
+        </PasswordButton>
       </div>
     </section>
   );
