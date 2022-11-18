@@ -59,9 +59,15 @@ function reducer(state = initialState, action) {
     case ADD_TO_LIST:
       return{
         ...state,
-        list: state.list.concat(action.item);
+        // list: state.list.concat(action.item);
       };
     default:
       return state;
   }
 }
+
+
+//스토어 만들기
+const store = createStore(reducer);
+
+console.log(store.getState());      //현재 store안에 들어있는 상태 조회

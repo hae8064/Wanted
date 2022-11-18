@@ -26,3 +26,19 @@ const initialState = [
     done: false,
   },
 ];
+
+export default function todos(state = initialState, action){
+    switch(action.type){
+        case ADD_TODO:
+            return state.concat(action.todo);
+        case TOGGLE_TODO:
+            return state.map(
+                todo => 
+                todo.id === action.id       //id일치하면
+                ? {...todo, done: !todo.done}       //done값 반전
+                :todo       //아니라면 그대로 둠
+            );
+        default:
+            return state;
+    }
+}
