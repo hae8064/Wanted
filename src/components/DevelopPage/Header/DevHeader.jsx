@@ -1,19 +1,19 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import Header from "../../Common/Header/Header";
-import "./DevHeader.css";
-import { throttle } from "lodash";
-import { useMediaQuery } from "react-responsive";
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Header from '../../Common/Header/Header';
+import './DevHeader.css';
+import { throttle } from 'lodash';
+import { useMediaQuery } from 'react-responsive';
 
 function DevHeader() {
   // 반응형 웹
   const isPc = useMediaQuery({
-    query: "(min-width:1024px)",
+    query: '(min-width:1024px)',
   });
   const isTablet = useMediaQuery({
-    query: "(min-width:768px) and (max-width:1023px)",
+    query: '(min-width:768px) and (max-width:1023px)',
   });
   const isMobile = useMediaQuery({
-    query: "(max-width:767px)",
+    query: '(max-width:767px)',
   });
 
   const [scrollEvent, setScrollEvent] = useState(false);
@@ -32,16 +32,16 @@ function DevHeader() {
   );
 
   useEffect(() => {
-    window.addEventListener("scroll", onScrollFn);
+    window.addEventListener('scroll', onScrollFn);
     return () => {
       //컴포넌트 나갈 떄 작동
-      window.removeEventListener("scroll", onScrollFn);
+      window.removeEventListener('scroll', onScrollFn);
     };
   }, []);
 
   return (
     <>
-      <div className={isPc ? "headerTitle" : "headerTitleNoPc"}>
+      <div className={isPc ? 'headerTitle' : 'headerTitleNoPc'}>
         <button className="headerTitleLeft">
           <span className="headerTitleLeftText">개발</span>
           <span className="headerTitleLeftContainer">
@@ -81,8 +81,8 @@ function DevHeader() {
         </button>
       </div>
 
-      <div className={isPc ? "headerContainerSti" : "headerContainerStiNoPc"}>
-        <div className={isPc ? "headerMiddle" : "headerMiddleNoPc"}>
+      <div className={isPc ? 'headerContainerSti' : 'headerContainerStiNoPc'}>
+        <div className={isPc ? 'headerMiddle' : 'headerMiddleNoPc'}>
           <div className="headerFilter2">
             <button className="headerRegion">
               <span className="headerRegionLeft">지역</span>
@@ -141,10 +141,10 @@ function DevHeader() {
           </div>
         </div>
 
-        <p className={isPc ? "headerMiddleP" : "headerMiddlePNoPc"}></p>
+        <p className={isPc ? 'headerMiddleP' : 'headerMiddlePNoPc'}></p>
 
-        <div className="headerBottom">
-          <div className={isPc ? "BottomSlickTrack" : "BottomSlickTrackNoPc"}>
+        <div className={isPc ? 'headerBottom' : 'headerBottomNoPc'}>
+          <div className={isPc ? 'BottomSlickTrack' : 'BottomSlickTrackNoPc'}>
             <button className="manyleftButton">
               <svg
                 className="SvgIcon_SvgIcon__root__svg__DKYBi"

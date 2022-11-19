@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 //스타일 컴포넌트
 const LoginStyledButton = styled.button`
@@ -7,7 +7,7 @@ const LoginStyledButton = styled.button`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: ${(props) => (props.color === "on" ? "#36f" : "lightgrey")};
+  background-color: ${(props) => (props.color === 'on' ? '#36f' : 'lightgrey')};
   height: 54px;
   border: none;
   border-radius: 27px;
@@ -28,14 +28,14 @@ const SignUpStyledButton = styled.button`
   z-index: 9;
   bottom: 0;
   margin-left: 15px;
-  background-color: ${(props) => (props.color ? "lightblue" : "lightgrey")};
+  background-color: ${(props) => (props.color ? 'lightblue' : 'lightgrey')};
 `;
 
 const PhoneButton = styled.button`
   height: 54px;
   border-radius: 5px;
   background-color: ${(props) =>
-    props.color === "off" ? "none" : "lightblue"};
+    props.color === 'off' ? 'none' : 'lightblue'};
   border: none;
   width: 30%;
   margin-left: 10px;
@@ -47,7 +47,7 @@ const PasswordButton = styled.button`
   align-items: center;
   width: 100%;
   background-color: ${(props) =>
-    props.color === "off" ? "lightgrey" : "#36f"};
+    props.color === 'off' ? 'lightgrey' : '#36f'};
   height: 54px;
   border: none;
   border-radius: 27px;

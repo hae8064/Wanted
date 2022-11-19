@@ -139,7 +139,7 @@
   width: 95%;
   display: flex;
   justify-content: space-between;
-  margin-top: 3.125rem;
+  margin-top: 1.25rem;
   align-items: center;
   margin-right: auto;
   position: sticky;
@@ -312,6 +312,18 @@
   white-space: nowrap;
 }
 
+.BottomSlickTrackNoPc .manyleftButton {
+  position: absolute;
+  left: 1.875rem;
+  top: 17.9375rem;
+}
+
+.BottomSlickTrackNoPc .manyRightButton {
+  position: absolute;
+  top: 16.6875rem;
+  right: 2.5rem;
+}
+
 .manyleftButton {
   position: absolute;
   left: 12.5rem;
@@ -367,6 +379,9 @@
   z-index: 1;
   max-width: 82.5rem;
   overflow: hidden;
+}
+
+.headerBottomNoPc {
 }
 
 .headerLastP {
