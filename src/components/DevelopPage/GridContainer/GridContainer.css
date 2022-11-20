@@ -8,6 +8,25 @@
   margin-right: 185px;
 }
 
+.devGridContainerTablet {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  margin-left: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.devGridContainerTablet .gridContainerFirst {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.devGridContainerTablet .gridContainerFirst header {
+  height: 300px;
+}
+
 .gridContainerFirst {
   display: flex;
   flex-direction: column;
@@ -125,4 +144,8 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.devGridContainerTablet .gridContainerFirst header a {
+  height: 300px !important;
 }

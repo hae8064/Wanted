@@ -35,7 +35,7 @@
   padding-bottom: 50px;
 }
 
-.topImgsContainer {
+.mainTopImgs > .topImgsContainer {
   width: 22%;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
 }
 
 .mainTopImgs a {
-  width: 30%;
+  /* width: 30%; */
   margin-left: 50px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -87,16 +87,16 @@ a.topImgsContainer {
   align-items: center;
   margin: 0 9px;
   height: 104px;
-  width: 200px;
+  /* width: 200px; */
   border: 1px solid #e1e2e3;
   border-radius: 0 0 3px 3px;
 }
 
-.topImgsContainer header {
+.mainTopImgs > .topImgsContainer header {
   width: 197px;
 }
 
-.companyBg img {
+.mainTopImgs .companyBg img {
   cursor: pointer;
   color: inherit;
   box-sizing: border-box;
@@ -113,7 +113,7 @@ a.topImgsContainer {
   background-image: url(https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F8681%2Fnfnaa497atbuwdq9__400_400.jpg&w=400&q=75);
 }
 
-.topImgsContainer {
+.mainTopImgs > .topImgsContainer {
   width: 22%;
 }
 
@@ -150,9 +150,63 @@ footer img {
 }
 
 .devMainTitleH3 {
-  font-size: 20px;
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .mainTopTextH4 {
   font-size: 18px;
+}
+
+.mainTablet {
+  margin-top: 2.5rem;
+  width: 95%;
+  margin-left: 1.875rem;
+}
+
+.mainTopImgsTablet a {
+  margin-left: 50px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.mainTopImgsTablet {
+  display: flex;
+}
+.mainTopImgsTablet .companyBg {
+  margin-left: 10px;
+}
+
+.mainTopImgsTablet .companyBg {
+  width: 160px;
+}
+
+.mainTopImgsTablet .topImgsContainer .companyBg img {
+  width: 160px;
+  background-image: url(https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F8681%2Fnfnaa497atbuwdq9__400_400.jpg&w=400&q=75);
+}
+
+.mainTopImgsTablet .topImgsContainer footer img {
+  position: absolute;
+  top: 90px;
+  left: 30px;
+}
+
+.mainTopImgsTablet .mainTopTextH4 {
+  font-size: 15px;
+  font-weight: 600;
 }

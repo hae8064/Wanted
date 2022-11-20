@@ -132,6 +132,11 @@
   font-size: 0.8125rem;
 }
 
+.aiPassIconTablet {
+  position: absolute;
+  bottom: 20px;
+}
+
 .signUpTablet {
   color: #36f;
   font-size: 0.875rem;
@@ -149,6 +154,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.aipass2 em {
+  position: absolute;
+  top: 40px;
 }
 
 .headerBottomTabletRight {

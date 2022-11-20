@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
-import "./MainEventBanner.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { SampleNextArrow, SamplePrevArrow } from "../../../assets/SlickButtons";
+import React, { useEffect } from 'react';
+import './MainEventBanner.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+import { SampleNextArrow, SamplePrevArrow } from '../../../assets/SlickButtons';
 
+//주석 체크
 function MainEventBanner() {
   const settings = {
     dots: false,
@@ -15,7 +16,7 @@ function MainEventBanner() {
     autoplay: false,
     arrows: true,
     centerMode: true,
-    centerPadding: "220px",
+    centerPadding: '220px',
     // centerRightPadding: "10px",
     nextArrow: <SamplePrevArrow className="slick-prev2" />,
     prevArrow: <SampleNextArrow />,

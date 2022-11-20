@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import "./TabletHeader.css";
-import { ReactComponent as SearchIcon } from "../../../assets/icon-search.svg";
-import { ReactComponent as SearchIcon2 } from "../../../assets/icon-search2.svg";
-import { ReactComponent as AlarmIcon } from "../../../assets/alarmButton.svg";
-import { ReactComponent as MenuIcon } from "../../../assets/menuIcon.svg";
-import DevHeader from "../../DevelopPage/Header/DevHeader";
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './TabletHeader.css';
+import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
+import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
+import { ReactComponent as AlarmIcon } from '../../../assets/alarmButton.svg';
+import { ReactComponent as MenuIcon } from '../../../assets/menuIcon.svg';
+import DevHeader from '../../DevelopPage/Header/DevHeader';
 function TabletHeader({
   setOn,
   getLoginModal,
@@ -20,7 +20,7 @@ function TabletHeader({
 
   const [loginModalOn, setLoginModalOn] = useState(1);
 
-  const [profilePopUp, setProfilePopUp] = useState("off");
+  const [profilePopUp, setProfilePopUp] = useState('off');
 
   const refLogoutContainer = useRef(null);
 
@@ -40,11 +40,11 @@ function TabletHeader({
 
   //프로필 버튼 클릭시
   const onProfileButton = () => {
-    setProfilePopUp("on");
+    setProfilePopUp('on');
   };
 
   const onLogout = () => {
-    localStorage.removeItem("id");
+    localStorage.removeItem('id');
     setHeaderLogout(false);
   };
 
@@ -56,14 +56,14 @@ function TabletHeader({
         refLogoutContainer.current &&
         !refLogoutContainer.current.contains(e.target)
       ) {
-        setProfilePopUp("off");
+        setProfilePopUp('off');
         changeSearchOn();
-        console.log("close");
+        console.log('close');
       }
     }
-    document.addEventListener("mousedown", handleOutside);
+    document.addEventListener('mousedown', handleOutside);
     return () => {
-      document.removeEventListener("mousedown", handleOutside);
+      document.removeEventListener('mousedown', handleOutside);
     };
   }, [refLogoutContainer]);
 
@@ -88,7 +88,7 @@ function TabletHeader({
 
             <Link
               className="wantedTitle"
-              to={"/"}
+              to={'/'}
               aria-label="home link"
               data-attribute-id="gnb"
               data-gnb-kind="home"
@@ -164,7 +164,7 @@ function TabletHeader({
                 <span>AI 합격예측</span>
 
                 {/* svg넣기 */}
-                <SearchIcon />
+                <SearchIcon className="aiPassIconTablet" />
               </Link>
             </ul>
           </div>

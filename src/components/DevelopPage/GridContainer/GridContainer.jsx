@@ -1,13 +1,25 @@
-import React, { useCallback, useEffect, useState } from "react";
-import "./GridContainer.css";
-import dummy from "../../../db/data.json";
-import { json, Link } from "react-router-dom";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { useDispatch, useSelector } from "react-redux";
-import { addBook, deleteBook } from "../../../redux/actions";
-import bookReducer from "../../../redux/reducers/book-reducer";
+import React, { useCallback, useEffect, useState } from 'react';
+import './GridContainer.css';
+import dummy from '../../../db/data.json';
+import { json, Link } from 'react-router-dom';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBook, deleteBook } from '../../../redux/actions';
+import bookReducer from '../../../redux/reducers/book-reducer';
+import { useMediaQuery } from 'react-responsive';
 
 function GridContainer() {
+  // 반응형 웹
+  const isPc = useMediaQuery({
+    query: '(min-width:1024px)',
+  });
+  const isTablet = useMediaQuery({
+    query: '(min-width:768px) and (max-width:1023px)',
+  });
+  const isMobile = useMediaQuery({
+    query: '(max-width:767px)',
+  });
+
   const dispatch = useDispatch();
 
   //무한 스크롤 구현 state
@@ -15,13 +27,13 @@ function GridContainer() {
   const [result, setResult] = useState(dummy.developGridContainer.slice(0, 8));
 
   //북마크 아이콘 배경 blue 변경
-  const [blueIcon, setBlueIcon] = useState("off");
+  const [blueIcon, setBlueIcon] = useState('off');
   const [bookId, setBookId] = useState([]);
 
   const bookItem = useSelector((store) => store.bookReducer);
 
   const _infiniteScroll = useCallback(() => {
-    console.log("@@@@");
+    console.log('@@@@');
     let scrollHeight = Math.max(
       document.documentElement.scrollHeight,
       document.body.scrollHeight
@@ -45,16 +57,16 @@ function GridContainer() {
   }, [itemIndex, result]);
 
   useEffect(() => {
-    window.addEventListener("scroll", _infiniteScroll, true);
-    return () => window.removeEventListener("scroll", _infiniteScroll, true);
+    window.addEventListener('scroll', _infiniteScroll, true);
+    return () => window.removeEventListener('scroll', _infiniteScroll, true);
   }, [_infiniteScroll]);
 
   useEffect(() => {
-    console.log("북마크 id목록 " + bookId);
+    console.log('북마크 id목록 ' + bookId);
   }, [bookId]);
 
   return (
-    <div className="devGridContainer">
+    <div className={isPc ? 'devGridContainer' : 'devGridContainerTablet'}>
       {result.map((container) => (
         <div className="gridContainerFirst">
           <header>
@@ -72,7 +84,7 @@ function GridContainer() {
                 xmlns="https://www.w3.org/2000/svg"
                 // onClick={onSvgClick}
                 onClick={() => {
-                  console.log("북마크 추가@@");
+                  console.log('북마크 추가@@');
                   dispatch(addBook(container.id));
                   // setBookId(bookId.concat(container.id));
                   setBookId((prevList) => [...prevList, container.id]);
@@ -105,7 +117,7 @@ function GridContainer() {
                 xmlns="https://www.w3.org/2000/svg"
                 // onClick={onSvgClick}
                 onClick={() => {
-                  console.log("북마크 추가@@");
+                  console.log('북마크 추가@@');
                   dispatch(addBook(container.id));
                   // setBookId(bookId.concat(container.id));
                   setBookId((prevList) => [...prevList, container.id]);
@@ -131,7 +143,7 @@ function GridContainer() {
             <Link
               key={container.id}
               to={`/detailRecruit/${container.id}`}
-              style={{ height: "190px" }}
+              style={{ height: '190px' }}
             >
               <img src={container.img} alt="" />
             </Link>
@@ -144,12 +156,12 @@ function GridContainer() {
               <span>{container.gridButton}</span>
             </button>
             <span className="gridTitle3">
-              {container.region} <span className="addressDot">.</span>{" "}
+              {container.region} <span className="addressDot">.</span>{' '}
               <span>{container.country}</span>
             </span>
             <span className="gridTitle4">
-              채용보상금{" "}
-              {container.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              채용보상금{' '}
+              {container.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               원
             </span>
           </footer>

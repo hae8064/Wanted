@@ -1,11 +1,23 @@
-import React from "react";
-import "./Bookmark.css";
-import { ReactComponent as BookmarkIcon } from "../../../assets/bookmark.svg";
-import "bootstrap/dist/css/bootstrap.css";
+import React from 'react';
+import './Bookmark.css';
+import { ReactComponent as BookmarkIcon } from '../../../assets/bookmark.svg';
+import 'bootstrap/dist/css/bootstrap.css';
+import { useMediaQuery } from 'react-responsive';
 
 function Bookmark() {
+  // 반응형 웹
+  const isPc = useMediaQuery({
+    query: '(min-width:1024px)',
+  });
+  const isTablet = useMediaQuery({
+    query: '(min-width:768px) and (max-width:1023px)',
+  });
+  const isMobile = useMediaQuery({
+    query: '(max-width:767px)',
+  });
+
   return (
-    <div class="main">
+    <div class={isPc ? 'main' : 'mainTablet'}>
       <button class="mainBookMark">
         <BookmarkIcon />
         <span>북마크 모아보기</span>
@@ -21,7 +33,7 @@ function Bookmark() {
         <h3 className="devMainTitleH3">적극 채용 중인 회사</h3>
       </div>
 
-      <div class="mainTopImgs">
+      <div class={isPc ? 'mainTopImgs' : 'mainTopImgsTablet'}>
         <a href="/" class="topImgsContainer">
           <header>
             <div class="companyBg">
