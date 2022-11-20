@@ -196,7 +196,7 @@ function DevHeader() {
             }
           >
             {isMobile ? null : (
-              <button className="manyleftButton">
+              <button className="manyleftButton2">
                 <svg
                   className="SvgIcon_SvgIcon__root__svg__DKYBi"
                   viewBox="0 0 18 18"
@@ -270,7 +270,7 @@ function DevHeader() {
               />
             </button>
             {isMobile ? null : (
-              <button className="manyRightButton">
+              <button className="manyRightButton2">
                 <svg
                   className="SvgIcon_SvgIcon__root__svg__DKYBi"
                   viewBox="0 0 18 18"

@@ -392,19 +392,18 @@
   white-space: nowrap;
 }
 
-.BottomSlickTrackNoPc .manyleftButton {
+.BottomSlickTrackNoPc .manyleftButton2 {
   position: absolute;
   left: 1.875rem;
-  top: 17.9375rem;
+  top: 110px;
 }
 
-.BottomSlickTrackNoPc .manyRightButton {
+.BottomSlickTrackNoPc .manyRightButton2 {
   position: absolute;
-  top: 16.6875rem;
   right: 2.1875rem;
 }
 
-.manyleftButton {
+.manyleftButton2 {
   position: absolute;
   left: 12.5rem;
   top: 1.5625rem;
@@ -419,12 +418,14 @@
   z-index: 2;
 }
 
-.manyleftButton svg {
+.manyleftButton2 svg {
   font-size: 1.125rem;
   color: #888;
+  margin-bottom: 15px;
+  margin-right: 3px;
 }
 
-.manyRightButton {
+.manyRightButton2 {
   position: absolute;
   right: 31.0625rem;
   width: 2.5rem;
@@ -436,11 +437,13 @@
   border-radius: 50%;
   background-color: #fff;
   z-index: 2;
+  margin-bottom: 22px;
 }
 
-.manyRightButton svg {
+.manyRightButton2 svg {
   font-size: 1.125rem;
   color: #888;
+  margin-left: 5px;
 }
 
 .headerBottom {
@@ -695,11 +698,11 @@
   margin-right: 0.1875rem;
 }
 
-.manyRightButton {
+.manyRightButton2 {
   margin-top: 1.25rem;
 }
 
-.manyRightButton svg {
+.manyRightButton2 svg {
   margin-bottom: 0.9375rem;
   margin-right: 0.3125rem;
 }

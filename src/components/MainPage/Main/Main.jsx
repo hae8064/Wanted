@@ -1,11 +1,11 @@
-import React from "react";
-import "./main.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import ArticleSliderContainer from "../MainArticleSliderContainer/ArticleSliderContainer";
-import MainWorkerContainer from "../mainWorkerContainer/MainWorkerContainer";
-import EventSliderContainer from "./EventSliderContainer/EventSliderContainer";
+import React from 'react';
+import './main.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+import ArticleSliderContainer from '../MainArticleSliderContainer/ArticleSliderContainer';
+import MainWorkerContainer from '../mainWorkerContainer/MainWorkerContainer';
+import EventSliderContainer from './EventSliderContainer/EventSliderContainer';
 
 function Main() {
   const setting = {
@@ -32,76 +32,76 @@ function Main() {
 
   const manyButtons = [
     {
-      className: "manybuttons career",
-      spanText: "커리어고민",
+      className: 'manybuttons career',
+      spanText: '커리어고민',
     },
     {
-      className: "manybuttons companylife",
-      spanText: "회사생활",
+      className: 'manybuttons companylife',
+      spanText: '회사생활',
     },
     {
-      className: "manybuttons curture",
-      spanText: "조직문화",
+      className: 'manybuttons curture',
+      spanText: '조직문화',
     },
     {
-      className: "manybuttons passmove",
-      spanText: "취업/이직",
+      className: 'manybuttons passmove',
+      spanText: '취업/이직',
     },
     {
-      className: "manybuttons leader",
-      spanText: "리더십",
+      className: 'manybuttons leader',
+      spanText: '리더십',
     },
     {
-      className: "manybuttons personrel",
-      spanText: "인간관계",
+      className: 'manybuttons personrel',
+      spanText: '인간관계',
     },
     {
-      className: "manybuttons lifestyle",
-      spanText: "라이프스타일",
+      className: 'manybuttons lifestyle',
+      spanText: '라이프스타일',
     },
     {
-      className: "manybuttons ittech",
-      spanText: "IT/기술",
+      className: 'manybuttons ittech',
+      spanText: 'IT/기술',
     },
     {
-      className: "manybuttons contents",
-      spanText: "콘텐츠제작",
+      className: 'manybuttons contents',
+      spanText: '콘텐츠제작',
     },
     {
-      className: "manybuttons develop",
-      spanText: "개발",
+      className: 'manybuttons develop',
+      spanText: '개발',
     },
     {
-      className: "manybuttons service",
-      spanText: "서비스기획",
+      className: 'manybuttons service',
+      spanText: '서비스기획',
     },
     {
-      className: "manybuttons marketing",
-      spanText: "마케팅",
+      className: 'manybuttons marketing',
+      spanText: '마케팅',
     },
     {
-      className: "manybuttons md",
-      spanText: "MD",
+      className: 'manybuttons md',
+      spanText: 'MD',
     },
     {
-      className: "manybuttons career",
-      spanText: "커리어고민",
+      className: 'manybuttons career',
+      spanText: '커리어고민',
     },
     {
-      className: "manybuttons companylife",
-      spanText: "회사생활",
+      className: 'manybuttons companylife',
+      spanText: '회사생활',
     },
     {
-      className: "manybuttons curture",
-      spanText: "조직문화",
+      className: 'manybuttons curture',
+      spanText: '조직문화',
     },
     {
-      className: "manybuttons passmove",
-      spanText: "취업/이직",
+      className: 'manybuttons passmove',
+      spanText: '취업/이직',
     },
     {
-      className: "manybuttons leader",
-      spanText: "리더십",
+      className: 'manybuttons leader',
+      spanText: '리더십',
     },
   ];
 
@@ -160,7 +160,7 @@ function Main() {
       <div className="manybuttonsContainer">
         <div className="manyButton">
           <div className="leftButtonContainer">
-            <button className="manyleftButton">
+            <button className="manyleftButtonMain">
               <svg
                 className="SvgIcon_SvgIcon__root__svg__DKYBi"
                 viewBox="0 0 18 18"
@@ -178,7 +178,7 @@ function Main() {
             );
           })}
 
-          <button className="manyRightButton">
+          <button className="manyRightButtonMain">
             <svg
               className="SvgIcon_SvgIcon__root__svg__DKYBi"
               viewBox="0 0 18 18"

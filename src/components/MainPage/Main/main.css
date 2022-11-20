@@ -154,9 +154,11 @@
   margin-bottom: 25px;
 }
 
-.manyleftButton svg {
+.manyleftButtonMain svg {
   font-size: 18px;
   color: #888;
+  margin-bottom: 15px;
+  margin-right: 3px;
 }
 
 .manybuttonsMenu {
@@ -194,9 +196,9 @@
   z-index: 1;
 }
 
-.manyleftButton {
+.manyleftButtonMain {
   position: absolute;
-  left: 0;
+  left: -2px;
   top: 0;
   width: 40px;
   height: 40px;
@@ -209,10 +211,10 @@
   z-index: 2;
 }
 
-.manyRightButton {
+.manyRightButtonMain {
   position: absolute;
   top: 0;
-  right: -2px;
+  right: -10px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -222,6 +224,12 @@
   border-radius: 50%;
   background-color: #fff;
   z-index: 2;
+}
+
+.manyRightButtonMain svg {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 15px;
 }
 
 /* 
