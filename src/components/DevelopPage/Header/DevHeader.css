@@ -49,6 +49,42 @@
   padding-left: 2.5rem;
 }
 
+.headerTitleMobile {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  --nav-height: 3.125rem;
+  line-height: 1.42857143;
+  color: #333333;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  display: flex;
+  max-width: 66.25rem;
+  align-items: center;
+  width: 100%;
+  margin-left: 1.25rem;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.headerTitleMobile .headerTitleLeftText,
+.headerTitleMobile .headerTitleRightText {
+  font-size: 14px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  font-weight: 700;
+}
+
+.headerTitleMobile .headerTitleLeft {
+  height: 28px;
+}
+
 .headerTitleLeft {
   display: flex;
   justify-content: space-around;
@@ -147,6 +183,25 @@
   top: 3.75rem;
   margin-bottom: 1.875rem;
   z-index: 2;
+}
+
+.headerContainerStiMobile {
+  margin-left: 1.25rem;
+}
+
+.headerMiddleMobile {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  align-items: center;
+  margin-right: auto;
+  position: sticky;
+  /* z-index: 2; */
+  top: 3.75rem;
+  margin-bottom: 1.875rem;
+  z-index: 2;
+  margin-right: 50px;
 }
 
 .headerFilter2 {
@@ -305,8 +360,23 @@
   align-items: center;
   display: flex;
   width: 95%;
-  overflow: hidden;
+  overflow: scroll;
   flex-shrink: 0;
+}
+
+.headerBottomMobile {
+  white-space: nowrap;
+  overflow-x: scroll;
+  height: 50px;
+}
+
+.BottomSlickTrackMobile {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 95%;
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 
 .BottomSlickTrackNoPc > button {
@@ -322,7 +392,7 @@
 .BottomSlickTrackNoPc .manyRightButton {
   position: absolute;
   top: 16.6875rem;
-  right: 2.5rem;
+  right: 2.1875rem;
 }
 
 .manyleftButton {

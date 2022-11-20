@@ -6,12 +6,24 @@ import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg'
 import { ReactComponent as AlarmIcon } from '../../../assets/alarmButton.svg';
 import { ReactComponent as MenuIcon } from '../../../assets/menuIcon.svg';
 import DevHeader from '../../DevelopPage/Header/DevHeader';
+import { useMediaQuery } from 'react-responsive';
 function TabletHeader({
   setOn,
   getLoginModal,
   setHeaderLogin,
   setHeaderLogout,
 }) {
+  //반응형 웹
+  const isPc = useMediaQuery({
+    query: '(min-width:1024px)',
+  });
+  const isTablet = useMediaQuery({
+    query: '(min-width:768px) and (max-width:1023px)',
+  });
+  const isMobile = useMediaQuery({
+    query: '(max-width:767px)',
+  });
+
   const [login, setLogin] = useState(false);
 
   const [hamhover, setHamHover] = useState(false);
@@ -104,69 +116,89 @@ function TabletHeader({
 
         <div className="headerBottomTablet">
           <div className="headerBottomTabletLeft">
-            <ul className="headermenuTablet">
-              <Link className="recruit2" to="">
-                채용
-              </Link>
-              <Link className="event2" to="">
-                이벤트
-              </Link>
-              <Link className="partpay2" to="">
-                직군별 연봉
-              </Link>
-              <Link className="jobpaper2" to="">
-                이력서
-              </Link>
-              <Link className="community2" to="">
-                <span>커뮤니티</span>
-                <em>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="11"
-                    viewBox="0 0 18 11"
-                  >
-                    <g
-                      fill="none"
-                      fill-rule="evenodd"
-                      font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo"
-                      font-size="9"
-                      font-weight="500"
-                    >
-                      <g fill="#36F">
-                        <g>
-                          <g>
+            {isTablet && (
+              <>
+                <ul className="headermenuTablet">
+                  <Link className="recruit2" to="">
+                    채용
+                  </Link>
+                  <Link className="event2" to="">
+                    이벤트
+                  </Link>
+                  <Link className="partpay2" to="">
+                    직군별 연봉
+                  </Link>
+                  <Link className="jobpaper2" to="">
+                    이력서
+                  </Link>
+                  <Link className="community2" to="">
+                    <span>커뮤니티</span>
+                    <em>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="11"
+                        viewBox="0 0 18 11"
+                      >
+                        <g
+                          fill="none"
+                          fill-rule="evenodd"
+                          font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo"
+                          font-size="9"
+                          font-weight="500"
+                        >
+                          <g fill="#36F">
                             <g>
                               <g>
                                 <g>
                                   <g>
-                                    <text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)">
-                                      <tspan x="0" y="8">
-                                        New
-                                      </tspan>
-                                    </text>
+                                    <g>
+                                      <g>
+                                        <text transform="translate(-931.000000, -13.000000) translate(224.000000, 7.000000) translate(210.000000, 6.000000) translate(350.000000, 0.000000) translate(147.000000, 0.000000)">
+                                          <tspan x="0" y="8">
+                                            New
+                                          </tspan>
+                                        </text>
+                                      </g>
+                                    </g>
                                   </g>
                                 </g>
                               </g>
                             </g>
                           </g>
                         </g>
-                      </g>
-                    </g>
-                  </svg>
-                </em>
-              </Link>
+                      </svg>
+                    </em>
+                  </Link>
 
-              <Link className="freejob2" to="">
-                프리랜서
-              </Link>
-              <Link className="aipass2" to="">
-                <span>AI 합격예측</span>
+                  <Link className="freejob2" to="">
+                    프리랜서
+                  </Link>
+                  <Link className="aipass2" to="">
+                    <span>AI 합격예측</span>
 
-                {/* svg넣기 */}
-                <SearchIcon className="aiPassIconTablet" />
-              </Link>
-            </ul>
+                    {/* svg넣기 */}
+                    <SearchIcon className="aiPassIconTablet" />
+                  </Link>
+                </ul>
+              </>
+            )}
+
+            {isMobile && (
+              <>
+                <ul className="headermenuTabletMobile">
+                  <Link className="recruit2" to="/">
+                    홈
+                  </Link>
+                  <Link className="recruit2" to="/">
+                    채용
+                  </Link>
+                  <Link className="recruit2" to="/">
+                    이벤트
+                  </Link>
+                </ul>
+              </>
+            )}
           </div>
 
           <div className="headerBottomTabletRight">

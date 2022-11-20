@@ -70,6 +70,15 @@ function App() {
         />
       )}
 
+      {isMobile && (
+        <TabletHeader
+          setOn={setOn}
+          getLoginModal={setLoginModal}
+          setHeaderLogin={headerLogin}
+          setHeaderLogout={setHeaderLogin}
+        />
+      )}
+
       {/* <LoginModal /> */}
       <Routes>
         <Route path="/" element={<MainContainer />} />

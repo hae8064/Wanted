@@ -175,3 +175,13 @@
   line-height: 1;
   border: none;
 }
+
+.headermenuTabletMobile {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  padding-left: 25px;
+}
+
+.headermenuTabletMobile .recruit2 {
+}

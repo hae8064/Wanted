@@ -41,7 +41,16 @@ function DevHeader() {
 
   return (
     <>
-      <div className={isPc ? 'headerTitle' : 'headerTitleNoPc'}>
+      {/* <div className={isPc ? 'headerTitle' : 'headerTitleNoPc'}> */}
+      <div
+        className={
+          isPc
+            ? 'headerTitle'
+            : isTablet
+            ? 'headerTitleNoPc'
+            : 'headerTitleMobile'
+        }
+      >
         <button className="headerTitleLeft">
           <span className="headerTitleLeftText">개발</span>
           <span className="headerTitleLeftContainer">
@@ -81,8 +90,26 @@ function DevHeader() {
         </button>
       </div>
 
-      <div className={isPc ? 'headerContainerSti' : 'headerContainerStiNoPc'}>
-        <div className={isPc ? 'headerMiddle' : 'headerMiddleNoPc'}>
+      {/* <div className={isPc ? 'headerContainerSti' : 'headerContainerStiNoPc'}> */}
+      <div
+        className={
+          isPc
+            ? 'headerContainerSti'
+            : isTablet
+            ? 'headerContainerStiNoPc'
+            : 'headerContainerStiMobile'
+        }
+      >
+        {/* <div className={isPc ? 'headerMiddle' : 'headerMiddleNoPc'}> */}
+        <div
+          className={
+            isPc
+              ? 'headerMiddle'
+              : isTablet
+              ? 'headerMiddleNoPc'
+              : 'headerMiddleMobile'
+          }
+        >
           <div className="headerFilter2">
             <button className="headerRegion">
               <span className="headerRegionLeft">지역</span>
@@ -141,10 +168,33 @@ function DevHeader() {
           </div>
         </div>
 
-        <p className={isPc ? 'headerMiddleP' : 'headerMiddlePNoPc'}></p>
+        {/* <p className={isPc ? 'headerMiddleP' : 'headerMiddlePNoPc'}></p> */}
+        <p
+          className={
+            isPc ? 'headerMiddleP' : isTablet ? 'headerMiddlePNoPc' : null
+          }
+        ></p>
 
-        <div className={isPc ? 'headerBottom' : 'headerBottomNoPc'}>
-          <div className={isPc ? 'BottomSlickTrack' : 'BottomSlickTrackNoPc'}>
+        {/* <div className={isPc ? 'headerBottom' : 'headerBottomNoPc'}> */}
+        <div
+          className={
+            isPc
+              ? 'headerBottom'
+              : isTablet
+              ? 'headerBottomNoPc'
+              : 'headerBottomMobile'
+          }
+        >
+          {/* <div className={isPc ? 'BottomSlickTrack' : 'BottomSlickTrackNoPc'}> */}
+          <div
+            className={
+              isPc
+                ? 'BottomSlickTrack'
+                : isTablet
+                ? 'BottomSlickTrackNoPc'
+                : 'BottomSlickTrackMobile'
+            }
+          >
             <button className="manyleftButton">
               <svg
                 className="SvgIcon_SvgIcon__root__svg__DKYBi"
