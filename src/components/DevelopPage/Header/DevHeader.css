@@ -69,7 +69,7 @@
   width: 100%;
   margin-left: 1.25rem;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .headerTitleMobile .headerTitleLeftText,
@@ -182,11 +182,15 @@
   /* z-index: 2; */
   top: 3.75rem;
   margin-bottom: 1.875rem;
-  z-index: 2;
 }
 
 .headerContainerStiMobile {
   margin-left: 1.25rem;
+  z-index: 3;
+  position: sticky;
+  top: 95px;
+  background: white;
+  margin-top: 10px;
 }
 
 .headerMiddleMobile {
@@ -202,6 +206,11 @@
   margin-bottom: 1.875rem;
   z-index: 2;
   margin-right: 50px;
+}
+
+.headerMiddleMobile .headerFilter2 {
+  z-index: 3;
+  position: sticky;
 }
 
 .headerFilter2 {
@@ -365,8 +374,8 @@
 }
 
 .headerBottomMobile {
-  white-space: nowrap;
-  overflow-x: scroll;
+  white-space: nowrap !important;
+  overflow-x: scroll !important;
   height: 50px;
 }
 
@@ -376,7 +385,7 @@
   display: flex;
   width: 95%;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .BottomSlickTrackNoPc > button {
@@ -705,4 +714,9 @@
 .headerContainerStiNoPc {
   width: 100%;
   padding-left: 2.5rem;
+  z-index: 3;
+  position: sticky;
+  top: 93px;
+  background: white;
+  margin-top: 10px;
 }

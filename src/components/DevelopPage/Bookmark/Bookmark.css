@@ -164,6 +164,19 @@ footer img {
   margin-left: 1.875rem;
 }
 
+.mainMobile {
+  margin-left: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.mainMobile::-webkit-scrollbar {
+  z-index: 3;
+  width: 100%;
+  background-color: red;
+  overflow-x: scroll;
+}
+
 .mainTopImgsTablet a {
   margin-left: 50px;
   font-size: 14px;
@@ -186,7 +199,22 @@ footer img {
 
 .mainTopImgsTablet {
   display: flex;
+  overflow-x: scroll !important;
+  white-space: nowrap;
 }
+
+.mainTopImgsTablet::-webkit-scrollbar {
+  overflow-x: scroll !important;
+  white-space: nowrap;
+  width: 100%;
+  background-color: red;
+}
+
+.mainTopImgsTablet::-webkit-scrollbar {
+  width: 100%;
+  background-color: red;
+}
+
 .mainTopImgsTablet .companyBg {
   margin-left: 10px;
 }
@@ -209,4 +237,35 @@ footer img {
 .mainTopImgsTablet .mainTopTextH4 {
   font-size: 15px;
   font-weight: 600;
+}
+
+.mobileBookTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerFilterRightButtonMobile {
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  letter-spacing: normal;
+  color: #000;
+  padding: 0 7px 0 11px;
+  margin-right: 28px;
+  width: 6.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerFilterRightTextMobile {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  font-family: inherit;
 }

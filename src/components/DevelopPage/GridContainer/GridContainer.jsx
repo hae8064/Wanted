@@ -66,7 +66,16 @@ function GridContainer() {
   }, [bookId]);
 
   return (
-    <div className={isPc ? 'devGridContainer' : 'devGridContainerTablet'}>
+    // <div className={isPc ? 'devGridContainer' : 'devGridContainerTablet'}>
+    <div
+      className={
+        isPc
+          ? 'devGridContainer'
+          : isTablet
+          ? 'devGridContainerTablet'
+          : 'devGridContainerMobile'
+      }
+    >
       {result.map((container) => (
         <div className="gridContainerFirst">
           <header>

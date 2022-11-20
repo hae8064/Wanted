@@ -15,6 +15,13 @@
   margin-top: 2.5rem;
 }
 
+.devGridContainerMobile {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  margin-left: 20px;
+  margin-top: 2.5rem;
+}
+
 .devGridContainerTablet .gridContainerFirst {
   display: flex;
   flex-direction: column;
