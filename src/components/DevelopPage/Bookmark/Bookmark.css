@@ -70,6 +70,29 @@ a.topImgsContainer {
   margin-right: 10px;
   position: relative;
 }
+
+.mainTopImgs .topImgsContainer footer {
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: Pretendard, Pretendard JP, Pretendard Std, -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial,
+    Apple SD Gothic Neo, Nanum Gothic, Malgun Gothic, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  user-select: none;
+  cursor: pointer;
+  color: inherit;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 9px;
+  height: 104px;
+  width: 200px;
+  border: 1px solid #e1e2e3;
+  border-radius: 0 0 3px 3px;
+}
+
 .topImgsContainer footer {
   font-size: 14px;
   line-height: 1.42857143;
@@ -155,7 +178,8 @@ footer img {
 }
 
 .mainTopTextH4 {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .mainTablet {
@@ -173,7 +197,6 @@ footer img {
 .mainMobile::-webkit-scrollbar {
   z-index: 3;
   width: 100%;
-  background-color: red;
   overflow-x: scroll;
 }
 
@@ -207,12 +230,10 @@ footer img {
   overflow-x: scroll !important;
   white-space: nowrap;
   width: 100%;
-  background-color: red;
 }
 
 .mainTopImgsTablet::-webkit-scrollbar {
   width: 100%;
-  background-color: red;
 }
 
 .mainTopImgsTablet .companyBg {

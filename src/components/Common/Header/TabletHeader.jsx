@@ -12,6 +12,7 @@ function TabletHeader({
   getLoginModal,
   setHeaderLogin,
   setHeaderLogout,
+  loginModal,
 }) {
   //반응형 웹
   const isPc = useMediaQuery({
@@ -117,7 +118,9 @@ function TabletHeader({
                 : { display: "flex" }
             }
           >
-            <button className="signUpTablet">회원가입하기</button>
+            <button className="signUpTablet" onClick={loginChange}>
+              회원가입하기
+            </button>
           </div>
         </div>
 

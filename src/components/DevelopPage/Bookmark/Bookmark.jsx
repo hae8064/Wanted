@@ -1,24 +1,24 @@
-import React from 'react';
-import './Bookmark.css';
-import { ReactComponent as BookmarkIcon } from '../../../assets/bookmark.svg';
-import 'bootstrap/dist/css/bootstrap.css';
-import { useMediaQuery } from 'react-responsive';
+import React from "react";
+import "./Bookmark.css";
+import { ReactComponent as BookmarkIcon } from "../../../assets/bookmark.svg";
+import "bootstrap/dist/css/bootstrap.css";
+import { useMediaQuery } from "react-responsive";
 
 function Bookmark() {
   // 반응형 웹
   const isPc = useMediaQuery({
-    query: '(min-width:1024px)',
+    query: "(min-width:1024px)",
   });
   const isTablet = useMediaQuery({
-    query: '(min-width:768px) and (max-width:1023px)',
+    query: "(min-width:768px) and (max-width:1023px)",
   });
   const isMobile = useMediaQuery({
-    query: '(max-width:767px)',
+    query: "(max-width:767px)",
   });
 
   return (
     // <div class={isPc ? 'main' : 'mainTablet'}>
-    <div class={isPc ? 'main' : isTablet ? 'mainTablet' : 'mainMobile'}>
+    <div class={isPc ? "main" : isTablet ? "mainTablet" : "mainMobile"}>
       <div className="mobileBookTop">
         <button class="mainBookMark">
           <BookmarkIcon />
@@ -54,7 +54,7 @@ function Bookmark() {
         <h3 className="devMainTitleH3">적극 채용 중인 회사</h3>
       </div>
 
-      <div class={isPc ? 'mainTopImgs' : 'mainTopImgsTablet'}>
+      <div class={isPc ? "mainTopImgs" : "mainTopImgsTablet"}>
         {/* <div class={isPc ? 'mainTopImgs' : isTa}> */}
         <a href="/" class="topImgsContainer">
           <header>

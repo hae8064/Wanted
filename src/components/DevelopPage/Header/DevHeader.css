@@ -27,6 +27,10 @@
   padding-left: 12.1875rem;
 }
 
+.headerBottomMobile::-webkit-scrollbar {
+  display: none;
+}
+
 .headerTitleNoPc {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -185,15 +189,15 @@
 }
 
 .headerContainerStiMobile {
-  margin-left: 1.25rem;
   z-index: 3;
   position: sticky;
-  top: 95px;
+  top: 5.1875rem;
   background: white;
   margin-top: 10px;
 }
 
 .headerMiddleMobile {
+  margin-left: 20px;
   width: 95%;
   display: flex;
   justify-content: space-between;
@@ -206,6 +210,7 @@
   margin-bottom: 1.875rem;
   z-index: 2;
   margin-right: 50px;
+  height: 60px;
 }
 
 .headerMiddleMobile .headerFilter2 {
@@ -377,6 +382,7 @@
   white-space: nowrap !important;
   overflow-x: scroll !important;
   height: 50px;
+  margin-left: 20px;
 }
 
 .BottomSlickTrackMobile {
