@@ -27,7 +27,7 @@
   padding-left: 12.1875rem;
 }
 
-.headerBottomMobile::-webkit-scrollbar {
+.BottomSlickTrackMobile .headerBottomMobile::-webkit-scrollbar {
   display: none;
 }
 
@@ -374,15 +374,15 @@
   align-items: center;
   display: flex;
   width: 95%;
-  overflow: scroll;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
 .headerBottomMobile {
   white-space: nowrap !important;
-  overflow-x: scroll !important;
   height: 50px;
   margin-left: 20px;
+  overflow: hidden;
 }
 
 .BottomSlickTrackMobile {
