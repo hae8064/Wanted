@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './TabletHeader.css';
-import { ReactComponent as SearchIcon } from '../../../assets/icon-search.svg';
-import { ReactComponent as SearchIcon2 } from '../../../assets/icon-search2.svg';
-import { ReactComponent as AlarmIcon } from '../../../assets/alarmButton.svg';
-import { ReactComponent as MenuIcon } from '../../../assets/menuIcon.svg';
-import DevHeader from '../../DevelopPage/Header/DevHeader';
-import { useMediaQuery } from 'react-responsive';
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import "./TabletHeader.css";
+import { ReactComponent as SearchIcon } from "../../../assets/icon-search.svg";
+import { ReactComponent as SearchIcon2 } from "../../../assets/icon-search2.svg";
+import { ReactComponent as AlarmIcon } from "../../../assets/alarmButton.svg";
+import { ReactComponent as MenuIcon } from "../../../assets/menuIcon.svg";
+import DevHeader from "../../DevelopPage/Header/DevHeader";
+import { useMediaQuery } from "react-responsive";
 function TabletHeader({
   setOn,
   getLoginModal,
@@ -15,13 +15,13 @@ function TabletHeader({
 }) {
   //반응형 웹
   const isPc = useMediaQuery({
-    query: '(min-width:1024px)',
+    query: "(min-width:1024px)",
   });
   const isTablet = useMediaQuery({
-    query: '(min-width:768px) and (max-width:1023px)',
+    query: "(min-width:768px) and (max-width:1023px)",
   });
   const isMobile = useMediaQuery({
-    query: '(max-width:767px)',
+    query: "(max-width:767px)",
   });
 
   const [login, setLogin] = useState(false);
@@ -32,7 +32,7 @@ function TabletHeader({
 
   const [loginModalOn, setLoginModalOn] = useState(1);
 
-  const [profilePopUp, setProfilePopUp] = useState('off');
+  const [profilePopUp, setProfilePopUp] = useState("off");
 
   const refLogoutContainer = useRef(null);
 
@@ -52,11 +52,11 @@ function TabletHeader({
 
   //프로필 버튼 클릭시
   const onProfileButton = () => {
-    setProfilePopUp('on');
+    setProfilePopUp("on");
   };
 
   const onLogout = () => {
-    localStorage.removeItem('id');
+    localStorage.removeItem("id");
     setHeaderLogout(false);
   };
 
@@ -68,14 +68,14 @@ function TabletHeader({
         refLogoutContainer.current &&
         !refLogoutContainer.current.contains(e.target)
       ) {
-        setProfilePopUp('off');
+        setProfilePopUp("off");
         changeSearchOn();
-        console.log('close');
+        console.log("close");
       }
     }
-    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener("mousedown", handleOutside);
     return () => {
-      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener("mousedown", handleOutside);
     };
   }, [refLogoutContainer]);
 
@@ -100,7 +100,7 @@ function TabletHeader({
 
             <Link
               className="wantedTitle"
-              to={'/'}
+              to={"/"}
               aria-label="home link"
               data-attribute-id="gnb"
               data-gnb-kind="home"
@@ -109,7 +109,14 @@ function TabletHeader({
             </Link>
           </div>
 
-          <div className="logoRightTablet">
+          <div
+            className="logoRightTablet"
+            style={
+              localStorage.getItem("id") === "lbh8064@naver.com"
+                ? { display: "none" }
+                : { display: "flex" }
+            }
+          >
             <button className="signUpTablet">회원가입하기</button>
           </div>
         </div>

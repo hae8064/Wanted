@@ -1,19 +1,19 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import Header from '../../Common/Header/Header';
-import './DevHeader.css';
-import { throttle } from 'lodash';
-import { useMediaQuery } from 'react-responsive';
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import Header from "../../Common/Header/Header";
+import "./DevHeader.css";
+import { throttle } from "lodash";
+import { useMediaQuery } from "react-responsive";
 
 function DevHeader() {
   // 반응형 웹
   const isPc = useMediaQuery({
-    query: '(min-width:1024px)',
+    query: "(min-width:1024px)",
   });
   const isTablet = useMediaQuery({
-    query: '(min-width:768px) and (max-width:1023px)',
+    query: "(min-width:768px) and (max-width:1023px)",
   });
   const isMobile = useMediaQuery({
-    query: '(max-width:767px)',
+    query: "(max-width:767px)",
   });
 
   const [scrollEvent, setScrollEvent] = useState(false);
@@ -32,10 +32,10 @@ function DevHeader() {
   );
 
   useEffect(() => {
-    window.addEventListener('scroll', onScrollFn);
+    window.addEventListener("scroll", onScrollFn);
     return () => {
       //컴포넌트 나갈 떄 작동
-      window.removeEventListener('scroll', onScrollFn);
+      window.removeEventListener("scroll", onScrollFn);
     };
   }, []);
 
@@ -45,10 +45,10 @@ function DevHeader() {
       <div
         className={
           isPc
-            ? 'headerTitle'
+            ? "headerTitle"
             : isTablet
-            ? 'headerTitleNoPc'
-            : 'headerTitleMobile'
+            ? "headerTitleNoPc"
+            : "headerTitleMobile"
         }
       >
         <button className="headerTitleLeft">
@@ -94,20 +94,20 @@ function DevHeader() {
       <div
         className={
           isPc
-            ? 'headerContainerSti'
+            ? "headerContainerSti"
             : isTablet
-            ? 'headerContainerStiNoPc'
-            : 'headerContainerStiMobile'
+            ? "headerContainerStiNoPc"
+            : "headerContainerStiMobile"
         }
       >
         {/* <div className={isPc ? 'headerMiddle' : 'headerMiddleNoPc'}> */}
         <div
           className={
             isPc
-              ? 'headerMiddle'
+              ? "headerMiddle"
               : isTablet
-              ? 'headerMiddleNoPc'
-              : 'headerMiddleMobile'
+              ? "headerMiddleNoPc"
+              : "headerMiddleMobile"
           }
         >
           <div className="headerFilter2">
@@ -149,29 +149,31 @@ function DevHeader() {
             </button>
           </div>
 
-          <div className="headerFilterRight">
-            <button className="headerFilterRightButton">
-              <span className="headerFilterRightText">응답률순</span>
-              <svg
-                width="8"
-                height="7"
-                viewBox="0 0 8 7"
-                fill="none"
-                xmlns="https://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z"
-                  fill="#333333"
-                ></path>
-              </svg>
-            </button>
-          </div>
+          {isMobile ? null : (
+            <div className="headerFilterRight">
+              <button className="headerFilterRightButton">
+                <span className="headerFilterRightText">응답률순</span>
+                <svg
+                  width="8"
+                  height="7"
+                  viewBox="0 0 8 7"
+                  fill="none"
+                  xmlns="https://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z"
+                    fill="#333333"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* <p className={isPc ? 'headerMiddleP' : 'headerMiddlePNoPc'}></p> */}
         <p
           className={
-            isPc ? 'headerMiddleP' : isTablet ? 'headerMiddlePNoPc' : null
+            isPc ? "headerMiddleP" : isTablet ? "headerMiddlePNoPc" : null
           }
         ></p>
 
@@ -179,20 +181,20 @@ function DevHeader() {
         <div
           className={
             isPc
-              ? 'headerBottom'
+              ? "headerBottom"
               : isTablet
-              ? 'headerBottomNoPc'
-              : 'headerBottomMobile'
+              ? "headerBottomNoPc"
+              : "headerBottomMobile"
           }
         >
           {/* <div className={isPc ? 'BottomSlickTrack' : 'BottomSlickTrackNoPc'}> */}
           <div
             className={
               isPc
-                ? 'BottomSlickTrack'
+                ? "BottomSlickTrack"
                 : isTablet
-                ? 'BottomSlickTrackNoPc'
-                : 'BottomSlickTrackMobile'
+                ? "BottomSlickTrackNoPc"
+                : "BottomSlickTrackMobile"
             }
           >
             {isMobile ? null : (
