@@ -1,19 +1,20 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import Header from "../../Common/Header/Header";
-import "./DevHeader.css";
-import { throttle } from "lodash";
-import { useMediaQuery } from "react-responsive";
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Header from '../../Common/Header/Header';
+import './DevHeader.css';
+import { throttle } from 'lodash';
+import { useMediaQuery } from 'react-responsive';
 
 function DevHeader() {
+  //주석 체크
   // 반응형 웹
   const isPc = useMediaQuery({
-    query: "(min-width:1024px)",
+    query: '(min-width:1024px)',
   });
   const isTablet = useMediaQuery({
-    query: "(min-width:768px) and (max-width:1023px)",
+    query: '(min-width:768px) and (max-width:1023px)',
   });
   const isMobile = useMediaQuery({
-    query: "(max-width:767px)",
+    query: '(max-width:767px)',
   });
 
   const [scrollEvent, setScrollEvent] = useState(false);
@@ -32,10 +33,10 @@ function DevHeader() {
   );
 
   useEffect(() => {
-    window.addEventListener("scroll", onScrollFn);
+    window.addEventListener('scroll', onScrollFn);
     return () => {
       //컴포넌트 나갈 떄 작동
-      window.removeEventListener("scroll", onScrollFn);
+      window.removeEventListener('scroll', onScrollFn);
     };
   }, []);
 
@@ -45,10 +46,10 @@ function DevHeader() {
       <div
         className={
           isPc
-            ? "headerTitle"
+            ? 'headerTitle'
             : isTablet
-            ? "headerTitleNoPc"
-            : "headerTitleMobile"
+            ? 'headerTitleNoPc'
+            : 'headerTitleMobile'
         }
       >
         <button className="headerTitleLeft">
@@ -94,20 +95,20 @@ function DevHeader() {
       <div
         className={
           isPc
-            ? "headerContainerSti"
+            ? 'headerContainerSti'
             : isTablet
-            ? "headerContainerStiNoPc"
-            : "headerContainerStiMobile"
+            ? 'headerContainerStiNoPc'
+            : 'headerContainerStiMobile'
         }
       >
         {/* <div className={isPc ? 'headerMiddle' : 'headerMiddleNoPc'}> */}
         <div
           className={
             isPc
-              ? "headerMiddle"
+              ? 'headerMiddle'
               : isTablet
-              ? "headerMiddleNoPc"
-              : "headerMiddleMobile"
+              ? 'headerMiddleNoPc'
+              : 'headerMiddleMobile'
           }
         >
           <div className="headerFilter2">
@@ -173,7 +174,7 @@ function DevHeader() {
         {/* <p className={isPc ? 'headerMiddleP' : 'headerMiddlePNoPc'}></p> */}
         <p
           className={
-            isPc ? "headerMiddleP" : isTablet ? "headerMiddlePNoPc" : null
+            isPc ? 'headerMiddleP' : isTablet ? 'headerMiddlePNoPc' : null
           }
         ></p>
 
@@ -181,20 +182,20 @@ function DevHeader() {
         <div
           className={
             isPc
-              ? "headerBottom"
+              ? 'headerBottom'
               : isTablet
-              ? "headerBottomNoPc"
-              : "headerBottomMobile"
+              ? 'headerBottomNoPc'
+              : 'headerBottomMobile'
           }
         >
           {/* <div className={isPc ? 'BottomSlickTrack' : 'BottomSlickTrackNoPc'}> */}
           <div
             className={
               isPc
-                ? "BottomSlickTrack"
+                ? 'BottomSlickTrack'
                 : isTablet
-                ? "BottomSlickTrackNoPc"
-                : "BottomSlickTrackMobile"
+                ? 'BottomSlickTrackNoPc'
+                : 'BottomSlickTrackMobile'
             }
           >
             {isMobile ? null : (
