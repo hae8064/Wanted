@@ -1,20 +1,30 @@
-import React, { useEffect, useState } from "react";
-import "./LoginModal.css";
-import { Link, useNavigate } from "react-router-dom";
-import SignUpModal from "../SignUpModal/SignUpModal";
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
-import AlertEmail from "../Alert/Alert";
-import { LoginStyledButton } from "../StyledComponents/LoginStyledButton";
+import React, { useEffect, useState } from 'react';
+import './LoginModal.css';
+import { Link, useNavigate } from 'react-router-dom';
+import SignUpModal from '../SignUpModal/SignUpModal';
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
+import AlertEmail from '../Alert/Alert';
+import { LoginStyledButton } from '../StyledComponents/LoginStyledButton';
+import { KAKAO_AUTH_URL } from '../../../Oauth';
+import axios from 'axios';
 
 const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
+  const { Kakao } = window;
+  const loginWithKakao = () => {
+    console.log('카카오 로그인!');
+    Kakao.Auth.authorize({
+      redirectUri: 'http://localhost:3000/',
+    });
+  };
+
   //회원가입 된 이메일
-  const signInEmail = "lbh8064@naver.com";
+  const signInEmail = 'lbh8064@naver.com';
   const [loginModal, setLoginModal] = useState(false);
-  const [userEmail, setUserEmail] = useState("");
+  const [userEmail, setUserEmail] = useState('');
   const [nextPage, setNextPage] = useState(false);
   //유효성 검사 통과 시 버튼 활성화
-  const [buttonActive, setButtonActive] = useState("off");
+  const [buttonActive, setButtonActive] = useState('off');
   const [bootAlert, setBootAlert] = useState(false);
 
   const closeModal = () => {
@@ -44,9 +54,9 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
 
   const emailCheck = (username) => {
     if (emailRegEx.test(username)) {
-      console.log("이메일 형식 맞습니다.");
+      console.log('이메일 형식 맞습니다.');
       setNextPage(true);
-      setButtonActive("on");
+      setButtonActive('on');
       modalSignUpOn();
     } else {
       setNextPage(false);
@@ -58,9 +68,9 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
   const onButtonActive = (e) => {
     setUserEmail(e.target.value);
     if (emailRegEx.test(userEmail)) {
-      setButtonActive("on");
+      setButtonActive('on');
     } else {
-      setButtonActive("off");
+      setButtonActive('off');
     }
   };
 
@@ -182,7 +192,11 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
 
           <div className="loginIcons">
             <div className="loginIcon1">
-              <button className="loginIconbutton1">
+              {/* <Link to={KAKAO_AUTH_URL}> */}
+              <button
+                className="loginIconbutton1"
+                onClick={() => loginWithKakao()}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"
@@ -199,6 +213,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
               <button className="loginIconspan">
                 <span>Kakao</span>
               </button>
+              {/* </Link> */}
             </div>
 
             <div className="loginIcon1">
