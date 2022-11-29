@@ -24,6 +24,8 @@ function TabletHeaderMiddle() {
       window.removeEventListener("scroll", onScrollFn);
     };
   }, []);
+
+  
   return <div>TabletHeaderMiddle</div>;
 }
 

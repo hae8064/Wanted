@@ -1,13 +1,13 @@
 const initialState = {
-  value: 0,
+  id: 0,
 };
 
 export default function addsubReducer(state = initialState, action) {
   switch (action.type) {
-    case "increment": {
+    case "ADDBOOK": {
       return {
         ...state,
-        value: state.value + 1,
+        id: state.id = 5,
       };
     }
     case "decrement": {
