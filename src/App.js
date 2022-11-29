@@ -23,6 +23,50 @@ import { useMediaQuery } from 'react-responsive';
 import TabletHeader from './components/Common/Header/TabletHeader';
 
 function App() {
+  const { Kakao } = window;
+
+  const [user, setUser] = useState(null);
+
+  const kakaoLogin = () => {
+    Kakao.Auth.login({
+      async success() {
+        await Kakao.API.request({
+          // url: '/v2/user/me',
+          url: '/v2/user/me',
+          success(res) {
+            console.log(res);
+            const kakaoAccount = res.kakao_account;
+            setUser({
+              email: kakaoAccount.email,
+              profileImg: kakaoAccount.profile.profile_image_url,
+              nickname: kakaoAccount.profile.nickname,
+            });
+
+            localStorage.setItem(
+              'profileImg',
+              kakaoAccount.profile.profile_image_url
+            );
+            // localStorage.setItem('profile', user && user.profileImg);
+            // console.log(kakaoAccount);
+          },
+          fail(error) {
+            console.log(error);
+          },
+        });
+
+        localStorage.setItem('id', 'lbh8064@naver.com');
+      },
+      fail(error) {
+        console.log(error);
+      },
+    });
+    setTimeout(() => {
+      Kakao.Auth.authorize({
+        redirectUri: 'http://localhost:3000/',
+      });
+    }, 1000);
+  };
+
   //반응형 웹
   const isPc = useMediaQuery({
     query: '(min-width:1024px)',
@@ -67,6 +111,7 @@ function App() {
           getLoginModal={setLoginModal}
           setHeaderLogin={headerLogin}
           setHeaderLogout={setHeaderLogin}
+          userProfile={user && user.profileImg}
         />
       )}
 
@@ -116,7 +161,7 @@ function App() {
       {/* 모달창 loginModal 기본 0 로그인 1 회원가입 2 비밀번호 3*/}
       {console.log('잘 로그인 되었는가.' + headerLogin)}
       {loginModal === 1 ? (
-        <LoginModal modalOn={setLoginModal} />
+        <LoginModal modalOn={setLoginModal} kakaoLogin={kakaoLogin} />
       ) : loginModal === 2 ? (
         <SignUpModal modalOn={setLoginModal} />
       ) : loginModal === 3 ? (

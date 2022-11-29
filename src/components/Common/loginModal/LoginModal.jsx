@@ -9,14 +9,13 @@ import { LoginStyledButton } from '../StyledComponents/LoginStyledButton';
 import { KAKAO_AUTH_URL } from '../../../Oauth';
 import axios from 'axios';
 
-const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
-  const { Kakao } = window;
-  const loginWithKakao = () => {
-    console.log('카카오 로그인!');
-    Kakao.Auth.authorize({
-      redirectUri: 'http://localhost:3000/',
-    });
-  };
+const LoginModal = ({ offLoginModal, containerState, modalOn, kakaoLogin }) => {
+  // const loginWithKakao = () => {
+  //   console.log('카카오 로그인!');
+  //   Kakao.Auth.authorize({
+  //     redirectUri: 'http://localhost:3000/',
+  //   });
+  // };
 
   //회원가입 된 이메일
   const signInEmail = 'lbh8064@naver.com';
@@ -193,10 +192,7 @@ const LoginModal = ({ offLoginModal, containerState, modalOn }) => {
           <div className="loginIcons">
             <div className="loginIcon1">
               {/* <Link to={KAKAO_AUTH_URL}> */}
-              <button
-                className="loginIconbutton1"
-                onClick={() => loginWithKakao()}
-              >
+              <button className="loginIconbutton1" onClick={() => kakaoLogin()}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"
