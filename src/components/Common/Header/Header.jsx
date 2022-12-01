@@ -109,9 +109,9 @@ function Header({
           <a className="partpay" href="">
             직군별 연봉
           </a>
-          <a className="jobpaper" href="">
+          <Link className="jobpaper" to="/recruitPage">
             이력서
-          </a>
+          </Link>
           <a className="community" href="">
             <span>커뮤니티</span>
             <em>

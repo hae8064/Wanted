@@ -21,6 +21,7 @@ import Password from './components/Common/PasswordModal/Password';
 import BookMark from './components/Common/BookMark/BookMark';
 import { useMediaQuery } from 'react-responsive';
 import TabletHeader from './components/Common/Header/TabletHeader';
+import RecruitPage from './components/Common/Recruit/RecruitPage';
 
 function App() {
   const { Kakao } = window;
@@ -62,6 +63,7 @@ function App() {
     });
     setTimeout(() => {
       Kakao.Auth.authorize({
+        prompts: 'login',
         redirectUri: 'http://localhost:3000/',
       });
     }, 1000);
@@ -144,6 +146,7 @@ function App() {
 
         <Route path="/signUp" element={<SignUpModal />} />
         <Route path="/developPage" element={<DevelopContainer />} />
+        <Route path="/recruitPage" element={<RecruitPage />} />
         <Route
           path="/naverMap"
           element={
