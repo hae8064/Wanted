@@ -58,13 +58,13 @@ const RecruitPage = () => {
     console.log(fileData);
   }, [fileData]);
 
-  var today = new Date();
+  let today = new Date();
 
-  var year = today.getFullYear();
-  var month = ('0' + (today.getMonth() + 1)).slice(-2);
-  var day = ('0' + today.getDate()).slice(-2);
+  let year = today.getFullYear();
+  let month = ('0' + (today.getMonth() + 1)).slice(-2);
+  let day = ('0' + today.getDate()).slice(-2);
 
-  var dateString = year + '-' + month + '-' + day;
+  let dateString = year + '-' + month + '-' + day;
   return (
     <div className="recruitPageContainer">
       <div className="topRecruitPage">
