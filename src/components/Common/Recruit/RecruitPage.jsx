@@ -26,11 +26,25 @@ const RecruitPage = () => {
       </div>
       <div className="bottomRecruitPage">
         <div className="bottomRecruitLeft">최근 문서</div>
-        <div className="bottomRecruitRight">원티드 이력서 소개</div>
+        <div className="bottomRecruitRight">
+          원티드 이력서 소개
+          <i className="icon-info_icon"></i>
+        </div>
       </div>
       <div className="bottomFileUpload">
-        <div className="newRecruit"></div>
-        <div className="newFileUpload"></div>
+        <div className="newRecruit">
+          <div className="newRecruitTop">
+            <i class="icon-new_resume"></i>
+          </div>
+          <div className="newRecruitBottom">새 이력서 작성</div>
+        </div>
+
+        <div className="newFileUpload">
+          <div className="newFileUploadTop">
+            <i class="icon-upload_resume"></i>
+          </div>
+          <div className="newFileUploadBottom">파일 업로드</div>
+        </div>
       </div>
     </div>
   );

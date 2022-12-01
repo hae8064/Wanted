@@ -1,6 +1,11 @@
 .recruitPageContainer {
   display: flex;
   flex-direction: column;
+  background-color: rgb(243, 242, 242);
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  width: 100%;
 }
 
 .topRecruitPage {
@@ -84,4 +89,108 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
+}
+
+.bottomRecruitLeft {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  padding: 15px 0;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.bottomRecruitRight {
+  font-size: 16px;
+  color: #3366ff;
+  font-weight: 600;
+}
+
+.icon-info_icon::before {
+  margin-left: 5px;
+  content: '\e9a7';
+}
+
+.bottomFileUpload {
+  width: 74%;
+  margin-left: 200px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.newRecruit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 237px;
+  height: 188px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.newRecruitTop {
+  background-color: #36f;
+  color: #fff;
+  cursor: pointer;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.icon-new_resume:before {
+  content: '\ea0e';
+}
+
+.newRecruitBottom {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.newFileUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 237px;
+  height: 188px;
+  box-sizing: border-box;
+  background-color: white;
+  margin-left: 20px;
+}
+
+.newFileUploadTop {
+  cursor: pointer;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  background-color: #e1e2e3;
+  color: #666;
+}
+
+.icon-upload_resume:before {
+  content: '\e9c6';
+}
+
+.newFileUploadBottom {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
 }
