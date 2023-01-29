@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# 리액트 - 원티드 클론코딩
 
 원티드 페이지 클론코딩 리액트로 작업 완료
 
